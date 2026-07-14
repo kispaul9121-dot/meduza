@@ -1,0 +1,16 @@
+npm warn Unknown project config "auto-install-peers". This will stop working in the next major version of npm.
+NOT SUPPORTED: option missingRefs. Pass empty schema with $id that should be ignored to ajv.addSchema.
+- Creating server
+√ Server is ready on port: 9000 – 3444ms
+- Creating server
+√ Server is ready on port: 9000 – 4152ms
+- Creating server
+√ Server is ready on port: 9000 – 3794ms
+(node:29956) DeprecationWarning: Calling client.query() when the client is already executing a query is deprecated and will be removed in pg@9.0. Use async/await or an external async flow control mechanism instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+- Creating server
+√ Server is ready on port: 9000 – 4437ms
+- Creating server
+√ Server is ready on port: 9000 – 4250ms
+- Creating server
+√ Server is ready on port: 9000 – 40425ms

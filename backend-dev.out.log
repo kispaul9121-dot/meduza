@@ -1,0 +1,2397 @@
+
+> @dtc/backend@0.0.1 dev
+> medusa develop
+
+[32minfo[39m:    redisUrl not found. A fake redis instance will be used.
+[33mwarn[39m:    Linting skipped: the `eslint` package is not installed in this project. Install the `eslint` package with your package manager to enable linting, or pass `--lint false` to silence this message.
+[32minfo[39m:    [Watcher] Using standard dev server (restart on file change)
+[32minfo[39m:    [Watcher] Watching filesystem to reload dev server on file change
+[32minfo[39m:    redisUrl not found. A fake redis instance will be used.
+[32minfo[39m:    redisUrl not found. A fake redis instance will be used.
+[32minfo[39m:    Skipping instrumentation registration. No register function found.
+[32minfo[39m:    redisUrl not found. A fake redis instance will be used.
+[32minfo[39m:    No link to load from D:\Meduza site\node_modules\@medusajs\draft-order\.medusa\server\src\links. skipped.
+[33mwarn[39m:    Local Event Bus installed. This is not recommended for production.
+[32minfo[39m:    Locking module: Using "in-memory" as default.
+[32minfo[39m:    No workflow to load from D:\Meduza site\node_modules\@medusajs\draft-order\.medusa\server\src\workflows. skipped.
+[32minfo[39m:    No subscriber to load from D:\Meduza site\node_modules\@medusajs\draft-order\.medusa\server\src\subscribers. skipped.
+[32minfo[39m:    No job to load from D:\Meduza site\node_modules\@medusajs\medusa\dist\jobs. skipped.
+[32minfo[39m:    No job to load from D:\Meduza site\node_modules\@medusajs\draft-order\.medusa\server\src\jobs. skipped.
+[32minfo[39m:    Admin URL → http://localhost:9000/app
+[32minfo[39m:    Publishable API key required in the request header: x-publishable-api-key. You can manage your keys in settings in the dashboard.
+[32mhttp[39m:    GET /store/server-configurator/models ← - (400) - 19.977 ms
+[32minfo[39m:    Publishable API key required in the request header: x-publishable-api-key. You can manage your keys in settings in the dashboard.
+[32mhttp[39m:    GET /store/server-configurator/models/hpe-proliant-dl360-gen10-8sff ← - (400) - 4.868 ms
+[32minfo[39m:    Publishable API key required in the request header: x-publishable-api-key. You can manage your keys in settings in the dashboard.
+[32mhttp[39m:    GET /store/server-configurator/models/hpe-proliant-dl360-gen10-8sff/options ← - (400) - 1.758 ms
+[32minfo[39m:    Publishable API key required in the request header: x-publishable-api-key. You can manage your keys in settings in the dashboard.
+[32mhttp[39m:    GET /store/server-configurator/catalog-facets ← - (400) - 1.840 ms
+[32minfo[39m:    Publishable API key required in the request header: x-publishable-api-key. You can manage your keys in settings in the dashboard.
+[32mhttp[39m:    POST /store/server-configurator/validate ← - (400) - 13.215 ms
+[32minfo[39m:    Publishable API key required in the request header: x-publishable-api-key. You can manage your keys in settings in the dashboard.
+[32mhttp[39m:    GET /store/server-configurator/models ← - (400) - 3.861 ms
+[32minfo[39m:    Publishable API key required in the request header: x-publishable-api-key. You can manage your keys in settings in the dashboard.
+[32mhttp[39m:    POST /store/server-configurator/validate ← - (400) - 1.958 ms
+[32minfo[39m:    Publishable API key required in the request header: x-publishable-api-key. You can manage your keys in settings in the dashboard.
+[32mhttp[39m:    GET /store/server-configurator/models/hpe-proliant-dl360-gen10-8sff ← - (400) - 1.462 ms
+[32minfo[39m:    Publishable API key required in the request header: x-publishable-api-key. You can manage your keys in settings in the dashboard.
+[32mhttp[39m:    GET /store/server-configurator/models/hpe-proliant-dl360-gen10-8sff/options ← - (400) - 2.426 ms
+[32minfo[39m:    Publishable API key required in the request header: x-publishable-api-key. You can manage your keys in settings in the dashboard.
+[32mhttp[39m:    GET /store/server-configurator/catalog-facets ← - (400) - 1.631 ms
+[32mhttp[39m:    GET /store/server-configurator/models ← - (200) - 19.088 ms
+[32mhttp[39m:    GET /store/server-configurator/models/hpe-proliant-dl360-gen10-8sff ← - (200) - 7.680 ms
+[32mhttp[39m:    GET /store/server-configurator/models/hpe-proliant-dl360-gen10-8sff/options ← - (200) - 21.464 ms
+[32mhttp[39m:    GET /store/server-configurator/catalog-facets ← - (200) - 7.186 ms
+[32mhttp[39m:    POST /store/server-configurator/validate ← - (200) - 16.855 ms
+[32mhttp[39m:    GET /store/server-configurator/models ← - (200) - 7.566 ms
+[32mhttp[39m:    GET /store/server-configurator/help-annotations?page=catalog ← - (200) - 13.537 ms
+[32mhttp[39m:    GET /store/server-configurator/catalog-facets ← - (200) - 19.592 ms
+[32mhttp[39m:    GET /store/server-configurator/models/hpe-proliant-dl360-gen10-8sff ← - (200) - 5.396 ms
+[32mhttp[39m:    GET /store/server-configurator/models/hpe-proliant-dl360-gen10-8sff/options ← - (200) - 21.738 ms
+[32mhttp[39m:    GET /store/server-configurator/help-annotations?page=configurator&slug=hpe-proliant-dl360-gen10-8sff ← - (200) - 9.256 ms
+[32mhttp[39m:    GET /store/server-configurator/models/hpe-proliant-dl360-gen10-10sff-nvme-premium ← - (200) - 4.822 ms
+[32mhttp[39m:    GET /store/server-configurator/models/hpe-proliant-dl360-gen10-10sff-nvme-premium/options ← - (200) - 14.305 ms
+[32mhttp[39m:    GET /store/server-configurator/help-annotations?page=configurator&slug=hpe-proliant-dl360-gen10-10sff-nvme-premium ← - (200) - 8.413 ms
+[32mhttp[39m:    GET /store/server-configurator/models/hpe-proliant-dl360-gen10-4lff ← - (200) - 5.496 ms
+[32mhttp[39m:    GET /store/server-configurator/models/hpe-proliant-dl360-gen10-4lff/options ← - (200) - 14.724 ms
+[32mhttp[39m:    GET /store/server-configurator/help-annotations?page=configurator&slug=hpe-proliant-dl360-gen10-4lff ← - (200) - 7.832 ms
+[32mhttp[39m:    GET /store/server-configurator/models/hpe-proliant-dl360-gen10-8sff/options ← - (200) - 12.285 ms
+[32mhttp[39m:    POST /store/server-configurator/validate ← - (200) - 10.562 ms
+[32mhttp[39m:    POST /store/server-configurator/validate ← - (200) - 9.369 ms
+[32mhttp[39m:    POST /store/server-configurator/validate ← - (200) - 8.066 ms
+[32mhttp[39m:    POST /store/server-configurator/validate ← - (200) - 6.578 ms
+[32mhttp[39m:    POST /store/server-configurator/validate ← - (200) - 9.129 ms
+[32mhttp[39m:    POST /store/server-configurator/validate ← - (200) - 7.416 ms
+[32mhttp[39m:    POST /store/server-configurator/validate ← - (200) - 5.681 ms
+[32mhttp[39m:    POST /store/server-configurator/validate ← - (200) - 7.475 ms
+[32mhttp[39m:    GET /app/server-configurator ← http://localhost:9000/app/server-configurator (200) - 23.213 ms
+[32mhttp[39m:    GET /app/entry.jsx ← http://localhost:9000/app/server-configurator (304) - 50.190 ms
+[32mhttp[39m:    GET /app/index.css ← http://localhost:9000/app/entry.jsx (200) - 3746.815 ms
+[32mhttp[39m:    GET /admin/feature-flags ← http://localhost:9000/app/server-configurator (304) - 1.553 ms
+[32mhttp[39m:    GET /admin/users/me ← http://localhost:9000/app/server-configurator (401) - 2.200 ms
+[32mhttp[39m:    GET /admin/users/me ← http://localhost:9000/app/server-configurator (401) - 0.405 ms
+[32mhttp[39m:    GET /cloud/auth ← http://localhost:9000/app/login (304) - 1.055 ms
+[32mhttp[39m:    POST /auth/user/emailpass ← http://localhost:9000/app/login (200) - 90.177 ms
+[32mhttp[39m:    POST /auth/session ← http://localhost:9000/app/login (200) - 4.532 ms
+[32mhttp[39m:    GET /admin/users/me ← http://localhost:9000/app/server-configurator (304) - 8.608 ms
+[32mhttp[39m:    GET /admin/stores ← http://localhost:9000/app/server-configurator (304) - 25.880 ms
+[32mhttp[39m:    GET /admin/layouts/sidebar/configuration ← http://localhost:9000/app/server-configurator (304) - 21.499 ms
+[32mhttp[39m:    GET /admin/layouts/configurations?limit=1&fields=id ← http://localhost:9000/app/server-configurator (304) - 28.072 ms
+[32mhttp[39m:    GET /admin/notifications?limit=1&offset=0&fields=created_at ← http://localhost:9000/app/server-configurator (304) - 28.666 ms
+[32mhttp[39m:    GET /admin/products?q=&limit=3&fields=id%2Ctitle%2Cthumbnail%2C-type%2C-collection%2C-options%2C-tags%2C-images%2C-variants%2C-sales_channels ← http://localhost:9000/app/server-configurator (304) - 58.574 ms
+[32mhttp[39m:    GET /admin/product-variants?q=&limit=3&fields=id%2Ctitle%2Csku%2Cproduct_id ← http://localhost:9000/app/server-configurator (304) - 68.268 ms
+[32mhttp[39m:    GET /admin/product-categories?limit=3&fields=id%2Cname ← http://localhost:9000/app/server-configurator (304) - 52.795 ms
+[32mhttp[39m:    GET /admin/orders?q=&limit=3&fields=id%2Cdisplay_id%2Cemail ← http://localhost:9000/app/server-configurator (304) - 93.338 ms
+[32mhttp[39m:    GET /admin/collections?q=&limit=3&fields=id%2Ctitle ← http://localhost:9000/app/server-configurator (304) - 58.724 ms
+[32mhttp[39m:    GET /admin/customers?q=&limit=3&fields=id%2Cemail%2Cfirst_name%2Clast_name ← http://localhost:9000/app/server-configurator (304) - 34.625 ms
+[32mhttp[39m:    GET /admin/layouts/topbar/configuration ← http://localhost:9000/app/server-configurator (304) - 109.901 ms
+[32mhttp[39m:    GET /admin/customer-groups?q=&limit=3&fields=id%2Cname ← http://localhost:9000/app/server-configurator (304) - 31.337 ms
+[32mhttp[39m:    GET /admin/inventory-items?q=&limit=3&fields=id%2Ctitle%2Csku ← http://localhost:9000/app/server-configurator (304) - 34.756 ms
+[32mhttp[39m:    GET /admin/promotions?q=&limit=3&fields=id%2Ccode%2Cstatus ← http://localhost:9000/app/server-configurator (304) - 26.215 ms
+[32mhttp[39m:    GET /admin/campaigns?q=&limit=3&fields=id%2Cname ← http://localhost:9000/app/server-configurator (304) - 30.139 ms
+[32mhttp[39m:    GET /admin/price-lists?q=&limit=3&fields=id%2Ctitle ← http://localhost:9000/app/server-configurator (304) - 23.227 ms
+[32mhttp[39m:    GET /admin/users?q=&limit=3&fields=id%2Cemail%2Cfirst_name%2Clast_name ← http://localhost:9000/app/server-configurator (304) - 26.763 ms
+[32mhttp[39m:    GET /admin/regions?q=&limit=3&fields=id%2Cname ← http://localhost:9000/app/server-configurator (304) - 26.129 ms
+[32mhttp[39m:    GET /admin/tax-regions?q=&limit=3&fields=id%2Ccountry_code%2Cprovince_code ← http://localhost:9000/app/server-configurator (304) - 22.587 ms
+[32mhttp[39m:    GET /admin/return-reasons?q=&limit=3&fields=id%2Clabel%2Cvalue ← http://localhost:9000/app/server-configurator (304) - 23.824 ms
+[32mhttp[39m:    GET /admin/sales-channels?q=&limit=3&fields=id%2Cname ← http://localhost:9000/app/server-configurator (304) - 19.605 ms
+[32mhttp[39m:    GET /admin/product-types?q=&limit=3&fields=id%2Cvalue ← http://localhost:9000/app/server-configurator (304) - 20.769 ms
+[32mhttp[39m:    GET /admin/product-tags?q=&limit=3&fields=id%2Cvalue ← http://localhost:9000/app/server-configurator (304) - 20.678 ms
+[32mhttp[39m:    GET /admin/stock-locations?q=&limit=3&fields=id%2Cname ← http://localhost:9000/app/server-configurator (304) - 21.076 ms
+[32mhttp[39m:    GET /admin/shipping-profiles?q=&limit=3&fields=id%2Cname ← http://localhost:9000/app/server-configurator (304) - 20.340 ms
+[32mhttp[39m:    GET /admin/api-keys?q=&limit=3&fields=id%2Ctitle%2Credacted&type=publishable ← http://localhost:9000/app/server-configurator (304) - 19.524 ms
+[32mhttp[39m:    GET /admin/api-keys?q=&limit=3&fields=id%2Ctitle%2Credacted&type=secret ← http://localhost:9000/app/server-configurator (304) - 10.722 ms
+[32mhttp[39m:    GET /admin/server-configurator/source-of-truth ← http://localhost:9000/app/server-configurator/source-of-truth (200) - 25.579 ms
+[32mhttp[39m:    GET /app/entry.jsx?t=1783941982530 ← http://localhost:9000/app/@vite/client (200) - 287.521 ms
+[32mhttp[39m:    GET /app/server-configurator/source-of-truth ← http://localhost:9000/app/server-configurator/source-of-truth (200) - 233.372 ms
+[32mhttp[39m:    GET /app/index.css?t=1783941982530 ← http://localhost:9000/app/@vite/client (-) - - ms
+[32mhttp[39m:    GET /app/index.css?t=1783941982531 ← http://localhost:9000/app/entry.jsx?t=1783941982530 (-) - - ms
+[32mhttp[39m:    GET /app/index.css?t=1783941982528 ← http://localhost:9000/app/@vite/client (-) - - ms
+[32mhttp[39m:    GET /app/entry.jsx ← http://localhost:9000/app/server-configurator/source-of-truth (200) - 0.825 ms
+[32mhttp[39m:    GET /app/index.css?t=1783941982531 ← http://localhost:9000/app/entry.jsx (200) - 2656.942 ms
+[32mhttp[39m:    GET /admin/feature-flags ← http://localhost:9000/app/server-configurator/source-of-truth (304) - 1.418 ms
+[32mhttp[39m:    GET /admin/users/me ← http://localhost:9000/app/server-configurator/source-of-truth (304) - 7.300 ms
+[32mhttp[39m:    GET /admin/layouts/configurations?limit=1&fields=id ← http://localhost:9000/app/server-configurator/source-of-truth (304) - 35.389 ms
+[32mhttp[39m:    GET /admin/stores ← http://localhost:9000/app/server-configurator/source-of-truth (304) - 57.559 ms
+[32mhttp[39m:    GET /admin/notifications?limit=1&offset=0&fields=created_at ← http://localhost:9000/app/server-configurator/source-of-truth (304) - 38.166 ms
+[32mhttp[39m:    GET /admin/server-configurator/source-of-truth ← http://localhost:9000/app/server-configurator/source-of-truth (304) - 103.562 ms
+[32mhttp[39m:    GET /admin/layouts/sidebar/configuration ← http://localhost:9000/app/server-configurator/source-of-truth (304) - 127.295 ms
+[32mhttp[39m:    GET /admin/products?q=&limit=3&fields=id%2Ctitle%2Cthumbnail%2C-type%2C-collection%2C-options%2C-tags%2C-images%2C-variants%2C-sales_channels ← http://localhost:9000/app/server-configurator/source-of-truth (304) - 71.943 ms
+[32mhttp[39m:    GET /admin/product-variants?q=&limit=3&fields=id%2Ctitle%2Csku%2Cproduct_id ← http://localhost:9000/app/server-configurator/source-of-truth (304) - 71.194 ms
+[32mhttp[39m:    GET /admin/layouts/topbar/configuration ← http://localhost:9000/app/server-configurator/source-of-truth (304) - 138.252 ms
+[32mhttp[39m:    GET /admin/orders?q=&limit=3&fields=id%2Cdisplay_id%2Cemail ← http://localhost:9000/app/server-configurator/source-of-truth (304) - 112.942 ms
+[32mhttp[39m:    GET /admin/product-categories?limit=3&fields=id%2Cname ← http://localhost:9000/app/server-configurator/source-of-truth (304) - 41.876 ms
+[32mhttp[39m:    GET /admin/collections?q=&limit=3&fields=id%2Ctitle ← http://localhost:9000/app/server-configurator/source-of-truth (304) - 41.739 ms
+[32mhttp[39m:    GET /admin/customers?q=&limit=3&fields=id%2Cemail%2Cfirst_name%2Clast_name ← http://localhost:9000/app/server-configurator/source-of-truth (304) - 32.639 ms
+[32mhttp[39m:    GET /admin/customer-groups?q=&limit=3&fields=id%2Cname ← http://localhost:9000/app/server-configurator/source-of-truth (304) - 38.637 ms
+[32mhttp[39m:    GET /admin/inventory-items?q=&limit=3&fields=id%2Ctitle%2Csku ← http://localhost:9000/app/server-configurator/source-of-truth (304) - 49.427 ms
+[32mhttp[39m:    GET /admin/promotions?q=&limit=3&fields=id%2Ccode%2Cstatus ← http://localhost:9000/app/server-configurator/source-of-truth (304) - 29.306 ms
+[32mhttp[39m:    GET /admin/campaigns?q=&limit=3&fields=id%2Cname ← http://localhost:9000/app/server-configurator/source-of-truth (304) - 35.079 ms
+[32mhttp[39m:    GET /admin/users?q=&limit=3&fields=id%2Cemail%2Cfirst_name%2Clast_name ← http://localhost:9000/app/server-configurator/source-of-truth (304) - 24.405 ms
+[32mhttp[39m:    GET /admin/price-lists?q=&limit=3&fields=id%2Ctitle ← http://localhost:9000/app/server-configurator/source-of-truth (304) - 26.437 ms
+[32mhttp[39m:    GET /admin/regions?q=&limit=3&fields=id%2Cname ← http://localhost:9000/app/server-configurator/source-of-truth (304) - 25.942 ms
+[32mhttp[39m:    GET /admin/tax-regions?q=&limit=3&fields=id%2Ccountry_code%2Cprovince_code ← http://localhost:9000/app/server-configurator/source-of-truth (304) - 24.637 ms
+[32mhttp[39m:    GET /admin/return-reasons?q=&limit=3&fields=id%2Clabel%2Cvalue ← http://localhost:9000/app/server-configurator/source-of-truth (304) - 24.601 ms
+[32mhttp[39m:    GET /admin/sales-channels?q=&limit=3&fields=id%2Cname ← http://localhost:9000/app/server-configurator/source-of-truth (304) - 13.603 ms
+[32mhttp[39m:    GET /admin/product-types?q=&limit=3&fields=id%2Cvalue ← http://localhost:9000/app/server-configurator/source-of-truth (304) - 20.712 ms
+[32mhttp[39m:    GET /admin/product-tags?q=&limit=3&fields=id%2Cvalue ← http://localhost:9000/app/server-configurator/source-of-truth (304) - 21.340 ms
+[32mhttp[39m:    GET /admin/stock-locations?q=&limit=3&fields=id%2Cname ← http://localhost:9000/app/server-configurator/source-of-truth (304) - 22.349 ms
+[32mhttp[39m:    GET /admin/shipping-profiles?q=&limit=3&fields=id%2Cname ← http://localhost:9000/app/server-configurator/source-of-truth (304) - 13.434 ms
+[32mhttp[39m:    GET /admin/api-keys?q=&limit=3&fields=id%2Ctitle%2Credacted&type=publishable ← http://localhost:9000/app/server-configurator/source-of-truth (304) - 13.559 ms
+[32mhttp[39m:    GET /admin/api-keys?q=&limit=3&fields=id%2Ctitle%2Credacted&type=secret ← http://localhost:9000/app/server-configurator/source-of-truth (304) - 15.990 ms
+[32mhttp[39m:    GET /app/orders ← - (200) - 4.836 ms
+[32mhttp[39m:    GET /admin/feature-flags ← http://localhost:9000/app/orders (304) - 2.043 ms
+[32mhttp[39m:    GET /admin/users/me ← http://localhost:9000/app/orders (401) - 0.519 ms
+[32mhttp[39m:    GET /admin/users/me ← http://localhost:9000/app/orders (401) - 0.484 ms
+[32mhttp[39m:    GET /cloud/auth ← http://localhost:9000/app/login (304) - 2.153 ms
+[32minfo[39m:    [Watcher] created src\workflows\server-configurator\shared\types.ts created: restarting dev server
+[32minfo[39m:    [Watcher] Reloaded in 518.26ms
+[32minfo[39m:    redisUrl not found. A fake redis instance will be used.
+[32minfo[39m:    redisUrl not found. A fake redis instance will be used.
+[32minfo[39m:    Skipping instrumentation registration. No register function found.
+[32minfo[39m:    redisUrl not found. A fake redis instance will be used.
+[32minfo[39m:    No link to load from D:\Meduza site\node_modules\@medusajs\draft-order\.medusa\server\src\links. skipped.
+[33mwarn[39m:    Local Event Bus installed. This is not recommended for production.
+[32minfo[39m:    Locking module: Using "in-memory" as default.
+[32minfo[39m:    No workflow to load from D:\Meduza site\node_modules\@medusajs\draft-order\.medusa\server\src\workflows. skipped.
+[32minfo[39m:    No subscriber to load from D:\Meduza site\node_modules\@medusajs\draft-order\.medusa\server\src\subscribers. skipped.
+[32minfo[39m:    No job to load from D:\Meduza site\node_modules\@medusajs\medusa\dist\jobs. skipped.
+[32minfo[39m:    No job to load from D:\Meduza site\node_modules\@medusajs\draft-order\.medusa\server\src\jobs. skipped.
+[32minfo[39m:    Admin URL → http://localhost:9000/app
+[32minfo[39m:    [Watcher] created src\workflows\server-configurator\shared\steps.ts created: restarting dev server
+[32minfo[39m:    [Watcher] Reloaded in 476.68ms
+[32minfo[39m:    redisUrl not found. A fake redis instance will be used.
+[32minfo[39m:    redisUrl not found. A fake redis instance will be used.
+[32minfo[39m:    Skipping instrumentation registration. No register function found.
+[32minfo[39m:    redisUrl not found. A fake redis instance will be used.
+[32minfo[39m:    No link to load from D:\Meduza site\node_modules\@medusajs\draft-order\.medusa\server\src\links. skipped.
+[33mwarn[39m:    Local Event Bus installed. This is not recommended for production.
+[32minfo[39m:    Locking module: Using "in-memory" as default.
+[32minfo[39m:    No workflow to load from D:\Meduza site\node_modules\@medusajs\draft-order\.medusa\server\src\workflows. skipped.
+[32minfo[39m:    No subscriber to load from D:\Meduza site\node_modules\@medusajs\draft-order\.medusa\server\src\subscribers. skipped.
+[32minfo[39m:    No job to load from D:\Meduza site\node_modules\@medusajs\medusa\dist\jobs. skipped.
+[32minfo[39m:    No job to load from D:\Meduza site\node_modules\@medusajs\draft-order\.medusa\server\src\jobs. skipped.
+[32minfo[39m:    Admin URL → http://localhost:9000/app
+[32minfo[39m:    [Watcher] created src\workflows\server-configurator\models\create-server-model.ts created: restarting dev server
+[32minfo[39m:    [Watcher] Reloaded in 519.68ms
+[32minfo[39m:    [Watcher] created src\workflows\server-configurator\models\delete-server-model.ts created: restarting dev server
+[32minfo[39m:    [Watcher] Reloaded in 474.41ms
+[32minfo[39m:    [Watcher] created src\workflows\server-configurator\models\duplicate-server-model.ts created: restarting dev server
+[32minfo[39m:    [Watcher] Reloaded in 786.51ms
+[32minfo[39m:    [Watcher] created src\workflows\server-configurator\models\update-server-model.ts created: restarting dev server
+[32minfo[39m:    [Watcher] Reloaded in 468.50ms
+[32minfo[39m:    [Watcher] created src\workflows\server-configurator\components\create-component.ts created: restarting dev server
+[32minfo[39m:    [Watcher] Reloaded in 498.13ms
+[32minfo[39m:    [Watcher] created src\workflows\server-configurator\components\delete-component.ts created: restarting dev server
+[32minfo[39m:    [Watcher] Reloaded in 477.28ms
+[32minfo[39m:    [Watcher] created src\workflows\server-configurator\components\update-component-applicability.ts created: restarting dev server
+[32minfo[39m:    [Watcher] Reloaded in 445.58ms
+[32minfo[39m:    [Watcher] created src\workflows\server-configurator\components\update-component.ts created: restarting dev server
+[32minfo[39m:    [Watcher] Reloaded in 466.33ms
+[32minfo[39m:    [Watcher] created src\workflows\server-configurator\components\duplicate-component.ts created: restarting dev server
+[32minfo[39m:    [Watcher] Reloaded in 524.81ms
+[32minfo[39m:    [Watcher] created src\workflows\server-configurator\rules\create-rule.ts created: restarting dev server
+[32minfo[39m:    [Watcher] Reloaded in 487.65ms
+[32minfo[39m:    [Watcher] created src\workflows\server-configurator\rules\delete-rule.ts created: restarting dev server
+[32minfo[39m:    [Watcher] Reloaded in 514.86ms
+[32minfo[39m:    [Watcher] created src\workflows\server-configurator\rules\duplicate-rule.ts created: restarting dev server
+[32minfo[39m:    [Watcher] Reloaded in 504.02ms
+[32minfo[39m:    [Watcher] created src\workflows\server-configurator\rules\enable-rule-with-confirmation.ts created: restarting dev server
+[32minfo[39m:    [Watcher] Reloaded in 479.36ms
+[32minfo[39m:    [Watcher] created src\workflows\server-configurator\rules\review-rule.ts created: restarting dev server
+[32minfo[39m:    [Watcher] Reloaded in 462.05ms
+[32minfo[39m:    [Watcher] created src\workflows\server-configurator\rules\update-rule.ts created: restarting dev server
+[32minfo[39m:    [Watcher] Reloaded in 473.94ms
+[32minfo[39m:    [Watcher] created src\workflows\server-configurator\help-annotations\create-help-annotation.ts created: restarting dev server
+[32minfo[39m:    [Watcher] Reloaded in 522.62ms
+[32minfo[39m:    [Watcher] created src\workflows\server-configurator\help-annotations\delete-help-annotation.ts created: restarting dev server
+[32minfo[39m:    [Watcher] Reloaded in 593.13ms
+[32minfo[39m:    [Watcher] created src\workflows\server-configurator\help-annotations\update-help-annotation.ts created: restarting dev server
+[32minfo[39m:    [Watcher] Reloaded in 468.10ms
+[32minfo[39m:    [Watcher] created src\workflows\server-configurator\rule-presets\create-rule-from-preset.ts created: restarting dev server
+[32minfo[39m:    [Watcher] Reloaded in 457.46ms
+[32minfo[39m:    [Watcher] created src\workflows\server-configurator\rule-presets\create-rule-preset.ts created: restarting dev server
+[32minfo[39m:    [Watcher] Reloaded in 474.70ms
+[32minfo[39m:    [Watcher] created src\workflows\server-configurator\rule-presets\delete-rule-preset.ts created: restarting dev server
+[32minfo[39m:    [Watcher] Reloaded in 505.55ms
+[32minfo[39m:    [Watcher] created src\workflows\server-configurator\rule-presets\duplicate-rule-preset.ts created: restarting dev server
+[32minfo[39m:    [Watcher] Reloaded in 470.25ms
+[32minfo[39m:    [Watcher] created src\workflows\server-configurator\rule-presets\update-rule-preset.ts created: restarting dev server
+[32minfo[39m:    [Watcher] Reloaded in 371.80ms
+[32minfo[39m:    redisUrl not found. A fake redis instance will be used.
+[32minfo[39m:    redisUrl not found. A fake redis instance will be used.
+[32minfo[39m:    Skipping instrumentation registration. No register function found.
+[32minfo[39m:    redisUrl not found. A fake redis instance will be used.
+[32minfo[39m:    No link to load from D:\Meduza site\node_modules\@medusajs\draft-order\.medusa\server\src\links. skipped.
+[33mwarn[39m:    Local Event Bus installed. This is not recommended for production.
+[32minfo[39m:    Locking module: Using "in-memory" as default.
+[32minfo[39m:    No workflow to load from D:\Meduza site\node_modules\@medusajs\draft-order\.medusa\server\src\workflows. skipped.
+[32minfo[39m:    No subscriber to load from D:\Meduza site\node_modules\@medusajs\draft-order\.medusa\server\src\subscribers. skipped.
+[32minfo[39m:    No job to load from D:\Meduza site\node_modules\@medusajs\medusa\dist\jobs. skipped.
+[32minfo[39m:    No job to load from D:\Meduza site\node_modules\@medusajs\draft-order\.medusa\server\src\jobs. skipped.
+[32minfo[39m:    Admin URL → http://localhost:9000/app
+[32minfo[39m:    [Watcher] created src\api\admin\server-configurator\middlewares.ts created: restarting dev server
+[32minfo[39m:    [Watcher] Reloaded in 451.31ms
+[32minfo[39m:    [Watcher] created src\api\admin\server-configurator\validators.ts created: restarting dev server
+[32minfo[39m:    [Watcher] Reloaded in 512.37ms
+[32minfo[39m:    [Watcher] created src\api\middlewares.ts created: restarting dev server
+[32minfo[39m:    [Watcher] Reloaded in 491.80ms
+[32minfo[39m:    redisUrl not found. A fake redis instance will be used.
+[32minfo[39m:    redisUrl not found. A fake redis instance will be used.
+[32minfo[39m:    Skipping instrumentation registration. No register function found.
+[32minfo[39m:    redisUrl not found. A fake redis instance will be used.
+[32minfo[39m:    No link to load from D:\Meduza site\node_modules\@medusajs\draft-order\.medusa\server\src\links. skipped.
+[33mwarn[39m:    Local Event Bus installed. This is not recommended for production.
+[32minfo[39m:    Locking module: Using "in-memory" as default.
+[32minfo[39m:    No workflow to load from D:\Meduza site\node_modules\@medusajs\draft-order\.medusa\server\src\workflows. skipped.
+[32minfo[39m:    No subscriber to load from D:\Meduza site\node_modules\@medusajs\draft-order\.medusa\server\src\subscribers. skipped.
+[32minfo[39m:    No job to load from D:\Meduza site\node_modules\@medusajs\draft-order\.medusa\server\src\jobs. skipped.
+[32minfo[39m:    No job to load from D:\Meduza site\node_modules\@medusajs\medusa\dist\jobs. skipped.
+[32minfo[39m:    Admin URL → http://localhost:9000/app
+[32minfo[39m:    [Watcher] modified src\api\admin\server-configurator\models\route.ts modified: restarting dev server
+[32minfo[39m:    [Watcher] Reloaded in 530.73ms
+[32minfo[39m:    [Watcher] modified src\api\admin\server-configurator\models\[id]\route.ts modified: restarting dev server
+[32minfo[39m:    [Watcher] Reloaded in 569.14ms
+[32minfo[39m:    [Watcher] modified src\api\admin\server-configurator\models\[id]\duplicate\route.ts modified: restarting dev server
+[32minfo[39m:    [Watcher] Reloaded in 504.11ms
+[32minfo[39m:    [Watcher] modified src\api\admin\server-configurator\models\[id]\route.ts modified: restarting dev server
+[32minfo[39m:    [Watcher] Reloaded in 503.61ms
+[32minfo[39m:    redisUrl not found. A fake redis instance will be used.
+[32minfo[39m:    redisUrl not found. A fake redis instance will be used.
+[32minfo[39m:    Skipping instrumentation registration. No register function found.
+[32minfo[39m:    redisUrl not found. A fake redis instance will be used.
+[32minfo[39m:    No link to load from D:\Meduza site\node_modules\@medusajs\draft-order\.medusa\server\src\links. skipped.
+[33mwarn[39m:    Local Event Bus installed. This is not recommended for production.
+[32minfo[39m:    Locking module: Using "in-memory" as default.
+[32minfo[39m:    No workflow to load from D:\Meduza site\node_modules\@medusajs\draft-order\.medusa\server\src\workflows. skipped.
+[32minfo[39m:    No subscriber to load from D:\Meduza site\node_modules\@medusajs\draft-order\.medusa\server\src\subscribers. skipped.
+[32minfo[39m:    No job to load from D:\Meduza site\node_modules\@medusajs\medusa\dist\jobs. skipped.
+[32minfo[39m:    No job to load from D:\Meduza site\node_modules\@medusajs\draft-order\.medusa\server\src\jobs. skipped.
+[32minfo[39m:    Admin URL → http://localhost:9000/app
+[32minfo[39m:    [Watcher] modified src\api\admin\server-configurator\components\route.ts modified: restarting dev server
+[32minfo[39m:    [Watcher] Reloaded in 847.63ms
+[32minfo[39m:    [Watcher] modified src\api\admin\server-configurator\components\[id]\route.ts modified: restarting dev server
+[32minfo[39m:    [Watcher] Reloaded in 478.82ms
+[32minfo[39m:    [Watcher] modified src\api\admin\server-configurator\components\[id]\duplicate\route.ts modified: restarting dev server
+[32minfo[39m:    [Watcher] Reloaded in 487.45ms
+[32minfo[39m:    [Watcher] modified src\api\admin\server-configurator\components\[id]\route.ts modified: restarting dev server
+[32minfo[39m:    [Watcher] Reloaded in 436.16ms
+[32minfo[39m:    [Watcher] modified src\api\admin\server-configurator\components\[id]\applicability\route.ts modified: restarting dev server
+[32minfo[39m:    [Watcher] Reloaded in 735.22ms
+[32minfo[39m:    [Watcher] modified src\api\admin\server-configurator\components\[id]\duplicate\route.ts modified: restarting dev server
+[32minfo[39m:    [Watcher] Reloaded in 392.09ms
+[32minfo[39m:    redisUrl not found. A fake redis instance will be used.
+[32minfo[39m:    redisUrl not found. A fake redis instance will be used.
+[32minfo[39m:    Skipping instrumentation registration. No register function found.
+[32minfo[39m:    redisUrl not found. A fake redis instance will be used.
+[32minfo[39m:    No link to load from D:\Meduza site\node_modules\@medusajs\draft-order\.medusa\server\src\links. skipped.
+[33mwarn[39m:    Local Event Bus installed. This is not recommended for production.
+[32minfo[39m:    Locking module: Using "in-memory" as default.
+[32minfo[39m:    No workflow to load from D:\Meduza site\node_modules\@medusajs\draft-order\.medusa\server\src\workflows. skipped.
+[32minfo[39m:    No subscriber to load from D:\Meduza site\node_modules\@medusajs\draft-order\.medusa\server\src\subscribers. skipped.
+[32minfo[39m:    No job to load from D:\Meduza site\node_modules\@medusajs\draft-order\.medusa\server\src\jobs. skipped.
+[32minfo[39m:    No job to load from D:\Meduza site\node_modules\@medusajs\medusa\dist\jobs. skipped.
+[32minfo[39m:    Admin URL → http://localhost:9000/app
+[32minfo[39m:    [Watcher] modified src\api\admin\server-configurator\rules\route.ts modified: restarting dev server
+[32minfo[39m:    [Watcher] Reloaded in 524.15ms
+[32minfo[39m:    [Watcher] modified src\api\admin\server-configurator\rules\[id]\route.ts modified: restarting dev server
+[32minfo[39m:    [Watcher] Reloaded in 847.94ms
+[32minfo[39m:    [Watcher] modified src\api\admin\server-configurator\rules\[id]\duplicate\route.ts modified: restarting dev server
+[32minfo[39m:    [Watcher] Reloaded in 447.15ms
+[32minfo[39m:    [Watcher] modified src\api\admin\server-configurator\rules\[id]\route.ts modified: restarting dev server
+[32minfo[39m:    [Watcher] Reloaded in 787.05ms
+[32minfo[39m:    [Watcher] modified src\api\admin\server-configurator\rules\[id]\review\route.ts modified: restarting dev server
+[32minfo[39m:    [Watcher] Reloaded in 609.14ms
+[32minfo[39m:    [Watcher] modified src\api\admin\server-configurator\rules\[id]\enable-with-confirmation\route.ts modified: restarting dev server
+[32minfo[39m:    [Watcher] Reloaded in 530.02ms
+[32minfo[39m:    [Watcher] modified src\api\admin\server-configurator\rules\[id]\duplicate\route.ts modified: restarting dev server
+[32minfo[39m:    [Watcher] Reloaded in 826.17ms
+[32minfo[39m:    redisUrl not found. A fake redis instance will be used.
+[32minfo[39m:    redisUrl not found. A fake redis instance will be used.
+[32minfo[39m:    Skipping instrumentation registration. No register function found.
+[32minfo[39m:    redisUrl not found. A fake redis instance will be used.
+[32minfo[39m:    No link to load from D:\Meduza site\node_modules\@medusajs\draft-order\.medusa\server\src\links. skipped.
+[33mwarn[39m:    Local Event Bus installed. This is not recommended for production.
+[32minfo[39m:    Locking module: Using "in-memory" as default.
+[32minfo[39m:    No workflow to load from D:\Meduza site\node_modules\@medusajs\draft-order\.medusa\server\src\workflows. skipped.
+[32minfo[39m:    No subscriber to load from D:\Meduza site\node_modules\@medusajs\draft-order\.medusa\server\src\subscribers. skipped.
+[32minfo[39m:    No job to load from D:\Meduza site\node_modules\@medusajs\draft-order\.medusa\server\src\jobs. skipped.
+[32minfo[39m:    No job to load from D:\Meduza site\node_modules\@medusajs\medusa\dist\jobs. skipped.
+[32minfo[39m:    Admin URL → http://localhost:9000/app
+[32minfo[39m:    [Watcher] modified src\api\admin\server-configurator\rule-presets\route.ts modified: restarting dev server
+[32minfo[39m:    [Watcher] Reloaded in 936.82ms
+[32minfo[39m:    [Watcher] modified src\api\admin\server-configurator\rule-presets\[id]\route.ts modified: restarting dev server
+[32minfo[39m:    [Watcher] Reloaded in 513.44ms
+[32minfo[39m:    [Watcher] modified src\api\admin\server-configurator\rule-presets\[id]\duplicate\route.ts modified: restarting dev server
+[32minfo[39m:    [Watcher] Reloaded in 462.26ms
+[32minfo[39m:    [Watcher] modified src\api\admin\server-configurator\rule-presets\[id]\route.ts modified: restarting dev server
+[32minfo[39m:    [Watcher] Reloaded in 468.73ms
+[32minfo[39m:    [Watcher] modified src\api\admin\server-configurator\rule-presets\[id]\create-rule\route.ts modified: restarting dev server
+[32minfo[39m:    [Watcher] Reloaded in 442.35ms
+[32minfo[39m:    [Watcher] modified src\api\admin\server-configurator\rule-presets\[id]\duplicate\route.ts modified: restarting dev server
+[32minfo[39m:    [Watcher] Reloaded in 451.46ms
+[32minfo[39m:    redisUrl not found. A fake redis instance will be used.
+[32minfo[39m:    redisUrl not found. A fake redis instance will be used.
+[32minfo[39m:    Skipping instrumentation registration. No register function found.
+[32minfo[39m:    redisUrl not found. A fake redis instance will be used.
+[32minfo[39m:    No link to load from D:\Meduza site\node_modules\@medusajs\draft-order\.medusa\server\src\links. skipped.
+[33mwarn[39m:    Local Event Bus installed. This is not recommended for production.
+[32minfo[39m:    Locking module: Using "in-memory" as default.
+[32minfo[39m:    No workflow to load from D:\Meduza site\node_modules\@medusajs\draft-order\.medusa\server\src\workflows. skipped.
+[32minfo[39m:    No subscriber to load from D:\Meduza site\node_modules\@medusajs\draft-order\.medusa\server\src\subscribers. skipped.
+[32minfo[39m:    No job to load from D:\Meduza site\node_modules\@medusajs\medusa\dist\jobs. skipped.
+[32minfo[39m:    No job to load from D:\Meduza site\node_modules\@medusajs\draft-order\.medusa\server\src\jobs. skipped.
+[32minfo[39m:    Admin URL → http://localhost:9000/app
+[32minfo[39m:    [Watcher] modified src\api\admin\server-configurator\help-annotations\route.ts modified: restarting dev server
+[32minfo[39m:    [Watcher] Reloaded in 547.28ms
+[32minfo[39m:    [Watcher] modified src\api\admin\server-configurator\help-annotations\[id]\route.ts modified: restarting dev server
+[32minfo[39m:    [Watcher] Reloaded in 778.81ms
+[32minfo[39m:    [Watcher] modified src\api\admin\server-configurator\help-annotations\route.ts modified: restarting dev server
+[32minfo[39m:    [Watcher] Reloaded in 429.94ms
+[32minfo[39m:    [Watcher] modified src\api\admin\server-configurator\simulate\route.ts modified: restarting dev server
+[32minfo[39m:    [Watcher] Reloaded in 437.28ms
+[32minfo[39m:    redisUrl not found. A fake redis instance will be used.
+[32minfo[39m:    redisUrl not found. A fake redis instance will be used.
+[32minfo[39m:    Skipping instrumentation registration. No register function found.
+[32minfo[39m:    redisUrl not found. A fake redis instance will be used.
+[32minfo[39m:    No link to load from D:\Meduza site\node_modules\@medusajs\draft-order\.medusa\server\src\links. skipped.
+[33mwarn[39m:    Local Event Bus installed. This is not recommended for production.
+[32minfo[39m:    Locking module: Using "in-memory" as default.
+[32minfo[39m:    No workflow to load from D:\Meduza site\node_modules\@medusajs\draft-order\.medusa\server\src\workflows. skipped.
+[32minfo[39m:    No subscriber to load from D:\Meduza site\node_modules\@medusajs\draft-order\.medusa\server\src\subscribers. skipped.
+[32minfo[39m:    No job to load from D:\Meduza site\node_modules\@medusajs\draft-order\.medusa\server\src\jobs. skipped.
+[32minfo[39m:    No job to load from D:\Meduza site\node_modules\@medusajs\medusa\dist\jobs. skipped.
+[32minfo[39m:    Admin URL → http://localhost:9000/app
+[32minfo[39m:    [Watcher] modified src\api\admin\server-configurator\simulate\route.ts modified: restarting dev server
+[32minfo[39m:    [Watcher] Reloaded in 530.02ms
+[32minfo[39m:    redisUrl not found. A fake redis instance will be used.
+[32minfo[39m:    redisUrl not found. A fake redis instance will be used.
+[32minfo[39m:    Skipping instrumentation registration. No register function found.
+[32minfo[39m:    redisUrl not found. A fake redis instance will be used.
+[32minfo[39m:    No link to load from D:\Meduza site\node_modules\@medusajs\draft-order\.medusa\server\src\links. skipped.
+[33mwarn[39m:    Local Event Bus installed. This is not recommended for production.
+[32minfo[39m:    Locking module: Using "in-memory" as default.
+[32minfo[39m:    No workflow to load from D:\Meduza site\node_modules\@medusajs\draft-order\.medusa\server\src\workflows. skipped.
+[32minfo[39m:    No subscriber to load from D:\Meduza site\node_modules\@medusajs\draft-order\.medusa\server\src\subscribers. skipped.
+[32minfo[39m:    No job to load from D:\Meduza site\node_modules\@medusajs\medusa\dist\jobs. skipped.
+[32minfo[39m:    No job to load from D:\Meduza site\node_modules\@medusajs\draft-order\.medusa\server\src\jobs. skipped.
+[32minfo[39m:    Admin URL → http://localhost:9000/app
+[32mhttp[39m:    GET /store/server-configurator/models ← - (200) - 27.403 ms
+[32mhttp[39m:    GET /store/customers/me?fields=%2Aorders ← - (401) - 6.365 ms
+[32mhttp[39m:    GET /store/customers/me?fields=%2Aorders ← - (401) - 6.346 ms
+[32mhttp[39m:    GET /store/customers/me?fields=%2Aorders ← - (401) - 6.421 ms
+[32mhttp[39m:    GET /store/customers/me?fields=%2Aorders ← - (401) - 7.612 ms
+[32mhttp[39m:    GET /store/customers/me?fields=%2Aorders ← - (401) - 8.247 ms
+[32mhttp[39m:    GET /store/customers/me?fields=%2Aorders ← - (401) - 6.886 ms
+[32mhttp[39m:    GET /store/customers/me?fields=%2Aorders ← - (401) - 3.765 ms
+[32mhttp[39m:    GET /store/customers/me?fields=%2Aorders ← - (401) - 5.402 ms
+[32mhttp[39m:    GET /store/customers/me?fields=%2Aorders ← - (401) - 8.253 ms
+[32mhttp[39m:    GET /store/customers/me?fields=%2Aorders ← - (401) - 9.372 ms
+[32mhttp[39m:    GET /store/customers/me?fields=%2Aorders ← - (401) - 13.110 ms
+[32mhttp[39m:    GET /store/customers/me?fields=%2Aorders ← - (401) - 7.398 ms
+[32mhttp[39m:    GET /store/customers/me?fields=%2Aorders ← - (401) - 6.304 ms
+[32mhttp[39m:    GET /store/customers/me?fields=%2Aorders ← - (401) - 4.859 ms
+[32mhttp[39m:    GET /store/customers/me?fields=%2Aorders ← - (401) - 6.273 ms
+[32mhttp[39m:    GET /store/customers/me?fields=%2Aorders ← - (401) - 5.087 ms
+[32mhttp[39m:    GET /store/customers/me?fields=%2Aorders ← - (401) - 8.773 ms
+[32mhttp[39m:    GET /store/customers/me?fields=%2Aorders ← - (401) - 6.694 ms
+[32mhttp[39m:    GET /store/customers/me?fields=%2Aorders ← - (401) - 4.444 ms
+[32mhttp[39m:    GET /store/customers/me?fields=%2Aorders ← - (401) - 6.429 ms
+[32mhttp[39m:    GET /store/customers/me?fields=%2Aorders ← - (401) - 3.337 ms
+[32mhttp[39m:    GET /store/customers/me?fields=%2Aorders ← - (401) - 6.453 ms
+[32mhttp[39m:    GET /store/customers/me?fields=%2Aorders ← - (401) - 3.955 ms
+[32mhttp[39m:    GET /store/customers/me?fields=%2Aorders ← - (401) - 2.858 ms
+[32mhttp[39m:    GET /store/customers/me?fields=%2Aorders ← - (401) - 6.372 ms
+[32mhttp[39m:    GET /store/customers/me?fields=%2Aorders ← - (401) - 6.957 ms
+[32mhttp[39m:    GET /store/customers/me?fields=%2Aorders ← - (401) - 7.218 ms
+[32mhttp[39m:    GET /store/customers/me?fields=%2Aorders ← - (401) - 7.025 ms
+[32mhttp[39m:    GET /store/customers/me?fields=%2Aorders ← - (401) - 3.787 ms
+[32mhttp[39m:    GET /store/customers/me?fields=%2Aorders ← - (401) - 3.011 ms
+[32mhttp[39m:    GET /store/customers/me?fields=%2Aorders ← - (401) - 3.700 ms
+[32mhttp[39m:    GET /store/customers/me?fields=%2Aorders ← - (401) - 3.450 ms
+[32mhttp[39m:    GET /store/customers/me?fields=%2Aorders ← - (401) - 6.577 ms
+[32mhttp[39m:    GET /store/customers/me?fields=%2Aorders ← - (401) - 5.599 ms
+[32mhttp[39m:    GET /store/customers/me?fields=%2Aorders ← - (401) - 7.544 ms
+[32mhttp[39m:    GET /store/customers/me?fields=%2Aorders ← - (401) - 7.974 ms
+[32mhttp[39m:    GET /store/customers/me?fields=%2Aorders ← - (401) - 7.403 ms
+[32mhttp[39m:    GET /store/customers/me?fields=%2Aorders ← - (401) - 6.967 ms
+[32mhttp[39m:    GET /store/customers/me?fields=%2Aorders ← - (401) - 7.904 ms
+[32mhttp[39m:    GET /store/customers/me?fields=%2Aorders ← - (401) - 7.437 ms
+[32mhttp[39m:    GET /store/customers/me?fields=%2Aorders ← - (401) - 7.933 ms
+[32mhttp[39m:    GET /store/customers/me?fields=%2Aorders ← - (401) - 6.719 ms
+[32mhttp[39m:    GET /store/customers/me?fields=%2Aorders ← - (401) - 6.804 ms
+[32mhttp[39m:    GET /store/customers/me?fields=%2Aorders ← - (401) - 7.710 ms
+[32mhttp[39m:    GET /store/customers/me?fields=%2Aorders ← - (401) - 8.261 ms
+[32mhttp[39m:    GET /store/customers/me?fields=%2Aorders ← - (401) - 7.413 ms
+[32mhttp[39m:    GET /store/customers/me?fields=%2Aorders ← - (401) - 7.543 ms
+[32mhttp[39m:    GET /store/customers/me?fields=%2Aorders ← - (401) - 8.190 ms
+[32mhttp[39m:    GET /store/customers/me?fields=%2Aorders ← - (401) - 7.242 ms
+[32mhttp[39m:    GET /store/customers/me?fields=%2Aorders ← - (401) - 6.537 ms
+[32mhttp[39m:    GET /store/customers/me?fields=%2Aorders ← - (401) - 10.184 ms
+[32mhttp[39m:    GET /store/customers/me?fields=%2Aorders ← - (401) - 8.898 ms
+[32mhttp[39m:    GET /store/customers/me?fields=%2Aorders ← - (401) - 6.723 ms
+[32mhttp[39m:    GET /store/customers/me?fields=%2Aorders ← - (401) - 7.183 ms
+[32mhttp[39m:    GET /store/customers/me?fields=%2Aorders ← - (401) - 9.104 ms
+[32mhttp[39m:    GET /store/customers/me?fields=%2Aorders ← - (401) - 9.583 ms
+[32mhttp[39m:    GET /store/customers/me?fields=%2Aorders ← - (401) - 8.635 ms
+[32mhttp[39m:    GET /store/customers/me?fields=%2Aorders ← - (401) - 10.107 ms
+[32mhttp[39m:    GET /store/customers/me?fields=%2Aorders ← - (401) - 9.890 ms
+[32mhttp[39m:    GET /store/customers/me?fields=%2Aorders ← - (401) - 7.256 ms
+[32mhttp[39m:    GET /store/customers/me?fields=%2Aorders ← - (401) - 8.401 ms
+[32mhttp[39m:    GET /store/customers/me?fields=%2Aorders ← - (401) - 4.544 ms
+[32mhttp[39m:    GET /store/customers/me?fields=%2Aorders ← - (401) - 4.628 ms
+[32mhttp[39m:    GET /store/customers/me?fields=%2Aorders ← - (401) - 6.115 ms
+[32mhttp[39m:    GET /store/customers/me?fields=%2Aorders ← - (401) - 5.151 ms
+[32mhttp[39m:    GET /store/customers/me?fields=%2Aorders ← - (401) - 6.182 ms
+[32mhttp[39m:    GET /store/customers/me?fields=%2Aorders ← - (401) - 6.404 ms
+[32mhttp[39m:    GET /store/customers/me?fields=%2Aorders ← - (401) - 6.786 ms
+[32mhttp[39m:    GET /store/customers/me?fields=%2Aorders ← - (401) - 6.701 ms
+[32mhttp[39m:    GET /store/customers/me?fields=%2Aorders ← - (401) - 4.583 ms
+[32mhttp[39m:    POST /auth/user/emailpass ← - (200) - 103.956 ms
+[32mhttp[39m:    POST /admin/auth/token ← - (401) - 4.680 ms
+[32mhttp[39m:    POST /auth/user/emailpass ← - (200) - 72.490 ms
+[32mhttp[39m:    GET /admin/server-configurator/models ← - (200) - 9.136 ms
+[32mhttp[39m:    POST /admin/server-configurator/models ← - (201) - 19.700 ms
+[32minfo[39m:    Invalid request: Field 'family' is required; Field 'generation' is required; Field 'model' is required
+[32mhttp[39m:    POST /admin/server-configurator/models ← - (400) - 4.461 ms
+[32mhttp[39m:    GET /admin/server-configurator/components ← - (200) - 15.442 ms
+[32mhttp[39m:    POST /admin/server-configurator/components ← - (201) - 9.198 ms
+[32mhttp[39m:    DELETE /admin/server-configurator/models/01KXDMQ5MGPC85N6AQ2NNA96TG ← - (200) - 9.314 ms
+[32mhttp[39m:    DELETE /admin/server-configurator/components/01KXDMQ5P6B9NNRF5G8BEXEPNN ← - (200) - 7.940 ms
+[32mhttp[39m:    GET /store/server-configurator/models ← - (200) - 7.148 ms
+[32mhttp[39m:    GET /store/server-configurator/models/hpe-proliant-dl360-gen10-8sff ← - (200) - 10.925 ms
+[32mhttp[39m:    GET /store/server-configurator/models/hpe-proliant-dl360-gen10-8sff/options ← - (200) - 20.801 ms
+[32mhttp[39m:    GET /store/server-configurator/catalog-facets ← - (200) - 10.584 ms
+[32mhttp[39m:    GET /store/server-configurator/models ← - (200) - 8.122 ms
+[32mhttp[39m:    GET /store/server-configurator/catalog-facets ← - (200) - 6.842 ms
+[32mhttp[39m:    GET /store/server-configurator/help-annotations?page=catalog ← - (200) - 14.292 ms
+[32mhttp[39m:    GET /store/server-configurator/models/hpe-proliant-dl360-gen10-8sff ← - (200) - 6.260 ms
+[32mhttp[39m:    GET /store/server-configurator/models/hpe-proliant-dl360-gen10-8sff/options ← - (200) - 15.866 ms
+[32mhttp[39m:    GET /store/server-configurator/help-annotations?page=configurator&slug=hpe-proliant-dl360-gen10-8sff ← - (200) - 7.986 ms
+[32mhttp[39m:    GET /store/server-configurator/models/hpe-proliant-dl360-gen10-10sff-nvme-premium ← - (200) - 7.399 ms
+[32mhttp[39m:    GET /store/server-configurator/models/hpe-proliant-dl360-gen10-10sff-nvme-premium/options ← - (200) - 15.038 ms
+[32mhttp[39m:    GET /store/server-configurator/help-annotations?page=configurator&slug=hpe-proliant-dl360-gen10-10sff-nvme-premium ← - (200) - 9.972 ms
+[32mhttp[39m:    GET /store/server-configurator/models/hpe-proliant-dl360-gen10-4lff ← - (200) - 7.375 ms
+[32mhttp[39m:    GET /store/server-configurator/models/hpe-proliant-dl360-gen10-4lff/options ← - (200) - 14.225 ms
+[32mhttp[39m:    GET /store/server-configurator/help-annotations?page=configurator&slug=hpe-proliant-dl360-gen10-4lff ← - (200) - 8.214 ms
+[32mhttp[39m:    GET /store/server-configurator/models ← - (200) - 14.009 ms
+[32mhttp[39m:    GET /store/server-configurator/catalog-facets ← - (200) - 12.426 ms
+[32mhttp[39m:    GET /store/server-configurator/help-annotations?page=catalog ← - (200) - 16.856 ms
+[32mhttp[39m:    GET /store/server-configurator/models/hpe-proliant-dl360-gen10-8sff ← - (200) - 21.557 ms
+[32mhttp[39m:    GET /store/server-configurator/models/hpe-proliant-dl360-gen10-8sff/options ← - (200) - 18.170 ms
+[32mhttp[39m:    GET /store/server-configurator/help-annotations?page=configurator&slug=hpe-proliant-dl360-gen10-8sff ← - (200) - 13.374 ms
+[32mhttp[39m:    GET /store/server-configurator/models/hpe-proliant-dl360-gen10-10sff-nvme-premium ← - (200) - 7.805 ms
+[32mhttp[39m:    GET /store/server-configurator/models/hpe-proliant-dl360-gen10-10sff-nvme-premium/options ← - (200) - 20.945 ms
+[32mhttp[39m:    GET /store/server-configurator/help-annotations?page=configurator&slug=hpe-proliant-dl360-gen10-10sff-nvme-premium ← - (200) - 10.133 ms
+[32mhttp[39m:    GET /store/server-configurator/models/hpe-proliant-dl360-gen10-4lff ← - (200) - 7.404 ms
+[32mhttp[39m:    GET /store/server-configurator/models/hpe-proliant-dl360-gen10-4lff/options ← - (200) - 16.892 ms
+[32mhttp[39m:    GET /store/server-configurator/help-annotations?page=configurator&slug=hpe-proliant-dl360-gen10-4lff ← - (200) - 10.467 ms
+[32mhttp[39m:    GET /store/server-configurator/models ← - (200) - 7.991 ms
+[32mhttp[39m:    GET /store/server-configurator/help-annotations?page=catalog ← - (200) - 11.879 ms
+[32mhttp[39m:    GET /store/server-configurator/catalog-facets ← - (200) - 12.172 ms
+[32mhttp[39m:    GET /store/server-configurator/models/hpe-proliant-dl360-gen10-8sff ← - (200) - 3.583 ms
+[32mhttp[39m:    GET /store/server-configurator/models/hpe-proliant-dl360-gen10-8sff/options ← - (200) - 11.058 ms
+[32mhttp[39m:    GET /store/server-configurator/help-annotations?page=configurator&slug=hpe-proliant-dl360-gen10-8sff ← - (200) - 6.153 ms
+[32mhttp[39m:    GET /app/server-configurator/source-of-truth ← http://localhost:9000/app/server-configurator/source-of-truth (304) - 20.329 ms
+[32mhttp[39m:    GET /app/entry.jsx ← http://localhost:9000/app/server-configurator/source-of-truth (200) - 32.094 ms
+[32mhttp[39m:    GET /app/index.css ← http://localhost:9000/app/entry.jsx (304) - 3139.790 ms
+[32mhttp[39m:    GET /admin/feature-flags ← http://localhost:9000/app/server-configurator/source-of-truth (304) - 1.757 ms
+[32mhttp[39m:    GET /admin/users/me ← http://localhost:9000/app/server-configurator/source-of-truth (401) - 0.900 ms
+[32mhttp[39m:    GET /admin/users/me ← http://localhost:9000/app/server-configurator/source-of-truth (401) - 0.547 ms
+[32mhttp[39m:    GET /cloud/auth ← http://localhost:9000/app/login (304) - 1.857 ms
+[32mhttp[39m:    POST /auth/user/emailpass ← http://localhost:9000/app/login (200) - 76.795 ms
+[32mhttp[39m:    POST /auth/session ← http://localhost:9000/app/login (200) - 2.058 ms
+[32mhttp[39m:    GET /admin/users/me ← http://localhost:9000/app/server-configurator/source-of-truth (304) - 8.374 ms
+[32mhttp[39m:    GET /admin/layouts/configurations?limit=1&fields=id ← http://localhost:9000/app/server-configurator/source-of-truth (304) - 35.865 ms
+[32mhttp[39m:    GET /admin/notifications?limit=1&offset=0&fields=created_at ← http://localhost:9000/app/server-configurator/source-of-truth (304) - 40.226 ms
+[32mhttp[39m:    GET /admin/server-configurator/source-of-truth ← http://localhost:9000/app/server-configurator/source-of-truth (304) - 74.489 ms
+[32mhttp[39m:    GET /admin/stores ← http://localhost:9000/app/server-configurator/source-of-truth (304) - 95.080 ms
+[32mhttp[39m:    GET /admin/products?q=&limit=3&fields=id%2Ctitle%2Cthumbnail%2C-type%2C-collection%2C-options%2C-tags%2C-images%2C-variants%2C-sales_channels ← http://localhost:9000/app/server-configurator/source-of-truth (304) - 37.970 ms
+[32mhttp[39m:    GET /admin/layouts/sidebar/configuration ← http://localhost:9000/app/server-configurator/source-of-truth (304) - 125.130 ms
+[32mhttp[39m:    GET /admin/layouts/topbar/configuration ← http://localhost:9000/app/server-configurator/source-of-truth (304) - 113.573 ms
+[32mhttp[39m:    GET /admin/orders?q=&limit=3&fields=id%2Cdisplay_id%2Cemail ← http://localhost:9000/app/server-configurator/source-of-truth (304) - 86.891 ms
+[32mhttp[39m:    GET /admin/product-variants?q=&limit=3&fields=id%2Ctitle%2Csku%2Cproduct_id ← http://localhost:9000/app/server-configurator/source-of-truth (304) - 41.961 ms
+[32mhttp[39m:    GET /admin/product-categories?limit=3&fields=id%2Cname ← http://localhost:9000/app/server-configurator/source-of-truth (304) - 51.249 ms
+[32mhttp[39m:    GET /admin/collections?q=&limit=3&fields=id%2Ctitle ← http://localhost:9000/app/server-configurator/source-of-truth (304) - 37.474 ms
+[32mhttp[39m:    GET /admin/customers?q=&limit=3&fields=id%2Cemail%2Cfirst_name%2Clast_name ← http://localhost:9000/app/server-configurator/source-of-truth (304) - 36.011 ms
+[32mhttp[39m:    GET /admin/customer-groups?q=&limit=3&fields=id%2Cname ← http://localhost:9000/app/server-configurator/source-of-truth (304) - 40.675 ms
+[32mhttp[39m:    GET /admin/inventory-items?q=&limit=3&fields=id%2Ctitle%2Csku ← http://localhost:9000/app/server-configurator/source-of-truth (304) - 35.623 ms
+[32mhttp[39m:    GET /admin/promotions?q=&limit=3&fields=id%2Ccode%2Cstatus ← http://localhost:9000/app/server-configurator/source-of-truth (304) - 34.481 ms
+[32mhttp[39m:    GET /admin/price-lists?q=&limit=3&fields=id%2Ctitle ← http://localhost:9000/app/server-configurator/source-of-truth (304) - 29.296 ms
+[32mhttp[39m:    GET /admin/campaigns?q=&limit=3&fields=id%2Cname ← http://localhost:9000/app/server-configurator/source-of-truth (304) - 34.337 ms
+[32mhttp[39m:    GET /admin/users?q=&limit=3&fields=id%2Cemail%2Cfirst_name%2Clast_name ← http://localhost:9000/app/server-configurator/source-of-truth (304) - 31.675 ms
+[32mhttp[39m:    GET /admin/regions?q=&limit=3&fields=id%2Cname ← http://localhost:9000/app/server-configurator/source-of-truth (304) - 26.259 ms
+[32mhttp[39m:    GET /admin/tax-regions?q=&limit=3&fields=id%2Ccountry_code%2Cprovince_code ← http://localhost:9000/app/server-configurator/source-of-truth (304) - 18.599 ms
+[32mhttp[39m:    GET /admin/return-reasons?q=&limit=3&fields=id%2Clabel%2Cvalue ← http://localhost:9000/app/server-configurator/source-of-truth (304) - 20.153 ms
+[32mhttp[39m:    GET /admin/sales-channels?q=&limit=3&fields=id%2Cname ← http://localhost:9000/app/server-configurator/source-of-truth (304) - 22.397 ms
+[32mhttp[39m:    GET /admin/product-types?q=&limit=3&fields=id%2Cvalue ← http://localhost:9000/app/server-configurator/source-of-truth (304) - 17.235 ms
+[32mhttp[39m:    GET /admin/product-tags?q=&limit=3&fields=id%2Cvalue ← http://localhost:9000/app/server-configurator/source-of-truth (304) - 16.088 ms
+[32mhttp[39m:    GET /admin/stock-locations?q=&limit=3&fields=id%2Cname ← http://localhost:9000/app/server-configurator/source-of-truth (304) - 16.713 ms
+[32mhttp[39m:    GET /admin/shipping-profiles?q=&limit=3&fields=id%2Cname ← http://localhost:9000/app/server-configurator/source-of-truth (304) - 26.698 ms
+[32mhttp[39m:    GET /admin/api-keys?q=&limit=3&fields=id%2Ctitle%2Credacted&type=publishable ← http://localhost:9000/app/server-configurator/source-of-truth (304) - 16.457 ms
+[32mhttp[39m:    GET /admin/api-keys?q=&limit=3&fields=id%2Ctitle%2Credacted&type=secret ← http://localhost:9000/app/server-configurator/source-of-truth (304) - 7.315 ms
+[32mhttp[39m:    GET /admin/server-configurator/import-review/components?limit=150 ← http://localhost:9000/app/server-configurator/import-review (200) - 13.331 ms
+[32mhttp[39m:    GET /admin/server-configurator/models ← http://localhost:9000/app/server-configurator/models (304) - 5.722 ms
+[32mhttp[39m:    GET /admin/products/prod_01KX64KAMCZFAPE6E838CM4FNH ← http://localhost:9000/app/server-configurator/models (200) - 60.775 ms
+[32mhttp[39m:    GET /admin/products/prod_01KX64KAMC37JVJ4AF8ATZ4SXD ← http://localhost:9000/app/server-configurator/models (200) - 24.558 ms
+[32mhttp[39m:    GET /admin/notifications?limit=1&offset=0&fields=created_at ← http://localhost:9000/app/server-configurator/models (304) - 4.832 ms
+[32mhttp[39m:    GET /admin/notifications?limit=1&offset=0&fields=created_at ← http://localhost:9000/app/server-configurator (304) - 11.043 ms
+[32mhttp[39m:    GET /admin/server-configurator/help-annotations ← http://localhost:9000/app/server-configurator/help-annotations (200) - 9.931 ms
+[32mhttp[39m:    GET /admin/server-configurator/components ← http://localhost:9000/app/server-configurator/components (200) - 10.247 ms
+[32mhttp[39m:    GET /admin/server-configurator/rules ← http://localhost:9000/app/server-configurator/rules (200) - 11.736 ms
+[32mhttp[39m:    GET /admin/server-configurator/import-review/components?limit=150 ← http://localhost:9000/app/server-configurator/import-review (304) - 10.251 ms
+[32minfo[39m:    [Watcher] created src\workflows\server-configurator-cart\types.ts created: restarting dev server
+[32minfo[39m:    [Watcher] Reloaded in 533.39ms
+[32minfo[39m:    [Watcher] modified src\api\middlewares.ts modified: restarting dev server
+[32minfo[39m:    [Watcher] Reloaded in 483.41ms
+[32minfo[39m:    [Watcher] modified src\api\store\server-configurator\add-to-cart\route.ts modified: restarting dev server
+[32minfo[39m:    [Watcher] Reloaded in 571.08ms
+[32minfo[39m:    [Watcher] created src\workflows\server-configurator-cart\add-configured-server-to-cart.ts created: restarting dev server
+[32minfo[39m:    [Watcher] Reloaded in 811.11ms
+[32minfo[39m:    [Watcher] created src\workflows\server-configurator-cart\steps\add-base-variant-to-cart-step.ts created: restarting dev server
+[32minfo[39m:    [Watcher] Reloaded in 564.29ms
+[32minfo[39m:    [Watcher] created src\workflows\server-configurator-cart\steps\calculate-configuration-price-step.ts created: restarting dev server
+[32minfo[39m:    [Watcher] Reloaded in 511.80ms
+[32minfo[39m:    [Watcher] created src\workflows\server-configurator-cart\steps\attach-configuration-metadata-step.ts created: restarting dev server
+[32minfo[39m:    [Watcher] Reloaded in 880.01ms
+[32minfo[39m:    [Watcher] created src\workflows\server-configurator-cart\steps\save-configuration-step.ts created: restarting dev server
+[32minfo[39m:    [Watcher] Reloaded in 989.39ms
+[32minfo[39m:    [Watcher] created src\workflows\server-configurator-cart\steps\validate-configuration-step.ts created: restarting dev server
+[32minfo[39m:    [Watcher] Reloaded in 928.45ms
+[32minfo[39m:    [Watcher] created src\api\store\server-configurator\middlewares.ts created: restarting dev server
+[32minfo[39m:    [Watcher] Reloaded in 1269.76ms
+[32minfo[39m:    [Watcher] created src\api\store\server-configurator\validators.ts created: restarting dev server
+[32minfo[39m:    [Watcher] Reloaded in 1441.15ms
+[32minfo[39m:    redisUrl not found. A fake redis instance will be used.
+[32minfo[39m:    redisUrl not found. A fake redis instance will be used.
+[32minfo[39m:    Skipping instrumentation registration. No register function found.
+[32minfo[39m:    redisUrl not found. A fake redis instance will be used.
+[32minfo[39m:    No link to load from D:\Meduza site\node_modules\@medusajs\draft-order\.medusa\server\src\links. skipped.
+[33mwarn[39m:    Local Event Bus installed. This is not recommended for production.
+[32minfo[39m:    Locking module: Using "in-memory" as default.
+[32minfo[39m:    No workflow to load from D:\Meduza site\node_modules\@medusajs\draft-order\.medusa\server\src\workflows. skipped.
+[32minfo[39m:    No subscriber to load from D:\Meduza site\node_modules\@medusajs\draft-order\.medusa\server\src\subscribers. skipped.
+[32minfo[39m:    No job to load from D:\Meduza site\node_modules\@medusajs\medusa\dist\jobs. skipped.
+[32minfo[39m:    No job to load from D:\Meduza site\node_modules\@medusajs\draft-order\.medusa\server\src\jobs. skipped.
+[32minfo[39m:    Admin URL → http://localhost:9000/app
+[32mhttp[39m:    GET /admin/server-configurator/models ← http://localhost:9000/app/server-configurator/models (401) - 7.426 ms
+[32minfo[39m:    [Watcher] modified src\workflows\server-configurator-cart\steps\add-base-variant-to-cart-step.ts modified: restarting dev server
+[32minfo[39m:    [Watcher] Reloaded in 538.65ms
+[32minfo[39m:    redisUrl not found. A fake redis instance will be used.
+[32minfo[39m:    redisUrl not found. A fake redis instance will be used.
+[32minfo[39m:    Skipping instrumentation registration. No register function found.
+[32minfo[39m:    redisUrl not found. A fake redis instance will be used.
+[32minfo[39m:    No link to load from D:\Meduza site\node_modules\@medusajs\draft-order\.medusa\server\src\links. skipped.
+[33mwarn[39m:    Local Event Bus installed. This is not recommended for production.
+[32minfo[39m:    Locking module: Using "in-memory" as default.
+[32minfo[39m:    No workflow to load from D:\Meduza site\node_modules\@medusajs\draft-order\.medusa\server\src\workflows. skipped.
+[32minfo[39m:    No subscriber to load from D:\Meduza site\node_modules\@medusajs\draft-order\.medusa\server\src\subscribers. skipped.
+[32minfo[39m:    No job to load from D:\Meduza site\node_modules\@medusajs\medusa\dist\jobs. skipped.
+[32minfo[39m:    No job to load from D:\Meduza site\node_modules\@medusajs\draft-order\.medusa\server\src\jobs. skipped.
+[32minfo[39m:    Admin URL → http://localhost:9000/app
+[32mhttp[39m:    GET /admin/products?limit=20&offset=0&is_giftcard=false&fields=id%2Ctitle%2Chandle%2Cstatus%2C%2Acollection%2C%2Asales_channels%2Cvariants.id%2Cthumbnail%2C-type%2C-options%2C-tags%2C-images%2C-variants ← http://localhost:9000/app/products (401) - 8.715 ms
+[32mhttp[39m:    GET /admin/product-types?limit=1000&offset=0 ← http://localhost:9000/app/products (401) - 1.901 ms
+[32mhttp[39m:    GET /admin/product-tags?limit=1000&offset=0 ← http://localhost:9000/app/products (401) - 0.926 ms
+[32mhttp[39m:    GET /admin/sales-channels?limit=1000&fields=id%2Cname ← http://localhost:9000/app/products (401) - 2.936 ms
+[32mhttp[39m:    GET /admin/layouts/product.list/configuration ← http://localhost:9000/app/products (401) - 3.066 ms
+[32mhttp[39m:    GET /cloud/auth ← http://localhost:9000/app/login (304) - 13.397 ms
+[32mhttp[39m:    POST /auth/user/emailpass ← http://localhost:9000/app/login (200) - 143.470 ms
+[32mhttp[39m:    POST /auth/session ← http://localhost:9000/app/login (200) - 8.555 ms
+[32mhttp[39m:    GET /admin/users/me ← http://localhost:9000/app/products (304) - 60.514 ms
+[32mhttp[39m:    GET /admin/layouts/configurations?limit=1&fields=id ← http://localhost:9000/app/products (304) - 62.332 ms
+[32mhttp[39m:    GET /admin/notifications?limit=1&offset=0&fields=created_at ← http://localhost:9000/app/products (304) - 71.252 ms
+[32mhttp[39m:    GET /admin/layouts/sidebar/configuration ← http://localhost:9000/app/products (304) - 102.019 ms
+[32mhttp[39m:    GET /admin/stores ← http://localhost:9000/app/products (304) - 121.491 ms
+[32mhttp[39m:    GET /admin/layouts/topbar/configuration ← http://localhost:9000/app/products (304) - 101.755 ms
+[32mhttp[39m:    GET /admin/product-types?limit=1000&offset=0 ← http://localhost:9000/app/products (304) - 32.525 ms
+[32mhttp[39m:    GET /admin/product-tags?limit=1000&offset=0 ← http://localhost:9000/app/products (304) - 34.492 ms
+[32mhttp[39m:    GET /admin/sales-channels?limit=1000&fields=id%2Cname ← http://localhost:9000/app/products (304) - 23.759 ms
+[32mhttp[39m:    GET /admin/products?limit=20&offset=0&is_giftcard=false&fields=id%2Ctitle%2Chandle%2Cstatus%2C%2Acollection%2C%2Asales_channels%2Cvariants.id%2Cthumbnail%2C-type%2C-options%2C-tags%2C-images%2C-variants ← http://localhost:9000/app/products (304) - 75.913 ms
+[32mhttp[39m:    GET /admin/products?q=&limit=3&fields=id%2Ctitle%2Cthumbnail%2C-type%2C-collection%2C-options%2C-tags%2C-images%2C-variants%2C-sales_channels ← http://localhost:9000/app/products (304) - 31.309 ms
+[32mhttp[39m:    GET /admin/orders?q=&limit=3&fields=id%2Cdisplay_id%2Cemail ← http://localhost:9000/app/products (304) - 46.746 ms
+[32mhttp[39m:    GET /admin/layouts/product.list/configuration ← http://localhost:9000/app/products (304) - 64.088 ms
+[32mhttp[39m:    GET /admin/product-variants?q=&limit=3&fields=id%2Ctitle%2Csku%2Cproduct_id ← http://localhost:9000/app/products (304) - 23.200 ms
+[32mhttp[39m:    GET /admin/product-categories?limit=3&fields=id%2Cname ← http://localhost:9000/app/products (304) - 21.735 ms
+[32mhttp[39m:    GET /admin/collections?q=&limit=3&fields=id%2Ctitle ← http://localhost:9000/app/products (304) - 30.799 ms
+[32mhttp[39m:    GET /admin/customers?q=&limit=3&fields=id%2Cemail%2Cfirst_name%2Clast_name ← http://localhost:9000/app/products (304) - 17.964 ms
+[32mhttp[39m:    GET /admin/customer-groups?q=&limit=3&fields=id%2Cname ← http://localhost:9000/app/products (304) - 26.950 ms
+[32mhttp[39m:    GET /admin/inventory-items?q=&limit=3&fields=id%2Ctitle%2Csku ← http://localhost:9000/app/products (304) - 17.658 ms
+[32mhttp[39m:    GET /admin/promotions?q=&limit=3&fields=id%2Ccode%2Cstatus ← http://localhost:9000/app/products (304) - 28.816 ms
+[32mhttp[39m:    GET /admin/campaigns?q=&limit=3&fields=id%2Cname ← http://localhost:9000/app/products (304) - 29.119 ms
+[32mhttp[39m:    GET /admin/price-lists?q=&limit=3&fields=id%2Ctitle ← http://localhost:9000/app/products (304) - 16.689 ms
+[32mhttp[39m:    GET /admin/users?q=&limit=3&fields=id%2Cemail%2Cfirst_name%2Clast_name ← http://localhost:9000/app/products (304) - 25.630 ms
+[32mhttp[39m:    GET /admin/regions?q=&limit=3&fields=id%2Cname ← http://localhost:9000/app/products (304) - 16.030 ms
+[32mhttp[39m:    GET /admin/tax-regions?q=&limit=3&fields=id%2Ccountry_code%2Cprovince_code ← http://localhost:9000/app/products (304) - 32.551 ms
+[32mhttp[39m:    GET /admin/return-reasons?q=&limit=3&fields=id%2Clabel%2Cvalue ← http://localhost:9000/app/products (304) - 21.221 ms
+[32mhttp[39m:    GET /admin/sales-channels?q=&limit=3&fields=id%2Cname ← http://localhost:9000/app/products (304) - 21.759 ms
+[32mhttp[39m:    GET /admin/product-types?q=&limit=3&fields=id%2Cvalue ← http://localhost:9000/app/products (304) - 32.384 ms
+[32mhttp[39m:    GET /admin/product-tags?q=&limit=3&fields=id%2Cvalue ← http://localhost:9000/app/products (304) - 16.847 ms
+[32mhttp[39m:    GET /admin/stock-locations?q=&limit=3&fields=id%2Cname ← http://localhost:9000/app/products (304) - 30.538 ms
+[32mhttp[39m:    GET /admin/shipping-profiles?q=&limit=3&fields=id%2Cname ← http://localhost:9000/app/products (304) - 19.861 ms
+[32mhttp[39m:    GET /admin/api-keys?q=&limit=3&fields=id%2Ctitle%2Credacted&type=publishable ← http://localhost:9000/app/products (304) - 19.725 ms
+[32mhttp[39m:    GET /admin/api-keys?q=&limit=3&fields=id%2Ctitle%2Credacted&type=secret ← http://localhost:9000/app/products (304) - 21.706 ms
+[32mhttp[39m:    GET /admin/products/prod_01KX64KAMC109HSEFA6Q94881Z?fields=%2Acategories%2C%2Ashipping_profile%2C-variants ← http://localhost:9000/app/products (200) - 36.926 ms
+[32mhttp[39m:    GET /admin/sales-channels ← http://localhost:9000/app/products/prod_01KX64KAMC109HSEFA6Q94881Z (304) - 10.303 ms
+[32mhttp[39m:    GET /admin/layouts/product.details/configuration ← http://localhost:9000/app/products/prod_01KX64KAMC109HSEFA6Q94881Z (304) - 22.906 ms
+[32mhttp[39m:    GET /admin/products/prod_01KX64KAMC109HSEFA6Q94881Z/variants?order=variant_rank&limit=10&fields=title%2Csku%2Cthumbnail%2C%2Aoptions%2Ccreated_at%2C%2Ainventory_items.inventory.location_levels%2Cinventory_quantity%2Cmanage_inventory ← http://localhost:9000/app/products/prod_01KX64KAMC109HSEFA6Q94881Z (200) - 50.307 ms
+[32mhttp[39m:    GET /store/server-configurator/models ← - (200) - 22.632 ms
+[32mhttp[39m:    GET /store/customers/me?fields=%2Aorders ← - (401) - 6.687 ms
+[32mhttp[39m:    GET /store/customers/me?fields=%2Aorders ← - (401) - 5.853 ms
+[32mhttp[39m:    GET /store/customers/me?fields=%2Aorders ← - (401) - 5.760 ms
+[32mhttp[39m:    GET /store/customers/me?fields=%2Aorders ← - (401) - 6.157 ms
+[32mhttp[39m:    GET /store/customers/me?fields=%2Aorders ← - (401) - 4.758 ms
+[32mhttp[39m:    GET /store/customers/me?fields=%2Aorders ← - (401) - 4.328 ms
+[32mhttp[39m:    GET /store/customers/me?fields=%2Aorders ← - (401) - 7.001 ms
+[32mhttp[39m:    GET /store/customers/me?fields=%2Aorders ← - (401) - 4.766 ms
+[32mhttp[39m:    GET /store/customers/me?fields=%2Aorders ← - (401) - 10.920 ms
+[32mhttp[39m:    GET /store/customers/me?fields=%2Aorders ← - (401) - 12.460 ms
+[32mhttp[39m:    GET /store/customers/me?fields=%2Aorders ← - (401) - 6.556 ms
+[32mhttp[39m:    GET /store/customers/me?fields=%2Aorders ← - (401) - 4.213 ms
+[32mhttp[39m:    GET /store/customers/me?fields=%2Aorders ← - (401) - 8.409 ms
+[32mhttp[39m:    GET /store/customers/me?fields=%2Aorders ← - (401) - 8.047 ms
+[32mhttp[39m:    GET /store/customers/me?fields=%2Aorders ← - (401) - 6.587 ms
+[32mhttp[39m:    GET /store/customers/me?fields=%2Aorders ← - (401) - 6.875 ms
+[32mhttp[39m:    GET /store/customers/me?fields=%2Aorders ← - (401) - 8.636 ms
+[32mhttp[39m:    GET /store/customers/me?fields=%2Aorders ← - (401) - 7.969 ms
+[32mhttp[39m:    GET /store/customers/me?fields=%2Aorders ← - (401) - 8.071 ms
+[32mhttp[39m:    GET /store/customers/me?fields=%2Aorders ← - (401) - 5.969 ms
+[32mhttp[39m:    GET /store/customers/me?fields=%2Aorders ← - (401) - 6.418 ms
+[32mhttp[39m:    GET /store/customers/me?fields=%2Aorders ← - (401) - 6.894 ms
+[32mhttp[39m:    GET /store/customers/me?fields=%2Aorders ← - (401) - 5.733 ms
+[32mhttp[39m:    GET /store/customers/me?fields=%2Aorders ← - (401) - 4.461 ms
+[32mhttp[39m:    GET /store/customers/me?fields=%2Aorders ← - (401) - 5.033 ms
+[32mhttp[39m:    GET /store/customers/me?fields=%2Aorders ← - (401) - 8.012 ms
+[32mhttp[39m:    GET /store/customers/me?fields=%2Aorders ← - (401) - 5.700 ms
+[32mhttp[39m:    GET /store/customers/me?fields=%2Aorders ← - (401) - 9.886 ms
+[32mhttp[39m:    GET /store/customers/me?fields=%2Aorders ← - (401) - 9.658 ms
+[32mhttp[39m:    GET /store/customers/me?fields=%2Aorders ← - (401) - 5.003 ms
+[32mhttp[39m:    GET /store/customers/me?fields=%2Aorders ← - (401) - 3.507 ms
+[32mhttp[39m:    GET /store/customers/me?fields=%2Aorders ← - (401) - 5.296 ms
+[32mhttp[39m:    GET /store/customers/me?fields=%2Aorders ← - (401) - 3.425 ms
+[32mhttp[39m:    GET /store/customers/me?fields=%2Aorders ← - (401) - 5.136 ms
+[32mhttp[39m:    GET /store/customers/me?fields=%2Aorders ← - (401) - 2.942 ms
+[32mhttp[39m:    GET /store/customers/me?fields=%2Aorders ← - (401) - 9.987 ms
+[32mhttp[39m:    GET /store/customers/me?fields=%2Aorders ← - (401) - 8.061 ms
+[32mhttp[39m:    GET /store/customers/me?fields=%2Aorders ← - (401) - 9.200 ms
+[32mhttp[39m:    GET /store/customers/me?fields=%2Aorders ← - (401) - 8.021 ms
+[32mhttp[39m:    GET /store/customers/me?fields=%2Aorders ← - (401) - 8.073 ms
+[32mhttp[39m:    GET /store/customers/me?fields=%2Aorders ← - (401) - 6.415 ms
+[32mhttp[39m:    GET /store/customers/me?fields=%2Aorders ← - (401) - 6.402 ms
+[32mhttp[39m:    GET /store/customers/me?fields=%2Aorders ← - (401) - 6.476 ms
+[32mhttp[39m:    GET /store/customers/me?fields=%2Aorders ← - (401) - 5.984 ms
+[32mhttp[39m:    GET /store/customers/me?fields=%2Aorders ← - (401) - 11.844 ms
+[32mhttp[39m:    GET /store/customers/me?fields=%2Aorders ← - (401) - 10.793 ms
+[32mhttp[39m:    GET /store/customers/me?fields=%2Aorders ← - (401) - 5.974 ms
+[32mhttp[39m:    GET /store/customers/me?fields=%2Aorders ← - (401) - 8.361 ms
+[32mhttp[39m:    GET /store/customers/me?fields=%2Aorders ← - (401) - 9.687 ms
+[32mhttp[39m:    GET /store/customers/me?fields=%2Aorders ← - (401) - 9.829 ms
+[32mhttp[39m:    GET /store/customers/me?fields=%2Aorders ← - (401) - 9.023 ms
+[32mhttp[39m:    GET /store/customers/me?fields=%2Aorders ← - (401) - 7.009 ms
+[32mhttp[39m:    GET /store/customers/me?fields=%2Aorders ← - (401) - 6.170 ms
+[32mhttp[39m:    GET /store/customers/me?fields=%2Aorders ← - (401) - 7.598 ms
+[32mhttp[39m:    GET /store/customers/me?fields=%2Aorders ← - (401) - 8.122 ms
+[32mhttp[39m:    GET /store/customers/me?fields=%2Aorders ← - (401) - 9.523 ms
+[32mhttp[39m:    GET /store/customers/me?fields=%2Aorders ← - (401) - 9.144 ms
+[32mhttp[39m:    GET /store/customers/me?fields=%2Aorders ← - (401) - 8.599 ms
+[32mhttp[39m:    GET /store/customers/me?fields=%2Aorders ← - (401) - 5.921 ms
+[32mhttp[39m:    GET /store/customers/me?fields=%2Aorders ← - (401) - 5.734 ms
+[32mhttp[39m:    GET /store/customers/me?fields=%2Aorders ← - (401) - 7.390 ms
+[32mhttp[39m:    GET /store/customers/me?fields=%2Aorders ← - (401) - 8.827 ms
+[32mhttp[39m:    GET /store/customers/me?fields=%2Aorders ← - (401) - 8.605 ms
+[32mhttp[39m:    GET /store/customers/me?fields=%2Aorders ← - (401) - 6.256 ms
+[32mhttp[39m:    GET /store/customers/me?fields=%2Aorders ← - (401) - 6.917 ms
+[32mhttp[39m:    GET /store/customers/me?fields=%2Aorders ← - (401) - 8.926 ms
+[32mhttp[39m:    GET /store/customers/me?fields=%2Aorders ← - (401) - 9.376 ms
+[32mhttp[39m:    GET /store/customers/me?fields=%2Aorders ← - (401) - 8.095 ms
+[32mhttp[39m:    GET /store/customers/me?fields=%2Aorders ← - (401) - 7.987 ms
+[32mhttp[39m:    GET /store/customers/me?fields=%2Aorders ← - (401) - 9.897 ms
+[32mhttp[39m:    GET /store/server-configurator/models ← - (200) - 10.346 ms
+[32mhttp[39m:    GET /store/server-configurator/models ← - (200) - 23.724 ms
+[32mhttp[39m:    GET /store/server-configurator/help-annotations?page=catalog ← - (200) - 30.951 ms
+[32mhttp[39m:    GET /store/server-configurator/help-annotations?page=catalog ← - (200) - 30.549 ms
+[32mhttp[39m:    GET /store/server-configurator/catalog-facets ← - (200) - 6.588 ms
+[32mhttp[39m:    GET /store/server-configurator/catalog-facets ← - (200) - 9.697 ms
+[32mhttp[39m:    GET /store/server-configurator/models/hpe-proliant-dl360-gen10-10sff-nvme-premium ← - (200) - 10.247 ms
+[32mhttp[39m:    GET /store/server-configurator/models/hpe-proliant-dl360-gen10-4lff ← - (200) - 10.919 ms
+[32mhttp[39m:    GET /store/server-configurator/models/hpe-proliant-dl360-gen10-8sff ← - (200) - 17.018 ms
+[32mhttp[39m:    GET /store/server-configurator/models/hpe-proliant-dl360-gen10-10sff-nvme-premium/options ← - (200) - 30.813 ms
+[32mhttp[39m:    GET /store/server-configurator/models/hpe-proliant-dl360-gen10-4lff/options ← - (200) - 40.593 ms
+[32mhttp[39m:    GET /store/server-configurator/models/hpe-proliant-dl360-gen10-8sff/options ← - (200) - 49.286 ms
+[32mhttp[39m:    GET /store/server-configurator/help-annotations?page=configurator&slug=hpe-proliant-dl360-gen10-10sff-nvme-premium ← - (200) - 14.820 ms
+[32mhttp[39m:    GET /store/server-configurator/help-annotations?page=configurator&slug=hpe-proliant-dl360-gen10-4lff ← - (200) - 15.075 ms
+[32mhttp[39m:    GET /store/server-configurator/help-annotations?page=configurator&slug=hpe-proliant-dl360-gen10-8sff ← - (200) - 16.822 ms
+[32minfo[39m:    [Watcher] modified src\workflows\server-configurator-cart\steps\add-base-variant-to-cart-step.ts modified: restarting dev server
+Error: Command failed: taskkill /PID 10024 /F /T
+�訡��: �� 㤠���� ���� ����� "10024".
+
+    at genericNodeError (node:internal/errors:985:15)
+    at wrappedFn (node:internal/errors:539:14)
+    at checkExecSyncError (node:child_process:925:11)
+    at execSync (node:child_process:997:15)
+    at Object.restart (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:185:19)
+    at Object.handleFileChange (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:236:20)
+    at FSWatcher.<anonymous> (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:246:26)
+    at FSWatcher.emit (node:events:508:28)
+    at FSWatcher.emit (node:domain:489:12)
+    at FSWatcher.emitWithAll (D:\Meduza site\node_modules\chokidar\index.js:436:14) {
+  status: 128,
+  signal: null,
+  output: [
+    null,
+    <Buffer >,
+    <Buffer 8e e8 a8 a1 aa a0 3a 20 8d a5 20 e3 a4 a0 a5 e2 e1 ef 20 ad a0 a9 e2 a8 20 af e0 ae e6 a5 e1 e1 20 22 31 30 30 32 34 22 2e 0d 0a>
+  ],
+  pid: 47560,
+  stdout: <Buffer >,
+  stderr: <Buffer 8e e8 a8 a1 aa a0 3a 20 8d a5 20 e3 a4 a0 a5 e2 e1 ef 20 ad a0 a9 e2 a8 20 af e0 ae e6 a5 e1 e1 20 22 31 30 30 32 34 22 2e 0d 0a>
+}
+[32minfo[39m:    [Watcher] modified src\workflows\server-configurator-cart\steps\attach-configuration-metadata-step.ts modified: restarting dev server
+Error: Command failed: taskkill /PID 10024 /F /T
+�訡��: �� 㤠���� ���� ����� "10024".
+
+    at genericNodeError (node:internal/errors:985:15)
+    at wrappedFn (node:internal/errors:539:14)
+    at checkExecSyncError (node:child_process:925:11)
+    at execSync (node:child_process:997:15)
+    at Object.restart (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:185:19)
+    at Object.handleFileChange (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:236:20)
+    at FSWatcher.<anonymous> (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:246:26)
+    at FSWatcher.emit (node:events:508:28)
+    at FSWatcher.emit (node:domain:489:12)
+    at FSWatcher.emitWithAll (D:\Meduza site\node_modules\chokidar\index.js:436:14) {
+  status: 128,
+  signal: null,
+  output: [
+    null,
+    <Buffer >,
+    <Buffer 8e e8 a8 a1 aa a0 3a 20 8d a5 20 e3 a4 a0 a5 e2 e1 ef 20 ad a0 a9 e2 a8 20 af e0 ae e6 a5 e1 e1 20 22 31 30 30 32 34 22 2e 0d 0a>
+  ],
+  pid: 63328,
+  stdout: <Buffer >,
+  stderr: <Buffer 8e e8 a8 a1 aa a0 3a 20 8d a5 20 e3 a4 a0 a5 e2 e1 ef 20 ad a0 a9 e2 a8 20 af e0 ae e6 a5 e1 e1 20 22 31 30 30 32 34 22 2e 0d 0a>
+}
+[32minfo[39m:    [Watcher] modified src\workflows\server-configurator-cart\steps\add-base-variant-to-cart-step.ts modified: restarting dev server
+Error: Command failed: taskkill /PID 10024 /F /T
+�訡��: �� 㤠���� ���� ����� "10024".
+
+    at genericNodeError (node:internal/errors:985:15)
+    at wrappedFn (node:internal/errors:539:14)
+    at checkExecSyncError (node:child_process:925:11)
+    at execSync (node:child_process:997:15)
+    at Object.restart (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:185:19)
+    at Object.handleFileChange (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:236:20)
+    at FSWatcher.<anonymous> (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:246:26)
+    at FSWatcher.emit (node:events:508:28)
+    at FSWatcher.emit (node:domain:489:12)
+    at FSWatcher.emitWithAll (D:\Meduza site\node_modules\chokidar\index.js:436:14) {
+  status: 128,
+  signal: null,
+  output: [
+    null,
+    <Buffer >,
+    <Buffer 8e e8 a8 a1 aa a0 3a 20 8d a5 20 e3 a4 a0 a5 e2 e1 ef 20 ad a0 a9 e2 a8 20 af e0 ae e6 a5 e1 e1 20 22 31 30 30 32 34 22 2e 0d 0a>
+  ],
+  pid: 52304,
+  stdout: <Buffer >,
+  stderr: <Buffer 8e e8 a8 a1 aa a0 3a 20 8d a5 20 e3 a4 a0 a5 e2 e1 ef 20 ad a0 a9 e2 a8 20 af e0 ae e6 a5 e1 e1 20 22 31 30 30 32 34 22 2e 0d 0a>
+}
+[32minfo[39m:    [Watcher] modified src\workflows\server-configurator-cart\steps\add-base-variant-to-cart-step.ts modified: restarting dev server
+Error: Command failed: taskkill /PID 10024 /F /T
+�訡��: �� 㤠���� ���� ����� "10024".
+
+    at genericNodeError (node:internal/errors:985:15)
+    at wrappedFn (node:internal/errors:539:14)
+    at checkExecSyncError (node:child_process:925:11)
+    at execSync (node:child_process:997:15)
+    at Object.restart (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:185:19)
+    at Object.handleFileChange (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:236:20)
+    at FSWatcher.<anonymous> (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:246:26)
+    at FSWatcher.emit (node:events:508:28)
+    at FSWatcher.emit (node:domain:489:12)
+    at FSWatcher.emitWithAll (D:\Meduza site\node_modules\chokidar\index.js:436:14) {
+  status: 128,
+  signal: null,
+  output: [
+    null,
+    <Buffer >,
+    <Buffer 8e e8 a8 a1 aa a0 3a 20 8d a5 20 e3 a4 a0 a5 e2 e1 ef 20 ad a0 a9 e2 a8 20 af e0 ae e6 a5 e1 e1 20 22 31 30 30 32 34 22 2e 0d 0a>
+  ],
+  pid: 7000,
+  stdout: <Buffer >,
+  stderr: <Buffer 8e e8 a8 a1 aa a0 3a 20 8d a5 20 e3 a4 a0 a5 e2 e1 ef 20 ad a0 a9 e2 a8 20 af e0 ae e6 a5 e1 e1 20 22 31 30 30 32 34 22 2e 0d 0a>
+}
+[32minfo[39m:    [Watcher] created src\modules\server-configurator\models\component-pack.ts created: restarting dev server
+Error: Command failed: taskkill /PID 10024 /F /T
+�訡��: �� 㤠���� ���� ����� "10024".
+
+    at genericNodeError (node:internal/errors:985:15)
+    at wrappedFn (node:internal/errors:539:14)
+    at checkExecSyncError (node:child_process:925:11)
+    at execSync (node:child_process:997:15)
+    at Object.restart (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:185:19)
+    at Object.handleFileChange (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:236:20)
+    at FSWatcher.<anonymous> (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:243:26)
+    at FSWatcher.emit (node:events:508:28)
+    at FSWatcher.emit (node:domain:489:12)
+    at FSWatcher.emitWithAll (D:\Meduza site\node_modules\chokidar\index.js:436:14) {
+  status: 128,
+  signal: null,
+  output: [
+    null,
+    <Buffer >,
+    <Buffer 8e e8 a8 a1 aa a0 3a 20 8d a5 20 e3 a4 a0 a5 e2 e1 ef 20 ad a0 a9 e2 a8 20 af e0 ae e6 a5 e1 e1 20 22 31 30 30 32 34 22 2e 0d 0a>
+  ],
+  pid: 57752,
+  stdout: <Buffer >,
+  stderr: <Buffer 8e e8 a8 a1 aa a0 3a 20 8d a5 20 e3 a4 a0 a5 e2 e1 ef 20 ad a0 a9 e2 a8 20 af e0 ae e6 a5 e1 e1 20 22 31 30 30 32 34 22 2e 0d 0a>
+}
+[32minfo[39m:    [Watcher] modified src\modules\server-configurator\service.ts modified: restarting dev server
+Error: Command failed: taskkill /PID 10024 /F /T
+�訡��: �� 㤠���� ���� ����� "10024".
+
+    at genericNodeError (node:internal/errors:985:15)
+    at wrappedFn (node:internal/errors:539:14)
+    at checkExecSyncError (node:child_process:925:11)
+    at execSync (node:child_process:997:15)
+    at Object.restart (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:185:19)
+    at Object.handleFileChange (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:236:20)
+    at FSWatcher.<anonymous> (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:246:26)
+    at FSWatcher.emit (node:events:508:28)
+    at FSWatcher.emit (node:domain:489:12)
+    at FSWatcher.emitWithAll (D:\Meduza site\node_modules\chokidar\index.js:436:14) {
+  status: 128,
+  signal: null,
+  output: [
+    null,
+    <Buffer >,
+    <Buffer 8e e8 a8 a1 aa a0 3a 20 8d a5 20 e3 a4 a0 a5 e2 e1 ef 20 ad a0 a9 e2 a8 20 af e0 ae e6 a5 e1 e1 20 22 31 30 30 32 34 22 2e 0d 0a>
+  ],
+  pid: 63480,
+  stdout: <Buffer >,
+  stderr: <Buffer 8e e8 a8 a1 aa a0 3a 20 8d a5 20 e3 a4 a0 a5 e2 e1 ef 20 ad a0 a9 e2 a8 20 af e0 ae e6 a5 e1 e1 20 22 31 30 30 32 34 22 2e 0d 0a>
+}
+[32minfo[39m:    [Watcher] modified src\api\admin\server-configurator\validators.ts modified: restarting dev server
+Error: Command failed: taskkill /PID 10024 /F /T
+�訡��: �� 㤠���� ���� ����� "10024".
+
+    at genericNodeError (node:internal/errors:985:15)
+    at wrappedFn (node:internal/errors:539:14)
+    at checkExecSyncError (node:child_process:925:11)
+    at execSync (node:child_process:997:15)
+    at Object.restart (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:185:19)
+    at Object.handleFileChange (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:236:20)
+    at FSWatcher.<anonymous> (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:246:26)
+    at FSWatcher.emit (node:events:508:28)
+    at FSWatcher.emit (node:domain:489:12)
+    at FSWatcher.emitWithAll (D:\Meduza site\node_modules\chokidar\index.js:436:14) {
+  status: 128,
+  signal: null,
+  output: [
+    null,
+    <Buffer >,
+    <Buffer 8e e8 a8 a1 aa a0 3a 20 8d a5 20 e3 a4 a0 a5 e2 e1 ef 20 ad a0 a9 e2 a8 20 af e0 ae e6 a5 e1 e1 20 22 31 30 30 32 34 22 2e 0d 0a>
+  ],
+  pid: 4912,
+  stdout: <Buffer >,
+  stderr: <Buffer 8e e8 a8 a1 aa a0 3a 20 8d a5 20 e3 a4 a0 a5 e2 e1 ef 20 ad a0 a9 e2 a8 20 af e0 ae e6 a5 e1 e1 20 22 31 30 30 32 34 22 2e 0d 0a>
+}
+[32minfo[39m:    [Watcher] modified src\api\admin\server-configurator\middlewares.ts modified: restarting dev server
+Error: Command failed: taskkill /PID 10024 /F /T
+�訡��: �� 㤠���� ���� ����� "10024".
+
+    at genericNodeError (node:internal/errors:985:15)
+    at wrappedFn (node:internal/errors:539:14)
+    at checkExecSyncError (node:child_process:925:11)
+    at execSync (node:child_process:997:15)
+    at Object.restart (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:185:19)
+    at Object.handleFileChange (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:236:20)
+    at FSWatcher.<anonymous> (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:246:26)
+    at FSWatcher.emit (node:events:508:28)
+    at FSWatcher.emit (node:domain:489:12)
+    at FSWatcher.emitWithAll (D:\Meduza site\node_modules\chokidar\index.js:436:14) {
+  status: 128,
+  signal: null,
+  output: [
+    null,
+    <Buffer >,
+    <Buffer 8e e8 a8 a1 aa a0 3a 20 8d a5 20 e3 a4 a0 a5 e2 e1 ef 20 ad a0 a9 e2 a8 20 af e0 ae e6 a5 e1 e1 20 22 31 30 30 32 34 22 2e 0d 0a>
+  ],
+  pid: 59036,
+  stdout: <Buffer >,
+  stderr: <Buffer 8e e8 a8 a1 aa a0 3a 20 8d a5 20 e3 a4 a0 a5 e2 e1 ef 20 ad a0 a9 e2 a8 20 af e0 ae e6 a5 e1 e1 20 22 31 30 30 32 34 22 2e 0d 0a>
+}
+[32minfo[39m:    [Watcher] created src\modules\server-configurator\models\component-pack-item.ts created: restarting dev server
+Error: Command failed: taskkill /PID 10024 /F /T
+�訡��: �� 㤠���� ���� ����� "10024".
+
+    at genericNodeError (node:internal/errors:985:15)
+    at wrappedFn (node:internal/errors:539:14)
+    at checkExecSyncError (node:child_process:925:11)
+    at execSync (node:child_process:997:15)
+    at Object.restart (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:185:19)
+    at Object.handleFileChange (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:236:20)
+    at FSWatcher.<anonymous> (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:243:26)
+    at FSWatcher.emit (node:events:508:28)
+    at FSWatcher.emit (node:domain:489:12)
+    at FSWatcher.emitWithAll (D:\Meduza site\node_modules\chokidar\index.js:436:14) {
+  status: 128,
+  signal: null,
+  output: [
+    null,
+    <Buffer >,
+    <Buffer 8e e8 a8 a1 aa a0 3a 20 8d a5 20 e3 a4 a0 a5 e2 e1 ef 20 ad a0 a9 e2 a8 20 af e0 ae e6 a5 e1 e1 20 22 31 30 30 32 34 22 2e 0d 0a>
+  ],
+  pid: 47508,
+  stdout: <Buffer >,
+  stderr: <Buffer 8e e8 a8 a1 aa a0 3a 20 8d a5 20 e3 a4 a0 a5 e2 e1 ef 20 ad a0 a9 e2 a8 20 af e0 ae e6 a5 e1 e1 20 22 31 30 30 32 34 22 2e 0d 0a>
+}
+[32minfo[39m:    [Watcher] created src\modules\server-configurator\migrations\Migration20260713170000.ts created: restarting dev server
+Error: Command failed: taskkill /PID 10024 /F /T
+�訡��: �� 㤠���� ���� ����� "10024".
+
+    at genericNodeError (node:internal/errors:985:15)
+    at wrappedFn (node:internal/errors:539:14)
+    at checkExecSyncError (node:child_process:925:11)
+    at execSync (node:child_process:997:15)
+    at Object.restart (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:185:19)
+    at Object.handleFileChange (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:236:20)
+    at FSWatcher.<anonymous> (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:243:26)
+    at FSWatcher.emit (node:events:508:28)
+    at FSWatcher.emit (node:domain:489:12)
+    at FSWatcher.emitWithAll (D:\Meduza site\node_modules\chokidar\index.js:436:14) {
+  status: 128,
+  signal: null,
+  output: [
+    null,
+    <Buffer >,
+    <Buffer 8e e8 a8 a1 aa a0 3a 20 8d a5 20 e3 a4 a0 a5 e2 e1 ef 20 ad a0 a9 e2 a8 20 af e0 ae e6 a5 e1 e1 20 22 31 30 30 32 34 22 2e 0d 0a>
+  ],
+  pid: 19516,
+  stdout: <Buffer >,
+  stderr: <Buffer 8e e8 a8 a1 aa a0 3a 20 8d a5 20 e3 a4 a0 a5 e2 e1 ef 20 ad a0 a9 e2 a8 20 af e0 ae e6 a5 e1 e1 20 22 31 30 30 32 34 22 2e 0d 0a>
+}
+[32minfo[39m:    [Watcher] modified src\api\admin\server-configurator\middlewares.ts modified: restarting dev server
+Error: Command failed: taskkill /PID 10024 /F /T
+�訡��: �� 㤠���� ���� ����� "10024".
+
+    at genericNodeError (node:internal/errors:985:15)
+    at wrappedFn (node:internal/errors:539:14)
+    at checkExecSyncError (node:child_process:925:11)
+    at execSync (node:child_process:997:15)
+    at Object.restart (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:185:19)
+    at Object.handleFileChange (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:236:20)
+    at FSWatcher.<anonymous> (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:246:26)
+    at FSWatcher.emit (node:events:508:28)
+    at FSWatcher.emit (node:domain:489:12)
+    at FSWatcher.emitWithAll (D:\Meduza site\node_modules\chokidar\index.js:436:14) {
+  status: 128,
+  signal: null,
+  output: [
+    null,
+    <Buffer >,
+    <Buffer 8e e8 a8 a1 aa a0 3a 20 8d a5 20 e3 a4 a0 a5 e2 e1 ef 20 ad a0 a9 e2 a8 20 af e0 ae e6 a5 e1 e1 20 22 31 30 30 32 34 22 2e 0d 0a>
+  ],
+  pid: 38428,
+  stdout: <Buffer >,
+  stderr: <Buffer 8e e8 a8 a1 aa a0 3a 20 8d a5 20 e3 a4 a0 a5 e2 e1 ef 20 ad a0 a9 e2 a8 20 af e0 ae e6 a5 e1 e1 20 22 31 30 30 32 34 22 2e 0d 0a>
+}
+[32minfo[39m:    [Watcher] modified src\api\admin\server-configurator\middlewares.ts modified: restarting dev server
+Error: Command failed: taskkill /PID 10024 /F /T
+�訡��: �� 㤠���� ���� ����� "10024".
+
+    at genericNodeError (node:internal/errors:985:15)
+    at wrappedFn (node:internal/errors:539:14)
+    at checkExecSyncError (node:child_process:925:11)
+    at execSync (node:child_process:997:15)
+    at Object.restart (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:185:19)
+    at Object.handleFileChange (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:236:20)
+    at FSWatcher.<anonymous> (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:246:26)
+    at FSWatcher.emit (node:events:508:28)
+    at FSWatcher.emit (node:domain:489:12)
+    at FSWatcher.emitWithAll (D:\Meduza site\node_modules\chokidar\index.js:436:14) {
+  status: 128,
+  signal: null,
+  output: [
+    null,
+    <Buffer >,
+    <Buffer 8e e8 a8 a1 aa a0 3a 20 8d a5 20 e3 a4 a0 a5 e2 e1 ef 20 ad a0 a9 e2 a8 20 af e0 ae e6 a5 e1 e1 20 22 31 30 30 32 34 22 2e 0d 0a>
+  ],
+  pid: 58588,
+  stdout: <Buffer >,
+  stderr: <Buffer 8e e8 a8 a1 aa a0 3a 20 8d a5 20 e3 a4 a0 a5 e2 e1 ef 20 ad a0 a9 e2 a8 20 af e0 ae e6 a5 e1 e1 20 22 31 30 30 32 34 22 2e 0d 0a>
+}
+[32minfo[39m:    [Watcher] created src\workflows\server-configurator\component-packs\shared\helpers.ts created: restarting dev server
+Error: Command failed: taskkill /PID 10024 /F /T
+�訡��: �� 㤠���� ���� ����� "10024".
+
+    at genericNodeError (node:internal/errors:985:15)
+    at wrappedFn (node:internal/errors:539:14)
+    at checkExecSyncError (node:child_process:925:11)
+    at execSync (node:child_process:997:15)
+    at Object.restart (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:185:19)
+    at Object.handleFileChange (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:236:20)
+    at FSWatcher.<anonymous> (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:243:26)
+    at FSWatcher.emit (node:events:508:28)
+    at FSWatcher.emit (node:domain:489:12)
+    at FSWatcher.emitWithAll (D:\Meduza site\node_modules\chokidar\index.js:436:14) {
+  status: 128,
+  signal: null,
+  output: [
+    null,
+    <Buffer >,
+    <Buffer 8e e8 a8 a1 aa a0 3a 20 8d a5 20 e3 a4 a0 a5 e2 e1 ef 20 ad a0 a9 e2 a8 20 af e0 ae e6 a5 e1 e1 20 22 31 30 30 32 34 22 2e 0d 0a>
+  ],
+  pid: 52876,
+  stdout: <Buffer >,
+  stderr: <Buffer 8e e8 a8 a1 aa a0 3a 20 8d a5 20 e3 a4 a0 a5 e2 e1 ef 20 ad a0 a9 e2 a8 20 af e0 ae e6 a5 e1 e1 20 22 31 30 30 32 34 22 2e 0d 0a>
+}
+[32minfo[39m:    [Watcher] created src\workflows\server-configurator\component-packs\shared\types.ts created: restarting dev server
+Error: Command failed: taskkill /PID 10024 /F /T
+�訡��: �� 㤠���� ���� ����� "10024".
+
+    at genericNodeError (node:internal/errors:985:15)
+    at wrappedFn (node:internal/errors:539:14)
+    at checkExecSyncError (node:child_process:925:11)
+    at execSync (node:child_process:997:15)
+    at Object.restart (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:185:19)
+    at Object.handleFileChange (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:236:20)
+    at FSWatcher.<anonymous> (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:243:26)
+    at FSWatcher.emit (node:events:508:28)
+    at FSWatcher.emit (node:domain:489:12)
+    at FSWatcher.emitWithAll (D:\Meduza site\node_modules\chokidar\index.js:436:14) {
+  status: 128,
+  signal: null,
+  output: [
+    null,
+    <Buffer >,
+    <Buffer 8e e8 a8 a1 aa a0 3a 20 8d a5 20 e3 a4 a0 a5 e2 e1 ef 20 ad a0 a9 e2 a8 20 af e0 ae e6 a5 e1 e1 20 22 31 30 30 32 34 22 2e 0d 0a>
+  ],
+  pid: 54828,
+  stdout: <Buffer >,
+  stderr: <Buffer 8e e8 a8 a1 aa a0 3a 20 8d a5 20 e3 a4 a0 a5 e2 e1 ef 20 ad a0 a9 e2 a8 20 af e0 ae e6 a5 e1 e1 20 22 31 30 30 32 34 22 2e 0d 0a>
+}
+[32minfo[39m:    [Watcher] created src\workflows\server-configurator\component-packs\shared\crud-steps.ts created: restarting dev server
+Error: Command failed: taskkill /PID 10024 /F /T
+�訡��: �� 㤠���� ���� ����� "10024".
+
+    at genericNodeError (node:internal/errors:985:15)
+    at wrappedFn (node:internal/errors:539:14)
+    at checkExecSyncError (node:child_process:925:11)
+    at execSync (node:child_process:997:15)
+    at Object.restart (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:185:19)
+    at Object.handleFileChange (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:236:20)
+    at FSWatcher.<anonymous> (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:243:26)
+    at FSWatcher.emit (node:events:508:28)
+    at FSWatcher.emit (node:domain:489:12)
+    at FSWatcher.emitWithAll (D:\Meduza site\node_modules\chokidar\index.js:436:14) {
+  status: 128,
+  signal: null,
+  output: [
+    null,
+    <Buffer >,
+    <Buffer 8e e8 a8 a1 aa a0 3a 20 8d a5 20 e3 a4 a0 a5 e2 e1 ef 20 ad a0 a9 e2 a8 20 af e0 ae e6 a5 e1 e1 20 22 31 30 30 32 34 22 2e 0d 0a>
+  ],
+  pid: 58008,
+  stdout: <Buffer >,
+  stderr: <Buffer 8e e8 a8 a1 aa a0 3a 20 8d a5 20 e3 a4 a0 a5 e2 e1 ef 20 ad a0 a9 e2 a8 20 af e0 ae e6 a5 e1 e1 20 22 31 30 30 32 34 22 2e 0d 0a>
+}
+[32minfo[39m:    [Watcher] created src\workflows\server-configurator\component-packs\shared\item-steps.ts created: restarting dev server
+Error: Command failed: taskkill /PID 10024 /F /T
+�訡��: �� 㤠���� ���� ����� "10024".
+
+    at genericNodeError (node:internal/errors:985:15)
+    at wrappedFn (node:internal/errors:539:14)
+    at checkExecSyncError (node:child_process:925:11)
+    at execSync (node:child_process:997:15)
+    at Object.restart (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:185:19)
+    at Object.handleFileChange (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:236:20)
+    at FSWatcher.<anonymous> (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:243:26)
+    at FSWatcher.emit (node:events:508:28)
+    at FSWatcher.emit (node:domain:489:12)
+    at FSWatcher.emitWithAll (D:\Meduza site\node_modules\chokidar\index.js:436:14) {
+  status: 128,
+  signal: null,
+  output: [
+    null,
+    <Buffer >,
+    <Buffer 8e e8 a8 a1 aa a0 3a 20 8d a5 20 e3 a4 a0 a5 e2 e1 ef 20 ad a0 a9 e2 a8 20 af e0 ae e6 a5 e1 e1 20 22 31 30 30 32 34 22 2e 0d 0a>
+  ],
+  pid: 45308,
+  stdout: <Buffer >,
+  stderr: <Buffer 8e e8 a8 a1 aa a0 3a 20 8d a5 20 e3 a4 a0 a5 e2 e1 ef 20 ad a0 a9 e2 a8 20 af e0 ae e6 a5 e1 e1 20 22 31 30 30 32 34 22 2e 0d 0a>
+}
+[32minfo[39m:    [Watcher] created src\workflows\server-configurator\component-packs\shared\applicability-steps.ts created: restarting dev server
+Error: Command failed: taskkill /PID 10024 /F /T
+�訡��: �� 㤠���� ���� ����� "10024".
+
+    at genericNodeError (node:internal/errors:985:15)
+    at wrappedFn (node:internal/errors:539:14)
+    at checkExecSyncError (node:child_process:925:11)
+    at execSync (node:child_process:997:15)
+    at Object.restart (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:185:19)
+    at Object.handleFileChange (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:236:20)
+    at FSWatcher.<anonymous> (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:243:26)
+    at FSWatcher.emit (node:events:508:28)
+    at FSWatcher.emit (node:domain:489:12)
+    at FSWatcher.emitWithAll (D:\Meduza site\node_modules\chokidar\index.js:436:14) {
+  status: 128,
+  signal: null,
+  output: [
+    null,
+    <Buffer >,
+    <Buffer 8e e8 a8 a1 aa a0 3a 20 8d a5 20 e3 a4 a0 a5 e2 e1 ef 20 ad a0 a9 e2 a8 20 af e0 ae e6 a5 e1 e1 20 22 31 30 30 32 34 22 2e 0d 0a>
+  ],
+  pid: 13624,
+  stdout: <Buffer >,
+  stderr: <Buffer 8e e8 a8 a1 aa a0 3a 20 8d a5 20 e3 a4 a0 a5 e2 e1 ef 20 ad a0 a9 e2 a8 20 af e0 ae e6 a5 e1 e1 20 22 31 30 30 32 34 22 2e 0d 0a>
+}
+[32minfo[39m:    [Watcher] created src\workflows\server-configurator\component-packs\create-component-pack.ts created: restarting dev server
+Error: Command failed: taskkill /PID 10024 /F /T
+�訡��: �� 㤠���� ���� ����� "10024".
+
+    at genericNodeError (node:internal/errors:985:15)
+    at wrappedFn (node:internal/errors:539:14)
+    at checkExecSyncError (node:child_process:925:11)
+    at execSync (node:child_process:997:15)
+    at Object.restart (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:185:19)
+    at Object.handleFileChange (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:236:20)
+    at FSWatcher.<anonymous> (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:243:26)
+    at FSWatcher.emit (node:events:508:28)
+    at FSWatcher.emit (node:domain:489:12)
+    at FSWatcher.emitWithAll (D:\Meduza site\node_modules\chokidar\index.js:436:14) {
+  status: 128,
+  signal: null,
+  output: [
+    null,
+    <Buffer >,
+    <Buffer 8e e8 a8 a1 aa a0 3a 20 8d a5 20 e3 a4 a0 a5 e2 e1 ef 20 ad a0 a9 e2 a8 20 af e0 ae e6 a5 e1 e1 20 22 31 30 30 32 34 22 2e 0d 0a>
+  ],
+  pid: 33048,
+  stdout: <Buffer >,
+  stderr: <Buffer 8e e8 a8 a1 aa a0 3a 20 8d a5 20 e3 a4 a0 a5 e2 e1 ef 20 ad a0 a9 e2 a8 20 af e0 ae e6 a5 e1 e1 20 22 31 30 30 32 34 22 2e 0d 0a>
+}
+[32minfo[39m:    [Watcher] created src\workflows\server-configurator\component-packs\update-component-pack.ts created: restarting dev server
+Error: Command failed: taskkill /PID 10024 /F /T
+�訡��: �� 㤠���� ���� ����� "10024".
+
+    at genericNodeError (node:internal/errors:985:15)
+    at wrappedFn (node:internal/errors:539:14)
+    at checkExecSyncError (node:child_process:925:11)
+    at execSync (node:child_process:997:15)
+    at Object.restart (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:185:19)
+    at Object.handleFileChange (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:236:20)
+    at FSWatcher.<anonymous> (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:243:26)
+    at FSWatcher.emit (node:events:508:28)
+    at FSWatcher.emit (node:domain:489:12)
+    at FSWatcher.emitWithAll (D:\Meduza site\node_modules\chokidar\index.js:436:14) {
+  status: 128,
+  signal: null,
+  output: [
+    null,
+    <Buffer >,
+    <Buffer 8e e8 a8 a1 aa a0 3a 20 8d a5 20 e3 a4 a0 a5 e2 e1 ef 20 ad a0 a9 e2 a8 20 af e0 ae e6 a5 e1 e1 20 22 31 30 30 32 34 22 2e 0d 0a>
+  ],
+  pid: 38252,
+  stdout: <Buffer >,
+  stderr: <Buffer 8e e8 a8 a1 aa a0 3a 20 8d a5 20 e3 a4 a0 a5 e2 e1 ef 20 ad a0 a9 e2 a8 20 af e0 ae e6 a5 e1 e1 20 22 31 30 30 32 34 22 2e 0d 0a>
+}
+[32minfo[39m:    [Watcher] created src\workflows\server-configurator\component-packs\add-component-to-pack.ts created: restarting dev server
+Error: Command failed: taskkill /PID 10024 /F /T
+�訡��: �� 㤠���� ���� ����� "10024".
+
+    at genericNodeError (node:internal/errors:985:15)
+    at wrappedFn (node:internal/errors:539:14)
+    at checkExecSyncError (node:child_process:925:11)
+    at execSync (node:child_process:997:15)
+    at Object.restart (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:185:19)
+    at Object.handleFileChange (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:236:20)
+    at FSWatcher.<anonymous> (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:243:26)
+    at FSWatcher.emit (node:events:508:28)
+    at FSWatcher.emit (node:domain:489:12)
+    at FSWatcher.emitWithAll (D:\Meduza site\node_modules\chokidar\index.js:436:14) {
+  status: 128,
+  signal: null,
+  output: [
+    null,
+    <Buffer >,
+    <Buffer 8e e8 a8 a1 aa a0 3a 20 8d a5 20 e3 a4 a0 a5 e2 e1 ef 20 ad a0 a9 e2 a8 20 af e0 ae e6 a5 e1 e1 20 22 31 30 30 32 34 22 2e 0d 0a>
+  ],
+  pid: 7072,
+  stdout: <Buffer >,
+  stderr: <Buffer 8e e8 a8 a1 aa a0 3a 20 8d a5 20 e3 a4 a0 a5 e2 e1 ef 20 ad a0 a9 e2 a8 20 af e0 ae e6 a5 e1 e1 20 22 31 30 30 32 34 22 2e 0d 0a>
+}
+[32minfo[39m:    [Watcher] created src\workflows\server-configurator\component-packs\bulk-add-components-to-pack.ts created: restarting dev server
+Error: Command failed: taskkill /PID 10024 /F /T
+�訡��: �� 㤠���� ���� ����� "10024".
+
+    at genericNodeError (node:internal/errors:985:15)
+    at wrappedFn (node:internal/errors:539:14)
+    at checkExecSyncError (node:child_process:925:11)
+    at execSync (node:child_process:997:15)
+    at Object.restart (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:185:19)
+    at Object.handleFileChange (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:236:20)
+    at FSWatcher.<anonymous> (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:243:26)
+    at FSWatcher.emit (node:events:508:28)
+    at FSWatcher.emit (node:domain:489:12)
+    at FSWatcher.emitWithAll (D:\Meduza site\node_modules\chokidar\index.js:436:14) {
+  status: 128,
+  signal: null,
+  output: [
+    null,
+    <Buffer >,
+    <Buffer 8e e8 a8 a1 aa a0 3a 20 8d a5 20 e3 a4 a0 a5 e2 e1 ef 20 ad a0 a9 e2 a8 20 af e0 ae e6 a5 e1 e1 20 22 31 30 30 32 34 22 2e 0d 0a>
+  ],
+  pid: 34420,
+  stdout: <Buffer >,
+  stderr: <Buffer 8e e8 a8 a1 aa a0 3a 20 8d a5 20 e3 a4 a0 a5 e2 e1 ef 20 ad a0 a9 e2 a8 20 af e0 ae e6 a5 e1 e1 20 22 31 30 30 32 34 22 2e 0d 0a>
+}
+[32minfo[39m:    [Watcher] created src\workflows\server-configurator\component-packs\delete-component-pack.ts created: restarting dev server
+Error: Command failed: taskkill /PID 10024 /F /T
+�訡��: �� 㤠���� ���� ����� "10024".
+
+    at genericNodeError (node:internal/errors:985:15)
+    at wrappedFn (node:internal/errors:539:14)
+    at checkExecSyncError (node:child_process:925:11)
+    at execSync (node:child_process:997:15)
+    at Object.restart (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:185:19)
+    at Object.handleFileChange (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:236:20)
+    at FSWatcher.<anonymous> (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:243:26)
+    at FSWatcher.emit (node:events:508:28)
+    at FSWatcher.emit (node:domain:489:12)
+    at FSWatcher.emitWithAll (D:\Meduza site\node_modules\chokidar\index.js:436:14) {
+  status: 128,
+  signal: null,
+  output: [
+    null,
+    <Buffer >,
+    <Buffer 8e e8 a8 a1 aa a0 3a 20 8d a5 20 e3 a4 a0 a5 e2 e1 ef 20 ad a0 a9 e2 a8 20 af e0 ae e6 a5 e1 e1 20 22 31 30 30 32 34 22 2e 0d 0a>
+  ],
+  pid: 6428,
+  stdout: <Buffer >,
+  stderr: <Buffer 8e e8 a8 a1 aa a0 3a 20 8d a5 20 e3 a4 a0 a5 e2 e1 ef 20 ad a0 a9 e2 a8 20 af e0 ae e6 a5 e1 e1 20 22 31 30 30 32 34 22 2e 0d 0a>
+}
+[32minfo[39m:    [Watcher] created src\workflows\server-configurator\component-packs\duplicate-component-pack.ts created: restarting dev server
+Error: Command failed: taskkill /PID 10024 /F /T
+�訡��: �� 㤠���� ���� ����� "10024".
+
+    at genericNodeError (node:internal/errors:985:15)
+    at wrappedFn (node:internal/errors:539:14)
+    at checkExecSyncError (node:child_process:925:11)
+    at execSync (node:child_process:997:15)
+    at Object.restart (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:185:19)
+    at Object.handleFileChange (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:236:20)
+    at FSWatcher.<anonymous> (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:243:26)
+    at FSWatcher.emit (node:events:508:28)
+    at FSWatcher.emit (node:domain:489:12)
+    at FSWatcher.emitWithAll (D:\Meduza site\node_modules\chokidar\index.js:436:14) {
+  status: 128,
+  signal: null,
+  output: [
+    null,
+    <Buffer >,
+    <Buffer 8e e8 a8 a1 aa a0 3a 20 8d a5 20 e3 a4 a0 a5 e2 e1 ef 20 ad a0 a9 e2 a8 20 af e0 ae e6 a5 e1 e1 20 22 31 30 30 32 34 22 2e 0d 0a>
+  ],
+  pid: 62804,
+  stdout: <Buffer >,
+  stderr: <Buffer 8e e8 a8 a1 aa a0 3a 20 8d a5 20 e3 a4 a0 a5 e2 e1 ef 20 ad a0 a9 e2 a8 20 af e0 ae e6 a5 e1 e1 20 22 31 30 30 32 34 22 2e 0d 0a>
+}
+[32minfo[39m:    [Watcher] created src\workflows\server-configurator\component-packs\remove-component-from-pack.ts created: restarting dev server
+Error: Command failed: taskkill /PID 10024 /F /T
+�訡��: �� 㤠���� ���� ����� "10024".
+
+    at genericNodeError (node:internal/errors:985:15)
+    at wrappedFn (node:internal/errors:539:14)
+    at checkExecSyncError (node:child_process:925:11)
+    at execSync (node:child_process:997:15)
+    at Object.restart (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:185:19)
+    at Object.handleFileChange (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:236:20)
+    at FSWatcher.<anonymous> (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:243:26)
+    at FSWatcher.emit (node:events:508:28)
+    at FSWatcher.emit (node:domain:489:12)
+    at FSWatcher.emitWithAll (D:\Meduza site\node_modules\chokidar\index.js:436:14) {
+  status: 128,
+  signal: null,
+  output: [
+    null,
+    <Buffer >,
+    <Buffer 8e e8 a8 a1 aa a0 3a 20 8d a5 20 e3 a4 a0 a5 e2 e1 ef 20 ad a0 a9 e2 a8 20 af e0 ae e6 a5 e1 e1 20 22 31 30 30 32 34 22 2e 0d 0a>
+  ],
+  pid: 53972,
+  stdout: <Buffer >,
+  stderr: <Buffer 8e e8 a8 a1 aa a0 3a 20 8d a5 20 e3 a4 a0 a5 e2 e1 ef 20 ad a0 a9 e2 a8 20 af e0 ae e6 a5 e1 e1 20 22 31 30 30 32 34 22 2e 0d 0a>
+}
+[32minfo[39m:    [Watcher] created src\workflows\server-configurator\component-packs\reorder-pack-items.ts created: restarting dev server
+Error: Command failed: taskkill /PID 10024 /F /T
+�訡��: �� 㤠���� ���� ����� "10024".
+
+    at genericNodeError (node:internal/errors:985:15)
+    at wrappedFn (node:internal/errors:539:14)
+    at checkExecSyncError (node:child_process:925:11)
+    at execSync (node:child_process:997:15)
+    at Object.restart (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:185:19)
+    at Object.handleFileChange (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:236:20)
+    at FSWatcher.<anonymous> (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:243:26)
+    at FSWatcher.emit (node:events:508:28)
+    at FSWatcher.emit (node:domain:489:12)
+    at FSWatcher.emitWithAll (D:\Meduza site\node_modules\chokidar\index.js:436:14) {
+  status: 128,
+  signal: null,
+  output: [
+    null,
+    <Buffer >,
+    <Buffer 8e e8 a8 a1 aa a0 3a 20 8d a5 20 e3 a4 a0 a5 e2 e1 ef 20 ad a0 a9 e2 a8 20 af e0 ae e6 a5 e1 e1 20 22 31 30 30 32 34 22 2e 0d 0a>
+  ],
+  pid: 53136,
+  stdout: <Buffer >,
+  stderr: <Buffer 8e e8 a8 a1 aa a0 3a 20 8d a5 20 e3 a4 a0 a5 e2 e1 ef 20 ad a0 a9 e2 a8 20 af e0 ae e6 a5 e1 e1 20 22 31 30 30 32 34 22 2e 0d 0a>
+}
+[32minfo[39m:    [Watcher] created src\workflows\server-configurator\component-packs\apply-pack-applicability.ts created: restarting dev server
+Error: Command failed: taskkill /PID 10024 /F /T
+�訡��: �� 㤠���� ���� ����� "10024".
+
+    at genericNodeError (node:internal/errors:985:15)
+    at wrappedFn (node:internal/errors:539:14)
+    at checkExecSyncError (node:child_process:925:11)
+    at execSync (node:child_process:997:15)
+    at Object.restart (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:185:19)
+    at Object.handleFileChange (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:236:20)
+    at FSWatcher.<anonymous> (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:243:26)
+    at FSWatcher.emit (node:events:508:28)
+    at FSWatcher.emit (node:domain:489:12)
+    at FSWatcher.emitWithAll (D:\Meduza site\node_modules\chokidar\index.js:436:14) {
+  status: 128,
+  signal: null,
+  output: [
+    null,
+    <Buffer >,
+    <Buffer 8e e8 a8 a1 aa a0 3a 20 8d a5 20 e3 a4 a0 a5 e2 e1 ef 20 ad a0 a9 e2 a8 20 af e0 ae e6 a5 e1 e1 20 22 31 30 30 32 34 22 2e 0d 0a>
+  ],
+  pid: 15720,
+  stdout: <Buffer >,
+  stderr: <Buffer 8e e8 a8 a1 aa a0 3a 20 8d a5 20 e3 a4 a0 a5 e2 e1 ef 20 ad a0 a9 e2 a8 20 af e0 ae e6 a5 e1 e1 20 22 31 30 30 32 34 22 2e 0d 0a>
+}
+[32minfo[39m:    [Watcher] created src\workflows\server-configurator\component-packs\detach-pack-applicability.ts created: restarting dev server
+Error: Command failed: taskkill /PID 10024 /F /T
+�訡��: �� 㤠���� ���� ����� "10024".
+
+    at genericNodeError (node:internal/errors:985:15)
+    at wrappedFn (node:internal/errors:539:14)
+    at checkExecSyncError (node:child_process:925:11)
+    at execSync (node:child_process:997:15)
+    at Object.restart (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:185:19)
+    at Object.handleFileChange (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:236:20)
+    at FSWatcher.<anonymous> (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:243:26)
+    at FSWatcher.emit (node:events:508:28)
+    at FSWatcher.emit (node:domain:489:12)
+    at FSWatcher.emitWithAll (D:\Meduza site\node_modules\chokidar\index.js:436:14) {
+  status: 128,
+  signal: null,
+  output: [
+    null,
+    <Buffer >,
+    <Buffer 8e e8 a8 a1 aa a0 3a 20 8d a5 20 e3 a4 a0 a5 e2 e1 ef 20 ad a0 a9 e2 a8 20 af e0 ae e6 a5 e1 e1 20 22 31 30 30 32 34 22 2e 0d 0a>
+  ],
+  pid: 8540,
+  stdout: <Buffer >,
+  stderr: <Buffer 8e e8 a8 a1 aa a0 3a 20 8d a5 20 e3 a4 a0 a5 e2 e1 ef 20 ad a0 a9 e2 a8 20 af e0 ae e6 a5 e1 e1 20 22 31 30 30 32 34 22 2e 0d 0a>
+}
+[32minfo[39m:    [Watcher] created src\workflows\server-configurator\component-packs\preview-pack-applicability.ts created: restarting dev server
+Error: Command failed: taskkill /PID 10024 /F /T
+�訡��: �� 㤠���� ���� ����� "10024".
+
+    at genericNodeError (node:internal/errors:985:15)
+    at wrappedFn (node:internal/errors:539:14)
+    at checkExecSyncError (node:child_process:925:11)
+    at execSync (node:child_process:997:15)
+    at Object.restart (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:185:19)
+    at Object.handleFileChange (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:236:20)
+    at FSWatcher.<anonymous> (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:243:26)
+    at FSWatcher.emit (node:events:508:28)
+    at FSWatcher.emit (node:domain:489:12)
+    at FSWatcher.emitWithAll (D:\Meduza site\node_modules\chokidar\index.js:436:14) {
+  status: 128,
+  signal: null,
+  output: [
+    null,
+    <Buffer >,
+    <Buffer 8e e8 a8 a1 aa a0 3a 20 8d a5 20 e3 a4 a0 a5 e2 e1 ef 20 ad a0 a9 e2 a8 20 af e0 ae e6 a5 e1 e1 20 22 31 30 30 32 34 22 2e 0d 0a>
+  ],
+  pid: 59736,
+  stdout: <Buffer >,
+  stderr: <Buffer 8e e8 a8 a1 aa a0 3a 20 8d a5 20 e3 a4 a0 a5 e2 e1 ef 20 ad a0 a9 e2 a8 20 af e0 ae e6 a5 e1 e1 20 22 31 30 30 32 34 22 2e 0d 0a>
+}
+[32minfo[39m:    [Watcher] created src\api\admin\server-configurator\component-packs\route.ts created: restarting dev server
+Error: Command failed: taskkill /PID 10024 /F /T
+�訡��: �� 㤠���� ���� ����� "10024".
+
+    at genericNodeError (node:internal/errors:985:15)
+    at wrappedFn (node:internal/errors:539:14)
+    at checkExecSyncError (node:child_process:925:11)
+    at execSync (node:child_process:997:15)
+    at Object.restart (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:185:19)
+    at Object.handleFileChange (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:236:20)
+    at FSWatcher.<anonymous> (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:243:26)
+    at FSWatcher.emit (node:events:508:28)
+    at FSWatcher.emit (node:domain:489:12)
+    at FSWatcher.emitWithAll (D:\Meduza site\node_modules\chokidar\index.js:436:14) {
+  status: 128,
+  signal: null,
+  output: [
+    null,
+    <Buffer >,
+    <Buffer 8e e8 a8 a1 aa a0 3a 20 8d a5 20 e3 a4 a0 a5 e2 e1 ef 20 ad a0 a9 e2 a8 20 af e0 ae e6 a5 e1 e1 20 22 31 30 30 32 34 22 2e 0d 0a>
+  ],
+  pid: 3804,
+  stdout: <Buffer >,
+  stderr: <Buffer 8e e8 a8 a1 aa a0 3a 20 8d a5 20 e3 a4 a0 a5 e2 e1 ef 20 ad a0 a9 e2 a8 20 af e0 ae e6 a5 e1 e1 20 22 31 30 30 32 34 22 2e 0d 0a>
+}
+[32minfo[39m:    [Watcher] created src\api\admin\server-configurator\component-packs\[id]\route.ts created: restarting dev server
+Error: Command failed: taskkill /PID 10024 /F /T
+�訡��: �� 㤠���� ���� ����� "10024".
+
+    at genericNodeError (node:internal/errors:985:15)
+    at wrappedFn (node:internal/errors:539:14)
+    at checkExecSyncError (node:child_process:925:11)
+    at execSync (node:child_process:997:15)
+    at Object.restart (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:185:19)
+    at Object.handleFileChange (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:236:20)
+    at FSWatcher.<anonymous> (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:243:26)
+    at FSWatcher.emit (node:events:508:28)
+    at FSWatcher.emit (node:domain:489:12)
+    at FSWatcher.emitWithAll (D:\Meduza site\node_modules\chokidar\index.js:436:14) {
+  status: 128,
+  signal: null,
+  output: [
+    null,
+    <Buffer >,
+    <Buffer 8e e8 a8 a1 aa a0 3a 20 8d a5 20 e3 a4 a0 a5 e2 e1 ef 20 ad a0 a9 e2 a8 20 af e0 ae e6 a5 e1 e1 20 22 31 30 30 32 34 22 2e 0d 0a>
+  ],
+  pid: 23912,
+  stdout: <Buffer >,
+  stderr: <Buffer 8e e8 a8 a1 aa a0 3a 20 8d a5 20 e3 a4 a0 a5 e2 e1 ef 20 ad a0 a9 e2 a8 20 af e0 ae e6 a5 e1 e1 20 22 31 30 30 32 34 22 2e 0d 0a>
+}
+[32minfo[39m:    [Watcher] created src\api\admin\server-configurator\component-packs\[id]\apply-applicability\route.ts created: restarting dev server
+Error: Command failed: taskkill /PID 10024 /F /T
+�訡��: �� 㤠���� ���� ����� "10024".
+
+    at genericNodeError (node:internal/errors:985:15)
+    at wrappedFn (node:internal/errors:539:14)
+    at checkExecSyncError (node:child_process:925:11)
+    at execSync (node:child_process:997:15)
+    at Object.restart (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:185:19)
+    at Object.handleFileChange (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:236:20)
+    at FSWatcher.<anonymous> (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:243:26)
+    at FSWatcher.emit (node:events:508:28)
+    at FSWatcher.emit (node:domain:489:12)
+    at FSWatcher.emitWithAll (D:\Meduza site\node_modules\chokidar\index.js:436:14) {
+  status: 128,
+  signal: null,
+  output: [
+    null,
+    <Buffer >,
+    <Buffer 8e e8 a8 a1 aa a0 3a 20 8d a5 20 e3 a4 a0 a5 e2 e1 ef 20 ad a0 a9 e2 a8 20 af e0 ae e6 a5 e1 e1 20 22 31 30 30 32 34 22 2e 0d 0a>
+  ],
+  pid: 64480,
+  stdout: <Buffer >,
+  stderr: <Buffer 8e e8 a8 a1 aa a0 3a 20 8d a5 20 e3 a4 a0 a5 e2 e1 ef 20 ad a0 a9 e2 a8 20 af e0 ae e6 a5 e1 e1 20 22 31 30 30 32 34 22 2e 0d 0a>
+}
+[32minfo[39m:    [Watcher] created src\api\admin\server-configurator\component-packs\[id]\bulk-add-components\route.ts created: restarting dev server
+Error: Command failed: taskkill /PID 10024 /F /T
+�訡��: �� 㤠���� ���� ����� "10024".
+
+    at genericNodeError (node:internal/errors:985:15)
+    at wrappedFn (node:internal/errors:539:14)
+    at checkExecSyncError (node:child_process:925:11)
+    at execSync (node:child_process:997:15)
+    at Object.restart (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:185:19)
+    at Object.handleFileChange (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:236:20)
+    at FSWatcher.<anonymous> (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:243:26)
+    at FSWatcher.emit (node:events:508:28)
+    at FSWatcher.emit (node:domain:489:12)
+    at FSWatcher.emitWithAll (D:\Meduza site\node_modules\chokidar\index.js:436:14) {
+  status: 128,
+  signal: null,
+  output: [
+    null,
+    <Buffer >,
+    <Buffer 8e e8 a8 a1 aa a0 3a 20 8d a5 20 e3 a4 a0 a5 e2 e1 ef 20 ad a0 a9 e2 a8 20 af e0 ae e6 a5 e1 e1 20 22 31 30 30 32 34 22 2e 0d 0a>
+  ],
+  pid: 27508,
+  stdout: <Buffer >,
+  stderr: <Buffer 8e e8 a8 a1 aa a0 3a 20 8d a5 20 e3 a4 a0 a5 e2 e1 ef 20 ad a0 a9 e2 a8 20 af e0 ae e6 a5 e1 e1 20 22 31 30 30 32 34 22 2e 0d 0a>
+}
+[32minfo[39m:    [Watcher] created src\api\admin\server-configurator\component-packs\[id]\detach-applicability\route.ts created: restarting dev server
+Error: Command failed: taskkill /PID 10024 /F /T
+�訡��: �� 㤠���� ���� ����� "10024".
+
+    at genericNodeError (node:internal/errors:985:15)
+    at wrappedFn (node:internal/errors:539:14)
+    at checkExecSyncError (node:child_process:925:11)
+    at execSync (node:child_process:997:15)
+    at Object.restart (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:185:19)
+    at Object.handleFileChange (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:236:20)
+    at FSWatcher.<anonymous> (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:243:26)
+    at FSWatcher.emit (node:events:508:28)
+    at FSWatcher.emit (node:domain:489:12)
+    at FSWatcher.emitWithAll (D:\Meduza site\node_modules\chokidar\index.js:436:14) {
+  status: 128,
+  signal: null,
+  output: [
+    null,
+    <Buffer >,
+    <Buffer 8e e8 a8 a1 aa a0 3a 20 8d a5 20 e3 a4 a0 a5 e2 e1 ef 20 ad a0 a9 e2 a8 20 af e0 ae e6 a5 e1 e1 20 22 31 30 30 32 34 22 2e 0d 0a>
+  ],
+  pid: 29976,
+  stdout: <Buffer >,
+  stderr: <Buffer 8e e8 a8 a1 aa a0 3a 20 8d a5 20 e3 a4 a0 a5 e2 e1 ef 20 ad a0 a9 e2 a8 20 af e0 ae e6 a5 e1 e1 20 22 31 30 30 32 34 22 2e 0d 0a>
+}
+[32minfo[39m:    [Watcher] created src\api\admin\server-configurator\component-packs\[id]\duplicate\route.ts created: restarting dev server
+Error: Command failed: taskkill /PID 10024 /F /T
+�訡��: �� 㤠���� ���� ����� "10024".
+
+    at genericNodeError (node:internal/errors:985:15)
+    at wrappedFn (node:internal/errors:539:14)
+    at checkExecSyncError (node:child_process:925:11)
+    at execSync (node:child_process:997:15)
+    at Object.restart (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:185:19)
+    at Object.handleFileChange (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:236:20)
+    at FSWatcher.<anonymous> (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:243:26)
+    at FSWatcher.emit (node:events:508:28)
+    at FSWatcher.emit (node:domain:489:12)
+    at FSWatcher.emitWithAll (D:\Meduza site\node_modules\chokidar\index.js:436:14) {
+  status: 128,
+  signal: null,
+  output: [
+    null,
+    <Buffer >,
+    <Buffer 8e e8 a8 a1 aa a0 3a 20 8d a5 20 e3 a4 a0 a5 e2 e1 ef 20 ad a0 a9 e2 a8 20 af e0 ae e6 a5 e1 e1 20 22 31 30 30 32 34 22 2e 0d 0a>
+  ],
+  pid: 54396,
+  stdout: <Buffer >,
+  stderr: <Buffer 8e e8 a8 a1 aa a0 3a 20 8d a5 20 e3 a4 a0 a5 e2 e1 ef 20 ad a0 a9 e2 a8 20 af e0 ae e6 a5 e1 e1 20 22 31 30 30 32 34 22 2e 0d 0a>
+}
+[32minfo[39m:    [Watcher] created src\api\admin\server-configurator\component-packs\[id]\preview-applicability\route.ts created: restarting dev server
+Error: Command failed: taskkill /PID 10024 /F /T
+�訡��: �� 㤠���� ���� ����� "10024".
+
+    at genericNodeError (node:internal/errors:985:15)
+    at wrappedFn (node:internal/errors:539:14)
+    at checkExecSyncError (node:child_process:925:11)
+    at execSync (node:child_process:997:15)
+    at Object.restart (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:185:19)
+    at Object.handleFileChange (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:236:20)
+    at FSWatcher.<anonymous> (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:243:26)
+    at FSWatcher.emit (node:events:508:28)
+    at FSWatcher.emit (node:domain:489:12)
+    at FSWatcher.emitWithAll (D:\Meduza site\node_modules\chokidar\index.js:436:14) {
+  status: 128,
+  signal: null,
+  output: [
+    null,
+    <Buffer >,
+    <Buffer 8e e8 a8 a1 aa a0 3a 20 8d a5 20 e3 a4 a0 a5 e2 e1 ef 20 ad a0 a9 e2 a8 20 af e0 ae e6 a5 e1 e1 20 22 31 30 30 32 34 22 2e 0d 0a>
+  ],
+  pid: 62276,
+  stdout: <Buffer >,
+  stderr: <Buffer 8e e8 a8 a1 aa a0 3a 20 8d a5 20 e3 a4 a0 a5 e2 e1 ef 20 ad a0 a9 e2 a8 20 af e0 ae e6 a5 e1 e1 20 22 31 30 30 32 34 22 2e 0d 0a>
+}
+[32minfo[39m:    [Watcher] created src\api\admin\server-configurator\component-packs\[id]\items\route.ts created: restarting dev server
+Error: Command failed: taskkill /PID 10024 /F /T
+�訡��: �� 㤠���� ���� ����� "10024".
+
+    at genericNodeError (node:internal/errors:985:15)
+    at wrappedFn (node:internal/errors:539:14)
+    at checkExecSyncError (node:child_process:925:11)
+    at execSync (node:child_process:997:15)
+    at Object.restart (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:185:19)
+    at Object.handleFileChange (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:236:20)
+    at FSWatcher.<anonymous> (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:243:26)
+    at FSWatcher.emit (node:events:508:28)
+    at FSWatcher.emit (node:domain:489:12)
+    at FSWatcher.emitWithAll (D:\Meduza site\node_modules\chokidar\index.js:436:14) {
+  status: 128,
+  signal: null,
+  output: [
+    null,
+    <Buffer >,
+    <Buffer 8e e8 a8 a1 aa a0 3a 20 8d a5 20 e3 a4 a0 a5 e2 e1 ef 20 ad a0 a9 e2 a8 20 af e0 ae e6 a5 e1 e1 20 22 31 30 30 32 34 22 2e 0d 0a>
+  ],
+  pid: 59076,
+  stdout: <Buffer >,
+  stderr: <Buffer 8e e8 a8 a1 aa a0 3a 20 8d a5 20 e3 a4 a0 a5 e2 e1 ef 20 ad a0 a9 e2 a8 20 af e0 ae e6 a5 e1 e1 20 22 31 30 30 32 34 22 2e 0d 0a>
+}
+[32minfo[39m:    [Watcher] created src\api\admin\server-configurator\component-packs\[id]\items\reorder\route.ts created: restarting dev server
+Error: Command failed: taskkill /PID 10024 /F /T
+�訡��: �� 㤠���� ���� ����� "10024".
+
+    at genericNodeError (node:internal/errors:985:15)
+    at wrappedFn (node:internal/errors:539:14)
+    at checkExecSyncError (node:child_process:925:11)
+    at execSync (node:child_process:997:15)
+    at Object.restart (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:185:19)
+    at Object.handleFileChange (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:236:20)
+    at FSWatcher.<anonymous> (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:243:26)
+    at FSWatcher.emit (node:events:508:28)
+    at FSWatcher.emit (node:domain:489:12)
+    at FSWatcher.emitWithAll (D:\Meduza site\node_modules\chokidar\index.js:436:14) {
+  status: 128,
+  signal: null,
+  output: [
+    null,
+    <Buffer >,
+    <Buffer 8e e8 a8 a1 aa a0 3a 20 8d a5 20 e3 a4 a0 a5 e2 e1 ef 20 ad a0 a9 e2 a8 20 af e0 ae e6 a5 e1 e1 20 22 31 30 30 32 34 22 2e 0d 0a>
+  ],
+  pid: 42764,
+  stdout: <Buffer >,
+  stderr: <Buffer 8e e8 a8 a1 aa a0 3a 20 8d a5 20 e3 a4 a0 a5 e2 e1 ef 20 ad a0 a9 e2 a8 20 af e0 ae e6 a5 e1 e1 20 22 31 30 30 32 34 22 2e 0d 0a>
+}
+[32minfo[39m:    [Watcher] created src\api\admin\server-configurator\component-packs\[id]\items\[item_id]\route.ts created: restarting dev server
+Error: Command failed: taskkill /PID 10024 /F /T
+�訡��: �� 㤠���� ���� ����� "10024".
+
+    at genericNodeError (node:internal/errors:985:15)
+    at wrappedFn (node:internal/errors:539:14)
+    at checkExecSyncError (node:child_process:925:11)
+    at execSync (node:child_process:997:15)
+    at Object.restart (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:185:19)
+    at Object.handleFileChange (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:236:20)
+    at FSWatcher.<anonymous> (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:243:26)
+    at FSWatcher.emit (node:events:508:28)
+    at FSWatcher.emit (node:domain:489:12)
+    at FSWatcher.emitWithAll (D:\Meduza site\node_modules\chokidar\index.js:436:14) {
+  status: 128,
+  signal: null,
+  output: [
+    null,
+    <Buffer >,
+    <Buffer 8e e8 a8 a1 aa a0 3a 20 8d a5 20 e3 a4 a0 a5 e2 e1 ef 20 ad a0 a9 e2 a8 20 af e0 ae e6 a5 e1 e1 20 22 31 30 30 32 34 22 2e 0d 0a>
+  ],
+  pid: 10832,
+  stdout: <Buffer >,
+  stderr: <Buffer 8e e8 a8 a1 aa a0 3a 20 8d a5 20 e3 a4 a0 a5 e2 e1 ef 20 ad a0 a9 e2 a8 20 af e0 ae e6 a5 e1 e1 20 22 31 30 30 32 34 22 2e 0d 0a>
+}
+[32minfo[39m:    [Watcher] modified src\api\admin\server-configurator\middlewares.ts modified: restarting dev server
+Error: Command failed: taskkill /PID 10024 /F /T
+�訡��: �� 㤠���� ���� ����� "10024".
+
+    at genericNodeError (node:internal/errors:985:15)
+    at wrappedFn (node:internal/errors:539:14)
+    at checkExecSyncError (node:child_process:925:11)
+    at execSync (node:child_process:997:15)
+    at Object.restart (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:185:19)
+    at Object.handleFileChange (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:236:20)
+    at FSWatcher.<anonymous> (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:246:26)
+    at FSWatcher.emit (node:events:508:28)
+    at FSWatcher.emit (node:domain:489:12)
+    at FSWatcher.emitWithAll (D:\Meduza site\node_modules\chokidar\index.js:436:14) {
+  status: 128,
+  signal: null,
+  output: [
+    null,
+    <Buffer >,
+    <Buffer 8e e8 a8 a1 aa a0 3a 20 8d a5 20 e3 a4 a0 a5 e2 e1 ef 20 ad a0 a9 e2 a8 20 af e0 ae e6 a5 e1 e1 20 22 31 30 30 32 34 22 2e 0d 0a>
+  ],
+  pid: 5708,
+  stdout: <Buffer >,
+  stderr: <Buffer 8e e8 a8 a1 aa a0 3a 20 8d a5 20 e3 a4 a0 a5 e2 e1 ef 20 ad a0 a9 e2 a8 20 af e0 ae e6 a5 e1 e1 20 22 31 30 30 32 34 22 2e 0d 0a>
+}
+[32minfo[39m:    [Watcher] modified src\workflows\server-configurator\component-packs\shared\item-steps.ts modified: restarting dev server
+Error: Command failed: taskkill /PID 10024 /F /T
+�訡��: �� 㤠���� ���� ����� "10024".
+
+    at genericNodeError (node:internal/errors:985:15)
+    at wrappedFn (node:internal/errors:539:14)
+    at checkExecSyncError (node:child_process:925:11)
+    at execSync (node:child_process:997:15)
+    at Object.restart (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:185:19)
+    at Object.handleFileChange (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:236:20)
+    at FSWatcher.<anonymous> (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:246:26)
+    at FSWatcher.emit (node:events:508:28)
+    at FSWatcher.emit (node:domain:489:12)
+    at FSWatcher.emitWithAll (D:\Meduza site\node_modules\chokidar\index.js:436:14) {
+  status: 128,
+  signal: null,
+  output: [
+    null,
+    <Buffer >,
+    <Buffer 8e e8 a8 a1 aa a0 3a 20 8d a5 20 e3 a4 a0 a5 e2 e1 ef 20 ad a0 a9 e2 a8 20 af e0 ae e6 a5 e1 e1 20 22 31 30 30 32 34 22 2e 0d 0a>
+  ],
+  pid: 9916,
+  stdout: <Buffer >,
+  stderr: <Buffer 8e e8 a8 a1 aa a0 3a 20 8d a5 20 e3 a4 a0 a5 e2 e1 ef 20 ad a0 a9 e2 a8 20 af e0 ae e6 a5 e1 e1 20 22 31 30 30 32 34 22 2e 0d 0a>
+}
+[32minfo[39m:    [Watcher] modified src\workflows\server-configurator\component-packs\shared\applicability-steps.ts modified: restarting dev server
+Error: Command failed: taskkill /PID 10024 /F /T
+�訡��: �� 㤠���� ���� ����� "10024".
+
+    at genericNodeError (node:internal/errors:985:15)
+    at wrappedFn (node:internal/errors:539:14)
+    at checkExecSyncError (node:child_process:925:11)
+    at execSync (node:child_process:997:15)
+    at Object.restart (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:185:19)
+    at Object.handleFileChange (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:236:20)
+    at FSWatcher.<anonymous> (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:246:26)
+    at FSWatcher.emit (node:events:508:28)
+    at FSWatcher.emit (node:domain:489:12)
+    at FSWatcher.emitWithAll (D:\Meduza site\node_modules\chokidar\index.js:436:14) {
+  status: 128,
+  signal: null,
+  output: [
+    null,
+    <Buffer >,
+    <Buffer 8e e8 a8 a1 aa a0 3a 20 8d a5 20 e3 a4 a0 a5 e2 e1 ef 20 ad a0 a9 e2 a8 20 af e0 ae e6 a5 e1 e1 20 22 31 30 30 32 34 22 2e 0d 0a>
+  ],
+  pid: 51964,
+  stdout: <Buffer >,
+  stderr: <Buffer 8e e8 a8 a1 aa a0 3a 20 8d a5 20 e3 a4 a0 a5 e2 e1 ef 20 ad a0 a9 e2 a8 20 af e0 ae e6 a5 e1 e1 20 22 31 30 30 32 34 22 2e 0d 0a>
+}
+[32minfo[39m:    [Watcher] modified src\workflows\server-configurator\component-packs\shared\item-steps.ts modified: restarting dev server
+Error: Command failed: taskkill /PID 10024 /F /T
+�訡��: �� 㤠���� ���� ����� "10024".
+
+    at genericNodeError (node:internal/errors:985:15)
+    at wrappedFn (node:internal/errors:539:14)
+    at checkExecSyncError (node:child_process:925:11)
+    at execSync (node:child_process:997:15)
+    at Object.restart (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:185:19)
+    at Object.handleFileChange (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:236:20)
+    at FSWatcher.<anonymous> (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:246:26)
+    at FSWatcher.emit (node:events:508:28)
+    at FSWatcher.emit (node:domain:489:12)
+    at FSWatcher.emitWithAll (D:\Meduza site\node_modules\chokidar\index.js:436:14) {
+  status: 128,
+  signal: null,
+  output: [
+    null,
+    <Buffer >,
+    <Buffer 8e e8 a8 a1 aa a0 3a 20 8d a5 20 e3 a4 a0 a5 e2 e1 ef 20 ad a0 a9 e2 a8 20 af e0 ae e6 a5 e1 e1 20 22 31 30 30 32 34 22 2e 0d 0a>
+  ],
+  pid: 47068,
+  stdout: <Buffer >,
+  stderr: <Buffer 8e e8 a8 a1 aa a0 3a 20 8d a5 20 e3 a4 a0 a5 e2 e1 ef 20 ad a0 a9 e2 a8 20 af e0 ae e6 a5 e1 e1 20 22 31 30 30 32 34 22 2e 0d 0a>
+}
+[32minfo[39m:    [Watcher] created src\scripts\intel-xeon\fetch-intel-ark.ts created: restarting dev server
+Error: Command failed: taskkill /PID 10024 /F /T
+�訡��: �� 㤠���� ���� ����� "10024".
+
+    at genericNodeError (node:internal/errors:985:15)
+    at wrappedFn (node:internal/errors:539:14)
+    at checkExecSyncError (node:child_process:925:11)
+    at execSync (node:child_process:997:15)
+    at Object.restart (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:185:19)
+    at Object.handleFileChange (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:236:20)
+    at FSWatcher.<anonymous> (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:243:26)
+    at FSWatcher.emit (node:events:508:28)
+    at FSWatcher.emit (node:domain:489:12)
+    at FSWatcher.emitWithAll (D:\Meduza site\node_modules\chokidar\index.js:436:14) {
+  status: 128,
+  signal: null,
+  output: [
+    null,
+    <Buffer >,
+    <Buffer 8e e8 a8 a1 aa a0 3a 20 8d a5 20 e3 a4 a0 a5 e2 e1 ef 20 ad a0 a9 e2 a8 20 af e0 ae e6 a5 e1 e1 20 22 31 30 30 32 34 22 2e 0d 0a>
+  ],
+  pid: 60028,
+  stdout: <Buffer >,
+  stderr: <Buffer 8e e8 a8 a1 aa a0 3a 20 8d a5 20 e3 a4 a0 a5 e2 e1 ef 20 ad a0 a9 e2 a8 20 af e0 ae e6 a5 e1 e1 20 22 31 30 30 32 34 22 2e 0d 0a>
+}
+[32minfo[39m:    [Watcher] created src\scripts\intel-xeon\intel-xeon-scalable-1st-draft.ts created: restarting dev server
+Error: Command failed: taskkill /PID 10024 /F /T
+�訡��: �� 㤠���� ���� ����� "10024".
+
+    at genericNodeError (node:internal/errors:985:15)
+    at wrappedFn (node:internal/errors:539:14)
+    at checkExecSyncError (node:child_process:925:11)
+    at execSync (node:child_process:997:15)
+    at Object.restart (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:185:19)
+    at Object.handleFileChange (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:236:20)
+    at FSWatcher.<anonymous> (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:243:26)
+    at FSWatcher.emit (node:events:508:28)
+    at FSWatcher.emit (node:domain:489:12)
+    at FSWatcher.emitWithAll (D:\Meduza site\node_modules\chokidar\index.js:436:14) {
+  status: 128,
+  signal: null,
+  output: [
+    null,
+    <Buffer >,
+    <Buffer 8e e8 a8 a1 aa a0 3a 20 8d a5 20 e3 a4 a0 a5 e2 e1 ef 20 ad a0 a9 e2 a8 20 af e0 ae e6 a5 e1 e1 20 22 31 30 30 32 34 22 2e 0d 0a>
+  ],
+  pid: 42820,
+  stdout: <Buffer >,
+  stderr: <Buffer 8e e8 a8 a1 aa a0 3a 20 8d a5 20 e3 a4 a0 a5 e2 e1 ef 20 ad a0 a9 e2 a8 20 af e0 ae e6 a5 e1 e1 20 22 31 30 30 32 34 22 2e 0d 0a>
+}
+[32minfo[39m:    [Watcher] created src\scripts\intel-xeon\intel-xeon-scalable-2nd-draft.ts created: restarting dev server
+Error: Command failed: taskkill /PID 10024 /F /T
+�訡��: �� 㤠���� ���� ����� "10024".
+
+    at genericNodeError (node:internal/errors:985:15)
+    at wrappedFn (node:internal/errors:539:14)
+    at checkExecSyncError (node:child_process:925:11)
+    at execSync (node:child_process:997:15)
+    at Object.restart (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:185:19)
+    at Object.handleFileChange (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:236:20)
+    at FSWatcher.<anonymous> (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:243:26)
+    at FSWatcher.emit (node:events:508:28)
+    at FSWatcher.emit (node:domain:489:12)
+    at FSWatcher.emitWithAll (D:\Meduza site\node_modules\chokidar\index.js:436:14) {
+  status: 128,
+  signal: null,
+  output: [
+    null,
+    <Buffer >,
+    <Buffer 8e e8 a8 a1 aa a0 3a 20 8d a5 20 e3 a4 a0 a5 e2 e1 ef 20 ad a0 a9 e2 a8 20 af e0 ae e6 a5 e1 e1 20 22 31 30 30 32 34 22 2e 0d 0a>
+  ],
+  pid: 59472,
+  stdout: <Buffer >,
+  stderr: <Buffer 8e e8 a8 a1 aa a0 3a 20 8d a5 20 e3 a4 a0 a5 e2 e1 ef 20 ad a0 a9 e2 a8 20 af e0 ae e6 a5 e1 e1 20 22 31 30 30 32 34 22 2e 0d 0a>
+}
+[32minfo[39m:    [Watcher] created src\scripts\intel-xeon\types.ts created: restarting dev server
+Error: Command failed: taskkill /PID 10024 /F /T
+�訡��: �� 㤠���� ���� ����� "10024".
+
+    at genericNodeError (node:internal/errors:985:15)
+    at wrappedFn (node:internal/errors:539:14)
+    at checkExecSyncError (node:child_process:925:11)
+    at execSync (node:child_process:997:15)
+    at Object.restart (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:185:19)
+    at Object.handleFileChange (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:236:20)
+    at FSWatcher.<anonymous> (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:243:26)
+    at FSWatcher.emit (node:events:508:28)
+    at FSWatcher.emit (node:domain:489:12)
+    at FSWatcher.emitWithAll (D:\Meduza site\node_modules\chokidar\index.js:436:14) {
+  status: 128,
+  signal: null,
+  output: [
+    null,
+    <Buffer >,
+    <Buffer 8e e8 a8 a1 aa a0 3a 20 8d a5 20 e3 a4 a0 a5 e2 e1 ef 20 ad a0 a9 e2 a8 20 af e0 ae e6 a5 e1 e1 20 22 31 30 30 32 34 22 2e 0d 0a>
+  ],
+  pid: 51588,
+  stdout: <Buffer >,
+  stderr: <Buffer 8e e8 a8 a1 aa a0 3a 20 8d a5 20 e3 a4 a0 a5 e2 e1 ef 20 ad a0 a9 e2 a8 20 af e0 ae e6 a5 e1 e1 20 22 31 30 30 32 34 22 2e 0d 0a>
+}
+[32minfo[39m:    [Watcher] created src\scripts\intel-xeon\sources.ts created: restarting dev server
+Error: Command failed: taskkill /PID 10024 /F /T
+�訡��: �� 㤠���� ���� ����� "10024".
+
+    at genericNodeError (node:internal/errors:985:15)
+    at wrappedFn (node:internal/errors:539:14)
+    at checkExecSyncError (node:child_process:925:11)
+    at execSync (node:child_process:997:15)
+    at Object.restart (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:185:19)
+    at Object.handleFileChange (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:236:20)
+    at FSWatcher.<anonymous> (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:243:26)
+    at FSWatcher.emit (node:events:508:28)
+    at FSWatcher.emit (node:domain:489:12)
+    at FSWatcher.emitWithAll (D:\Meduza site\node_modules\chokidar\index.js:436:14) {
+  status: 128,
+  signal: null,
+  output: [
+    null,
+    <Buffer >,
+    <Buffer 8e e8 a8 a1 aa a0 3a 20 8d a5 20 e3 a4 a0 a5 e2 e1 ef 20 ad a0 a9 e2 a8 20 af e0 ae e6 a5 e1 e1 20 22 31 30 30 32 34 22 2e 0d 0a>
+  ],
+  pid: 16848,
+  stdout: <Buffer >,
+  stderr: <Buffer 8e e8 a8 a1 aa a0 3a 20 8d a5 20 e3 a4 a0 a5 e2 e1 ef 20 ad a0 a9 e2 a8 20 af e0 ae e6 a5 e1 e1 20 22 31 30 30 32 34 22 2e 0d 0a>
+}
+[32minfo[39m:    [Watcher] created src\scripts\intel-xeon\normalize-cpu.ts created: restarting dev server
+Error: Command failed: taskkill /PID 10024 /F /T
+�訡��: �� 㤠���� ���� ����� "10024".
+
+    at genericNodeError (node:internal/errors:985:15)
+    at wrappedFn (node:internal/errors:539:14)
+    at checkExecSyncError (node:child_process:925:11)
+    at execSync (node:child_process:997:15)
+    at Object.restart (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:185:19)
+    at Object.handleFileChange (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:236:20)
+    at FSWatcher.<anonymous> (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:243:26)
+    at FSWatcher.emit (node:events:508:28)
+    at FSWatcher.emit (node:domain:489:12)
+    at FSWatcher.emitWithAll (D:\Meduza site\node_modules\chokidar\index.js:436:14) {
+  status: 128,
+  signal: null,
+  output: [
+    null,
+    <Buffer >,
+    <Buffer 8e e8 a8 a1 aa a0 3a 20 8d a5 20 e3 a4 a0 a5 e2 e1 ef 20 ad a0 a9 e2 a8 20 af e0 ae e6 a5 e1 e1 20 22 31 30 30 32 34 22 2e 0d 0a>
+  ],
+  pid: 53708,
+  stdout: <Buffer >,
+  stderr: <Buffer 8e e8 a8 a1 aa a0 3a 20 8d a5 20 e3 a4 a0 a5 e2 e1 ef 20 ad a0 a9 e2 a8 20 af e0 ae e6 a5 e1 e1 20 22 31 30 30 32 34 22 2e 0d 0a>
+}
+[32minfo[39m:    [Watcher] created src\scripts\intel-xeon\upsert-cpus.ts created: restarting dev server
+Error: Command failed: taskkill /PID 10024 /F /T
+�訡��: �� 㤠���� ���� ����� "10024".
+
+    at genericNodeError (node:internal/errors:985:15)
+    at wrappedFn (node:internal/errors:539:14)
+    at checkExecSyncError (node:child_process:925:11)
+    at execSync (node:child_process:997:15)
+    at Object.restart (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:185:19)
+    at Object.handleFileChange (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:236:20)
+    at FSWatcher.<anonymous> (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:243:26)
+    at FSWatcher.emit (node:events:508:28)
+    at FSWatcher.emit (node:domain:489:12)
+    at FSWatcher.emitWithAll (D:\Meduza site\node_modules\chokidar\index.js:436:14) {
+  status: 128,
+  signal: null,
+  output: [
+    null,
+    <Buffer >,
+    <Buffer 8e e8 a8 a1 aa a0 3a 20 8d a5 20 e3 a4 a0 a5 e2 e1 ef 20 ad a0 a9 e2 a8 20 af e0 ae e6 a5 e1 e1 20 22 31 30 30 32 34 22 2e 0d 0a>
+  ],
+  pid: 57888,
+  stdout: <Buffer >,
+  stderr: <Buffer 8e e8 a8 a1 aa a0 3a 20 8d a5 20 e3 a4 a0 a5 e2 e1 ef 20 ad a0 a9 e2 a8 20 af e0 ae e6 a5 e1 e1 20 22 31 30 30 32 34 22 2e 0d 0a>
+}
+[32minfo[39m:    [Watcher] created src\scripts\intel-xeon\create-cpu-packs.ts created: restarting dev server
+Error: Command failed: taskkill /PID 10024 /F /T
+�訡��: �� 㤠���� ���� ����� "10024".
+
+    at genericNodeError (node:internal/errors:985:15)
+    at wrappedFn (node:internal/errors:539:14)
+    at checkExecSyncError (node:child_process:925:11)
+    at execSync (node:child_process:997:15)
+    at Object.restart (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:185:19)
+    at Object.handleFileChange (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:236:20)
+    at FSWatcher.<anonymous> (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:243:26)
+    at FSWatcher.emit (node:events:508:28)
+    at FSWatcher.emit (node:domain:489:12)
+    at FSWatcher.emitWithAll (D:\Meduza site\node_modules\chokidar\index.js:436:14) {
+  status: 128,
+  signal: null,
+  output: [
+    null,
+    <Buffer >,
+    <Buffer 8e e8 a8 a1 aa a0 3a 20 8d a5 20 e3 a4 a0 a5 e2 e1 ef 20 ad a0 a9 e2 a8 20 af e0 ae e6 a5 e1 e1 20 22 31 30 30 32 34 22 2e 0d 0a>
+  ],
+  pid: 51016,
+  stdout: <Buffer >,
+  stderr: <Buffer 8e e8 a8 a1 aa a0 3a 20 8d a5 20 e3 a4 a0 a5 e2 e1 ef 20 ad a0 a9 e2 a8 20 af e0 ae e6 a5 e1 e1 20 22 31 30 30 32 34 22 2e 0d 0a>
+}
+[32minfo[39m:    [Watcher] created src\scripts\intel-xeon\report.ts created: restarting dev server
+Error: Command failed: taskkill /PID 10024 /F /T
+�訡��: �� 㤠���� ���� ����� "10024".
+
+    at genericNodeError (node:internal/errors:985:15)
+    at wrappedFn (node:internal/errors:539:14)
+    at checkExecSyncError (node:child_process:925:11)
+    at execSync (node:child_process:997:15)
+    at Object.restart (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:185:19)
+    at Object.handleFileChange (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:236:20)
+    at FSWatcher.<anonymous> (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:243:26)
+    at FSWatcher.emit (node:events:508:28)
+    at FSWatcher.emit (node:domain:489:12)
+    at FSWatcher.emitWithAll (D:\Meduza site\node_modules\chokidar\index.js:436:14) {
+  status: 128,
+  signal: null,
+  output: [
+    null,
+    <Buffer >,
+    <Buffer 8e e8 a8 a1 aa a0 3a 20 8d a5 20 e3 a4 a0 a5 e2 e1 ef 20 ad a0 a9 e2 a8 20 af e0 ae e6 a5 e1 e1 20 22 31 30 30 32 34 22 2e 0d 0a>
+  ],
+  pid: 49480,
+  stdout: <Buffer >,
+  stderr: <Buffer 8e e8 a8 a1 aa a0 3a 20 8d a5 20 e3 a4 a0 a5 e2 e1 ef 20 ad a0 a9 e2 a8 20 af e0 ae e6 a5 e1 e1 20 22 31 30 30 32 34 22 2e 0d 0a>
+}
+[32minfo[39m:    [Watcher] created src\scripts\import-intel-xeon-scalable-cpus.ts created: restarting dev server
+Error: Command failed: taskkill /PID 10024 /F /T
+�訡��: �� 㤠���� ���� ����� "10024".
+
+    at genericNodeError (node:internal/errors:985:15)
+    at wrappedFn (node:internal/errors:539:14)
+    at checkExecSyncError (node:child_process:925:11)
+    at execSync (node:child_process:997:15)
+    at Object.restart (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:185:19)
+    at Object.handleFileChange (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:236:20)
+    at FSWatcher.<anonymous> (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:243:26)
+    at FSWatcher.emit (node:events:508:28)
+    at FSWatcher.emit (node:domain:489:12)
+    at FSWatcher.emitWithAll (D:\Meduza site\node_modules\chokidar\index.js:436:14) {
+  status: 128,
+  signal: null,
+  output: [
+    null,
+    <Buffer >,
+    <Buffer 8e e8 a8 a1 aa a0 3a 20 8d a5 20 e3 a4 a0 a5 e2 e1 ef 20 ad a0 a9 e2 a8 20 af e0 ae e6 a5 e1 e1 20 22 31 30 30 32 34 22 2e 0d 0a>
+  ],
+  pid: 46092,
+  stdout: <Buffer >,
+  stderr: <Buffer 8e e8 a8 a1 aa a0 3a 20 8d a5 20 e3 a4 a0 a5 e2 e1 ef 20 ad a0 a9 e2 a8 20 af e0 ae e6 a5 e1 e1 20 22 31 30 30 32 34 22 2e 0d 0a>
+}
+[32minfo[39m:    [Watcher] created src\scripts\seed-component-packs.ts created: restarting dev server
+Error: Command failed: taskkill /PID 10024 /F /T
+�訡��: �� 㤠���� ���� ����� "10024".
+
+    at genericNodeError (node:internal/errors:985:15)
+    at wrappedFn (node:internal/errors:539:14)
+    at checkExecSyncError (node:child_process:925:11)
+    at execSync (node:child_process:997:15)
+    at Object.restart (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:185:19)
+    at Object.handleFileChange (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:236:20)
+    at FSWatcher.<anonymous> (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:243:26)
+    at FSWatcher.emit (node:events:508:28)
+    at FSWatcher.emit (node:domain:489:12)
+    at FSWatcher.emitWithAll (D:\Meduza site\node_modules\chokidar\index.js:436:14) {
+  status: 128,
+  signal: null,
+  output: [
+    null,
+    <Buffer >,
+    <Buffer 8e e8 a8 a1 aa a0 3a 20 8d a5 20 e3 a4 a0 a5 e2 e1 ef 20 ad a0 a9 e2 a8 20 af e0 ae e6 a5 e1 e1 20 22 31 30 30 32 34 22 2e 0d 0a>
+  ],
+  pid: 48420,
+  stdout: <Buffer >,
+  stderr: <Buffer 8e e8 a8 a1 aa a0 3a 20 8d a5 20 e3 a4 a0 a5 e2 e1 ef 20 ad a0 a9 e2 a8 20 af e0 ae e6 a5 e1 e1 20 22 31 30 30 32 34 22 2e 0d 0a>
+}
+[32minfo[39m:    [Watcher] modified src\scripts\intel-xeon\create-cpu-packs.ts modified: restarting dev server
+Error: Command failed: taskkill /PID 10024 /F /T
+�訡��: �� 㤠���� ���� ����� "10024".
+
+    at genericNodeError (node:internal/errors:985:15)
+    at wrappedFn (node:internal/errors:539:14)
+    at checkExecSyncError (node:child_process:925:11)
+    at execSync (node:child_process:997:15)
+    at Object.restart (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:185:19)
+    at Object.handleFileChange (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:236:20)
+    at FSWatcher.<anonymous> (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:246:26)
+    at FSWatcher.emit (node:events:508:28)
+    at FSWatcher.emit (node:domain:489:12)
+    at FSWatcher.emitWithAll (D:\Meduza site\node_modules\chokidar\index.js:436:14) {
+  status: 128,
+  signal: null,
+  output: [
+    null,
+    <Buffer >,
+    <Buffer 8e e8 a8 a1 aa a0 3a 20 8d a5 20 e3 a4 a0 a5 e2 e1 ef 20 ad a0 a9 e2 a8 20 af e0 ae e6 a5 e1 e1 20 22 31 30 30 32 34 22 2e 0d 0a>
+  ],
+  pid: 2508,
+  stdout: <Buffer >,
+  stderr: <Buffer 8e e8 a8 a1 aa a0 3a 20 8d a5 20 e3 a4 a0 a5 e2 e1 ef 20 ad a0 a9 e2 a8 20 af e0 ae e6 a5 e1 e1 20 22 31 30 30 32 34 22 2e 0d 0a>
+}
+[32minfo[39m:    [Watcher] modified src\scripts\intel-xeon\create-cpu-packs.ts modified: restarting dev server
+Error: Command failed: taskkill /PID 10024 /F /T
+�訡��: �� 㤠���� ���� ����� "10024".
+
+    at genericNodeError (node:internal/errors:985:15)
+    at wrappedFn (node:internal/errors:539:14)
+    at checkExecSyncError (node:child_process:925:11)
+    at execSync (node:child_process:997:15)
+    at Object.restart (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:185:19)
+    at Object.handleFileChange (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:236:20)
+    at FSWatcher.<anonymous> (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:246:26)
+    at FSWatcher.emit (node:events:508:28)
+    at FSWatcher.emit (node:domain:489:12)
+    at FSWatcher.emitWithAll (D:\Meduza site\node_modules\chokidar\index.js:436:14) {
+  status: 128,
+  signal: null,
+  output: [
+    null,
+    <Buffer >,
+    <Buffer 8e e8 a8 a1 aa a0 3a 20 8d a5 20 e3 a4 a0 a5 e2 e1 ef 20 ad a0 a9 e2 a8 20 af e0 ae e6 a5 e1 e1 20 22 31 30 30 32 34 22 2e 0d 0a>
+  ],
+  pid: 50696,
+  stdout: <Buffer >,
+  stderr: <Buffer 8e e8 a8 a1 aa a0 3a 20 8d a5 20 e3 a4 a0 a5 e2 e1 ef 20 ad a0 a9 e2 a8 20 af e0 ae e6 a5 e1 e1 20 22 31 30 30 32 34 22 2e 0d 0a>
+}
+[32minfo[39m:    [Watcher] modified src\scripts\seed-component-packs.ts modified: restarting dev server
+Error: Command failed: taskkill /PID 10024 /F /T
+�訡��: �� 㤠���� ���� ����� "10024".
+
+    at genericNodeError (node:internal/errors:985:15)
+    at wrappedFn (node:internal/errors:539:14)
+    at checkExecSyncError (node:child_process:925:11)
+    at execSync (node:child_process:997:15)
+    at Object.restart (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:185:19)
+    at Object.handleFileChange (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:236:20)
+    at FSWatcher.<anonymous> (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:246:26)
+    at FSWatcher.emit (node:events:508:28)
+    at FSWatcher.emit (node:domain:489:12)
+    at FSWatcher.emitWithAll (D:\Meduza site\node_modules\chokidar\index.js:436:14) {
+  status: 128,
+  signal: null,
+  output: [
+    null,
+    <Buffer >,
+    <Buffer 8e e8 a8 a1 aa a0 3a 20 8d a5 20 e3 a4 a0 a5 e2 e1 ef 20 ad a0 a9 e2 a8 20 af e0 ae e6 a5 e1 e1 20 22 31 30 30 32 34 22 2e 0d 0a>
+  ],
+  pid: 63480,
+  stdout: <Buffer >,
+  stderr: <Buffer 8e e8 a8 a1 aa a0 3a 20 8d a5 20 e3 a4 a0 a5 e2 e1 ef 20 ad a0 a9 e2 a8 20 af e0 ae e6 a5 e1 e1 20 22 31 30 30 32 34 22 2e 0d 0a>
+}
+[32minfo[39m:    [Watcher] modified src\api\admin\server-configurator\components\route.ts modified: restarting dev server
+Error: Command failed: taskkill /PID 10024 /F /T
+�訡��: �� 㤠���� ���� ����� "10024".
+
+    at genericNodeError (node:internal/errors:985:15)
+    at wrappedFn (node:internal/errors:539:14)
+    at checkExecSyncError (node:child_process:925:11)
+    at execSync (node:child_process:997:15)
+    at Object.restart (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:185:19)
+    at Object.handleFileChange (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:236:20)
+    at FSWatcher.<anonymous> (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:246:26)
+    at FSWatcher.emit (node:events:508:28)
+    at FSWatcher.emit (node:domain:489:12)
+    at FSWatcher.emitWithAll (D:\Meduza site\node_modules\chokidar\index.js:436:14) {
+  status: 128,
+  signal: null,
+  output: [
+    null,
+    <Buffer >,
+    <Buffer 8e e8 a8 a1 aa a0 3a 20 8d a5 20 e3 a4 a0 a5 e2 e1 ef 20 ad a0 a9 e2 a8 20 af e0 ae e6 a5 e1 e1 20 22 31 30 30 32 34 22 2e 0d 0a>
+  ],
+  pid: 45452,
+  stdout: <Buffer >,
+  stderr: <Buffer 8e e8 a8 a1 aa a0 3a 20 8d a5 20 e3 a4 a0 a5 e2 e1 ef 20 ad a0 a9 e2 a8 20 af e0 ae e6 a5 e1 e1 20 22 31 30 30 32 34 22 2e 0d 0a>
+}
+[32minfo[39m:    [Watcher] modified src\api\admin\server-configurator\components\route.ts modified: restarting dev server
+Error: Command failed: taskkill /PID 10024 /F /T
+�訡��: �� 㤠���� ���� ����� "10024".
+
+    at genericNodeError (node:internal/errors:985:15)
+    at wrappedFn (node:internal/errors:539:14)
+    at checkExecSyncError (node:child_process:925:11)
+    at execSync (node:child_process:997:15)
+    at Object.restart (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:185:19)
+    at Object.handleFileChange (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:236:20)
+    at FSWatcher.<anonymous> (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:246:26)
+    at FSWatcher.emit (node:events:508:28)
+    at FSWatcher.emit (node:domain:489:12)
+    at FSWatcher.emitWithAll (D:\Meduza site\node_modules\chokidar\index.js:436:14) {
+  status: 128,
+  signal: null,
+  output: [
+    null,
+    <Buffer >,
+    <Buffer 8e e8 a8 a1 aa a0 3a 20 8d a5 20 e3 a4 a0 a5 e2 e1 ef 20 ad a0 a9 e2 a8 20 af e0 ae e6 a5 e1 e1 20 22 31 30 30 32 34 22 2e 0d 0a>
+  ],
+  pid: 59720,
+  stdout: <Buffer >,
+  stderr: <Buffer 8e e8 a8 a1 aa a0 3a 20 8d a5 20 e3 a4 a0 a5 e2 e1 ef 20 ad a0 a9 e2 a8 20 af e0 ae e6 a5 e1 e1 20 22 31 30 30 32 34 22 2e 0d 0a>
+}
+[32minfo[39m:    [Watcher] modified src\api\admin\server-configurator\applicability\route.ts modified: restarting dev server
+Error: Command failed: taskkill /PID 10024 /F /T
+�訡��: �� 㤠���� ���� ����� "10024".
+
+    at genericNodeError (node:internal/errors:985:15)
+    at wrappedFn (node:internal/errors:539:14)
+    at checkExecSyncError (node:child_process:925:11)
+    at execSync (node:child_process:997:15)
+    at Object.restart (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:185:19)
+    at Object.handleFileChange (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:236:20)
+    at FSWatcher.<anonymous> (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:246:26)
+    at FSWatcher.emit (node:events:508:28)
+    at FSWatcher.emit (node:domain:489:12)
+    at FSWatcher.emitWithAll (D:\Meduza site\node_modules\chokidar\index.js:436:14) {
+  status: 128,
+  signal: null,
+  output: [
+    null,
+    <Buffer >,
+    <Buffer 8e e8 a8 a1 aa a0 3a 20 8d a5 20 e3 a4 a0 a5 e2 e1 ef 20 ad a0 a9 e2 a8 20 af e0 ae e6 a5 e1 e1 20 22 31 30 30 32 34 22 2e 0d 0a>
+  ],
+  pid: 47248,
+  stdout: <Buffer >,
+  stderr: <Buffer 8e e8 a8 a1 aa a0 3a 20 8d a5 20 e3 a4 a0 a5 e2 e1 ef 20 ad a0 a9 e2 a8 20 af e0 ae e6 a5 e1 e1 20 22 31 30 30 32 34 22 2e 0d 0a>
+}
+[32minfo[39m:    [Watcher] modified src\scripts\intel-xeon\create-cpu-packs.ts modified: restarting dev server
+Error: Command failed: taskkill /PID 10024 /F /T
+�訡��: �� 㤠���� ���� ����� "10024".
+
+    at genericNodeError (node:internal/errors:985:15)
+    at wrappedFn (node:internal/errors:539:14)
+    at checkExecSyncError (node:child_process:925:11)
+    at execSync (node:child_process:997:15)
+    at Object.restart (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:185:19)
+    at Object.handleFileChange (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:236:20)
+    at FSWatcher.<anonymous> (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:246:26)
+    at FSWatcher.emit (node:events:508:28)
+    at FSWatcher.emit (node:domain:489:12)
+    at FSWatcher.emitWithAll (D:\Meduza site\node_modules\chokidar\index.js:436:14) {
+  status: 128,
+  signal: null,
+  output: [
+    null,
+    <Buffer >,
+    <Buffer 8e e8 a8 a1 aa a0 3a 20 8d a5 20 e3 a4 a0 a5 e2 e1 ef 20 ad a0 a9 e2 a8 20 af e0 ae e6 a5 e1 e1 20 22 31 30 30 32 34 22 2e 0d 0a>
+  ],
+  pid: 56356,
+  stdout: <Buffer >,
+  stderr: <Buffer 8e e8 a8 a1 aa a0 3a 20 8d a5 20 e3 a4 a0 a5 e2 e1 ef 20 ad a0 a9 e2 a8 20 af e0 ae e6 a5 e1 e1 20 22 31 30 30 32 34 22 2e 0d 0a>
+}
+[32minfo[39m:    [Watcher] modified src\scripts\intel-xeon\normalize-cpu.ts modified: restarting dev server
+Error: Command failed: taskkill /PID 10024 /F /T
+�訡��: �� 㤠���� ���� ����� "10024".
+
+    at genericNodeError (node:internal/errors:985:15)
+    at wrappedFn (node:internal/errors:539:14)
+    at checkExecSyncError (node:child_process:925:11)
+    at execSync (node:child_process:997:15)
+    at Object.restart (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:185:19)
+    at Object.handleFileChange (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:236:20)
+    at FSWatcher.<anonymous> (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:246:26)
+    at FSWatcher.emit (node:events:508:28)
+    at FSWatcher.emit (node:domain:489:12)
+    at FSWatcher.emitWithAll (D:\Meduza site\node_modules\chokidar\index.js:436:14) {
+  status: 128,
+  signal: null,
+  output: [
+    null,
+    <Buffer >,
+    <Buffer 8e e8 a8 a1 aa a0 3a 20 8d a5 20 e3 a4 a0 a5 e2 e1 ef 20 ad a0 a9 e2 a8 20 af e0 ae e6 a5 e1 e1 20 22 31 30 30 32 34 22 2e 0d 0a>
+  ],
+  pid: 59024,
+  stdout: <Buffer >,
+  stderr: <Buffer 8e e8 a8 a1 aa a0 3a 20 8d a5 20 e3 a4 a0 a5 e2 e1 ef 20 ad a0 a9 e2 a8 20 af e0 ae e6 a5 e1 e1 20 22 31 30 30 32 34 22 2e 0d 0a>
+}
+[32minfo[39m:    [Watcher] modified src\scripts\intel-xeon\normalize-cpu.ts modified: restarting dev server
+Error: Command failed: taskkill /PID 10024 /F /T
+�訡��: �� 㤠���� ���� ����� "10024".
+
+    at genericNodeError (node:internal/errors:985:15)
+    at wrappedFn (node:internal/errors:539:14)
+    at checkExecSyncError (node:child_process:925:11)
+    at execSync (node:child_process:997:15)
+    at Object.restart (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:185:19)
+    at Object.handleFileChange (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:236:20)
+    at FSWatcher.<anonymous> (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:246:26)
+    at FSWatcher.emit (node:events:508:28)
+    at FSWatcher.emit (node:domain:489:12)
+    at FSWatcher.emitWithAll (D:\Meduza site\node_modules\chokidar\index.js:436:14) {
+  status: 128,
+  signal: null,
+  output: [
+    null,
+    <Buffer >,
+    <Buffer 8e e8 a8 a1 aa a0 3a 20 8d a5 20 e3 a4 a0 a5 e2 e1 ef 20 ad a0 a9 e2 a8 20 af e0 ae e6 a5 e1 e1 20 22 31 30 30 32 34 22 2e 0d 0a>
+  ],
+  pid: 36832,
+  stdout: <Buffer >,
+  stderr: <Buffer 8e e8 a8 a1 aa a0 3a 20 8d a5 20 e3 a4 a0 a5 e2 e1 ef 20 ad a0 a9 e2 a8 20 af e0 ae e6 a5 e1 e1 20 22 31 30 30 32 34 22 2e 0d 0a>
+}
+[32minfo[39m:    [Watcher] modified src\scripts\intel-xeon\report.ts modified: restarting dev server
+Error: Command failed: taskkill /PID 10024 /F /T
+�訡��: �� 㤠���� ���� ����� "10024".
+
+    at genericNodeError (node:internal/errors:985:15)
+    at wrappedFn (node:internal/errors:539:14)
+    at checkExecSyncError (node:child_process:925:11)
+    at execSync (node:child_process:997:15)
+    at Object.restart (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:185:19)
+    at Object.handleFileChange (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:236:20)
+    at FSWatcher.<anonymous> (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:246:26)
+    at FSWatcher.emit (node:events:508:28)
+    at FSWatcher.emit (node:domain:489:12)
+    at FSWatcher.emitWithAll (D:\Meduza site\node_modules\chokidar\index.js:436:14) {
+  status: 128,
+  signal: null,
+  output: [
+    null,
+    <Buffer >,
+    <Buffer 8e e8 a8 a1 aa a0 3a 20 8d a5 20 e3 a4 a0 a5 e2 e1 ef 20 ad a0 a9 e2 a8 20 af e0 ae e6 a5 e1 e1 20 22 31 30 30 32 34 22 2e 0d 0a>
+  ],
+  pid: 47008,
+  stdout: <Buffer >,
+  stderr: <Buffer 8e e8 a8 a1 aa a0 3a 20 8d a5 20 e3 a4 a0 a5 e2 e1 ef 20 ad a0 a9 e2 a8 20 af e0 ae e6 a5 e1 e1 20 22 31 30 30 32 34 22 2e 0d 0a>
+}
+[32minfo[39m:    [Watcher] created src\scripts\_codex-cleanup-dell-r640-test.ts created: restarting dev server
+Error: Command failed: taskkill /PID 10024 /F /T
+�訡��: �� 㤠���� ���� ����� "10024".
+
+    at genericNodeError (node:internal/errors:985:15)
+    at wrappedFn (node:internal/errors:539:14)
+    at checkExecSyncError (node:child_process:925:11)
+    at execSync (node:child_process:997:15)
+    at Object.restart (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:185:19)
+    at Object.handleFileChange (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:236:20)
+    at FSWatcher.<anonymous> (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:243:26)
+    at FSWatcher.emit (node:events:508:28)
+    at FSWatcher.emit (node:domain:489:12)
+    at FSWatcher.emitWithAll (D:\Meduza site\node_modules\chokidar\index.js:436:14) {
+  status: 128,
+  signal: null,
+  output: [
+    null,
+    <Buffer >,
+    <Buffer 8e e8 a8 a1 aa a0 3a 20 8d a5 20 e3 a4 a0 a5 e2 e1 ef 20 ad a0 a9 e2 a8 20 af e0 ae e6 a5 e1 e1 20 22 31 30 30 32 34 22 2e 0d 0a>
+  ],
+  pid: 44580,
+  stdout: <Buffer >,
+  stderr: <Buffer 8e e8 a8 a1 aa a0 3a 20 8d a5 20 e3 a4 a0 a5 e2 e1 ef 20 ad a0 a9 e2 a8 20 af e0 ae e6 a5 e1 e1 20 22 31 30 30 32 34 22 2e 0d 0a>
+}
+[32minfo[39m:    [Watcher] removed src\scripts\_codex-cleanup-dell-r640-test.ts removed: restarting dev server
+Error: Command failed: taskkill /PID 10024 /F /T
+�訡��: �� 㤠���� ���� ����� "10024".
+
+    at genericNodeError (node:internal/errors:985:15)
+    at wrappedFn (node:internal/errors:539:14)
+    at checkExecSyncError (node:child_process:925:11)
+    at execSync (node:child_process:997:15)
+    at Object.restart (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:185:19)
+    at Object.handleFileChange (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:236:20)
+    at FSWatcher.<anonymous> (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:249:26)
+    at FSWatcher.emit (node:events:508:28)
+    at FSWatcher.emit (node:domain:489:12)
+    at D:\Meduza site\node_modules\chokidar\index.js:472:30 {
+  status: 128,
+  signal: null,
+  output: [
+    null,
+    <Buffer >,
+    <Buffer 8e e8 a8 a1 aa a0 3a 20 8d a5 20 e3 a4 a0 a5 e2 e1 ef 20 ad a0 a9 e2 a8 20 af e0 ae e6 a5 e1 e1 20 22 31 30 30 32 34 22 2e 0d 0a>
+  ],
+  pid: 53736,
+  stdout: <Buffer >,
+  stderr: <Buffer 8e e8 a8 a1 aa a0 3a 20 8d a5 20 e3 a4 a0 a5 e2 e1 ef 20 ad a0 a9 e2 a8 20 af e0 ae e6 a5 e1 e1 20 22 31 30 30 32 34 22 2e 0d 0a>
+}
+[32minfo[39m:    [Watcher] created src.zip created: restarting dev server
+Error: Command failed: taskkill /PID 10024 /F /T
+�訡��: �� 㤠���� ���� ����� "10024".
+
+    at genericNodeError (node:internal/errors:985:15)
+    at wrappedFn (node:internal/errors:539:14)
+    at checkExecSyncError (node:child_process:925:11)
+    at execSync (node:child_process:997:15)
+    at Object.restart (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:185:19)
+    at Object.handleFileChange (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:236:20)
+    at FSWatcher.<anonymous> (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:243:26)
+    at FSWatcher.emit (node:events:508:28)
+    at FSWatcher.emit (node:domain:489:12)
+    at FSWatcher.emitWithAll (D:\Meduza site\node_modules\chokidar\index.js:436:14) {
+  status: 128,
+  signal: null,
+  output: [
+    null,
+    <Buffer >,
+    <Buffer 8e e8 a8 a1 aa a0 3a 20 8d a5 20 e3 a4 a0 a5 e2 e1 ef 20 ad a0 a9 e2 a8 20 af e0 ae e6 a5 e1 e1 20 22 31 30 30 32 34 22 2e 0d 0a>
+  ],
+  pid: 5708,
+  stdout: <Buffer >,
+  stderr: <Buffer 8e e8 a8 a1 aa a0 3a 20 8d a5 20 e3 a4 a0 a5 e2 e1 ef 20 ad a0 a9 e2 a8 20 af e0 ae e6 a5 e1 e1 20 22 31 30 30 32 34 22 2e 0d 0a>
+}
+[32minfo[39m:    [Watcher] modified src.zip modified: restarting dev server
+Error: Command failed: taskkill /PID 10024 /F /T
+�訡��: �� 㤠���� ���� ����� "10024".
+
+    at genericNodeError (node:internal/errors:985:15)
+    at wrappedFn (node:internal/errors:539:14)
+    at checkExecSyncError (node:child_process:925:11)
+    at execSync (node:child_process:997:15)
+    at Object.restart (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:185:19)
+    at Object.handleFileChange (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:236:20)
+    at FSWatcher.<anonymous> (D:\Meduza site\node_modules\@medusajs\medusa\src\commands\develop.ts:246:26)
+    at FSWatcher.emit (node:events:508:28)
+    at FSWatcher.emit (node:domain:489:12)
+    at FSWatcher.emitWithAll (D:\Meduza site\node_modules\chokidar\index.js:436:14) {
+  status: 128,
+  signal: null,
+  output: [
+    null,
+    <Buffer >,
+    <Buffer 8e e8 a8 a1 aa a0 3a 20 8d a5 20 e3 a4 a0 a5 e2 e1 ef 20 ad a0 a9 e2 a8 20 af e0 ae e6 a5 e1 e1 20 22 31 30 30 32 34 22 2e 0d 0a>
+  ],
+  pid: 36304,
+  stdout: <Buffer >,
+  stderr: <Buffer 8e e8 a8 a1 aa a0 3a 20 8d a5 20 e3 a4 a0 a5 e2 e1 ef 20 ad a0 a9 e2 a8 20 af e0 ae e6 a5 e1 e1 20 22 31 30 30 32 34 22 2e 0d 0a>
+}

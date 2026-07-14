@@ -1,0 +1,18 @@
+npm warn Unknown project config "auto-install-peers". This will stop working in the next major version of npm.
+NOT SUPPORTED: option missingRefs. Pass empty schema with $id that should be ignored to ajv.addSchema.
+- Creating server
+тИЪ Server is ready on port: 9000 тАУ 4350ms
+- Creating server
+тИЪ Server is ready on port: 9000 тАУ 5038ms
+- Creating server
+тИЪ Server is ready on port: 9000 тАУ 6814ms
+Ошибка: Не удается найти процесс "59668".
+Ошибка: Не удается найти процесс "59668".
+Ошибка: Не удается найти процесс "59668".
+Ошибка: Не удается найти процесс "59668".
+Ошибка: Не удается найти процесс "59668".
+Ошибка: Не удается найти процесс "59668".
+Ошибка: Не удается найти процесс "59668".
+- Creating server
+тИЪ Server is ready on port: 9000 тАУ 4204ms
+Ошибка: Не удается найти процесс "41876".

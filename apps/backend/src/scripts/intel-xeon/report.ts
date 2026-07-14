@@ -1,0 +1,48 @@
+import fs from "node:fs/promises"
+import path from "node:path"
+
+export async function writeIntelImportReport(input: any) {
+  const lines = [
+    "# Intel Xeon Scalable Import Result",
+    "",
+    `Date: ${new Date().toISOString()}`,
+    "",
+    "## Sources",
+    "",
+    `- Intel ARK/Product Specifications attempted: ${input.ark?.ok ? "reachable" : "not usable for structured import"}`,
+    `- Intel ARK note: ${input.ark?.note || "not checked"}`,
+    "- Fallback used: curated TypeScript draft data in `apps/backend/src/scripts/intel-xeon`.",
+    "- All fallback rows are marked `needs_review: true` and `source_confidence: fallback`.",
+    "",
+    "## Counts",
+    "",
+    `- 1st Gen source rows: ${input.first_count}`,
+    `- 2nd Gen source rows: ${input.second_count}`,
+    `- Last run created: ${input.upsert.created}`,
+    `- Last run updated: ${input.upsert.updated}`,
+    `- Last run unchanged: ${input.upsert.unchanged}`,
+    `- Skipped: ${input.upsert.skipped}`,
+    `- Needs review: ${input.upsert.needs_review}`,
+    `- Total imported/managed CPU rows: ${input.first_count + input.second_count}`,
+    "",
+    "## Packs",
+    "",
+    ...input.packs.map((row: any) => `- ${row.pack.name}: ${row.items.total} items (${row.items.added} added this run)`),
+    "",
+    "## Fields Filled",
+    "",
+    "- `type`, `brand`, `public_name`, `short_name`, `model`, `part_number`, `enabled`, `price`, `cost`, `stock_qty`.",
+    "- `specs_json`: generation, platform, code name, socket, cores, threads, frequencies, cache, TDP, memory, ECC, UPI/PCIe, scalability, launch date, source metadata, suffix flags.",
+    "",
+    "## HPE Gen10 Applicability",
+    "",
+    "- `Intel Xeon Scalable 1st/2nd Gen for HPE Gen10` applies CPU applicability through component `specs_json.applicability`.",
+    "- Runtime `/options` still reads components and applicability only; packs are admin tooling.",
+    "",
+    "## Risks",
+    "",
+    "- This run uses fallback draft data, not a full parsed Intel ARK export.",
+    "- Manual verification is required for exact SKU support, high-TDP cooling, BIOS support, and special suffix SKUs.",
+  ]
+  await fs.writeFile(path.resolve(process.cwd(), "../../INTEL_XEON_SCALABLE_IMPORT_RESULT.md"), lines.join("\n"))
+}

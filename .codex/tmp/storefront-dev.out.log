@@ -1,0 +1,3400 @@
+
+> @dtc/storefront@1.0.3 dev
+> next dev --turbopack -p 8000
+
+   ▲ Next.js 15.5.18 (Turbopack)
+   - Local:        http://localhost:8000
+   - Network:      http://172.19.0.1:8000
+   - Environments: .env.local
+
+ ✓ Starting...
+ ✓ Compiled middleware in 185ms
+ ✓ Ready in 1525ms
+ ○ Compiling /servers ...
+ ✓ Compiled /servers in 3.8s
+Initiating Medusa client with default headers:
+ {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/models
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/help-annotations?page=catalog
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/catalog-facets
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+ GET /servers 200 in 4495ms
+ │ GET http://localhost:9000/store/server-configurator/models 200 in 12ms (cache hit)
+ │ GET http://localhost:9000/store/server-configurator/help-annotations?page=catalog 200 in 16ms (cache hit)
+ │ GET http://localhost:9000/store/server-configurator/catalog-facets 200 in 14ms (cache hit)
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/models
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/help-annotations?page=catalog
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/catalog-facets
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+ GET /servers 200 in 278ms
+ │ GET http://localhost:9000/store/server-configurator/models 200 in 1ms (cache hit)
+ │ GET http://localhost:9000/store/server-configurator/help-annotations?page=catalog 200 in 1ms (cache hit)
+ │ GET http://localhost:9000/store/server-configurator/catalog-facets 200 in 1ms (cache hit)
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/models
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/help-annotations?page=catalog
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/catalog-facets
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+ GET /servers 200 in 238ms
+ │ GET http://localhost:9000/store/server-configurator/models 200 in 1ms (cache hit)
+ │ GET http://localhost:9000/store/server-configurator/help-annotations?page=catalog 200 in 1ms (cache hit)
+ │ GET http://localhost:9000/store/server-configurator/catalog-facets 200 in 1ms (cache hit)
+ ○ Compiling /servers/[slug] ...
+ ✓ Compiled /servers/[slug] in 648ms
+Initiating Medusa client with default headers:
+ {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/models/hpe-proliant-dl360-gen10-8sff
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/models/hpe-proliant-dl360-gen10-8sff
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/models/hpe-proliant-dl360-gen10-8sff/options
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/help-annotations?page=configurator&slug=hpe-proliant-dl360-gen10-8sff
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/models
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Initiating Medusa client with default headers:
+ {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+ GET /servers/hpe-proliant-dl360-gen10-8sff 200 in 1778ms
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/models/hpe-proliant-dl360-gen10-8sff
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/models/hpe-proliant-dl360-gen10-8sff
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/models/hpe-proliant-dl360-gen10-8sff/options
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/help-annotations?page=configurator&slug=hpe-proliant-dl360-gen10-8sff
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/models
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+ GET /servers/hpe-proliant-dl360-gen10-8sff 200 in 123ms
+ │ GET http://localhost:9000/store/server-configurator/models/hpe-proliant-dl360-gen10-8sff 200 in 1ms (cache hit)
+ │ GET http://localhost:9000/store/server-configurator/models/hpe-proliant-dl360-gen10-8sff 200 in 1ms (cache hit)
+ │ GET http://localhost:9000/store/server-configurator/models/hpe-proliant-dl360-gen10-8sff/options 200 in 1ms (cache hit)
+ │ GET http://localhost:9000/store/server-configurator/help-annotations?page=configurator&slug=hpe-proliant-dl360-gen10-8sff 200 in 1ms (cache hit)
+ │ GET http://localhost:9000/store/server-configurator/models 200 in 1ms (cache hit)
+Initiating Medusa client with default headers:
+ {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/models
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/help-annotations?page=catalog
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/catalog-facets
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+ GET /servers 200 in 99ms
+ │ GET http://localhost:9000/store/server-configurator/models 200 in 1ms (cache hit)
+ │ GET http://localhost:9000/store/server-configurator/help-annotations?page=catalog 200 in 2ms (cache hit)
+ │ GET http://localhost:9000/store/server-configurator/catalog-facets 200 in 2ms (cache hit)
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/models/hpe-proliant-dl360-gen10-10sff-nvme-premium
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/models/hpe-proliant-dl360-gen10-10sff-nvme-premium
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/models/hpe-proliant-dl360-gen10-10sff-nvme-premium/options
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/help-annotations?page=configurator&slug=hpe-proliant-dl360-gen10-10sff-nvme-premium
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/models
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+ GET /servers/hpe-proliant-dl360-gen10-10sff-nvme-premium 200 in 243ms
+Initiating Medusa client with default headers:
+ {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/models/hpe-proliant-dl360-gen10-10sff-nvme-premium
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/models/hpe-proliant-dl360-gen10-10sff-nvme-premium
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/models/hpe-proliant-dl360-gen10-10sff-nvme-premium/options
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/help-annotations?page=configurator&slug=hpe-proliant-dl360-gen10-10sff-nvme-premium
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/models
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+ GET /servers/hpe-proliant-dl360-gen10-10sff-nvme-premium 200 in 206ms
+ │ GET http://localhost:9000/store/server-configurator/models/hpe-proliant-dl360-gen10-10sff-nvme-premium 200 in 3ms (cache hit)
+ │ GET http://localhost:9000/store/server-configurator/models/hpe-proliant-dl360-gen10-10sff-nvme-premium 200 in 2ms (cache hit)
+ │ GET http://localhost:9000/store/server-configurator/models/hpe-proliant-dl360-gen10-10sff-nvme-premium/options 200 in 3ms (cache hit)
+ │ GET http://localhost:9000/store/server-configurator/help-annotations?page=configurator&slug=hpe-proliant-dl360-gen10-10sff-nvme-premium 200 in 1ms (cache hit)
+ │ GET http://localhost:9000/store/server-configurator/models 200 in 1ms (cache hit)
+Initiating Medusa client with default headers:
+ {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/models
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/help-annotations?page=catalog
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/catalog-facets
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+ GET /servers 200 in 109ms
+ │ GET http://localhost:9000/store/server-configurator/models 200 in 2ms (cache hit)
+ │ GET http://localhost:9000/store/server-configurator/help-annotations?page=catalog 200 in 2ms (cache hit)
+ │ GET http://localhost:9000/store/server-configurator/catalog-facets 200 in 3ms (cache hit)
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/models/hpe-proliant-dl360-gen10-8sff
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/models/hpe-proliant-dl360-gen10-8sff
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/models/hpe-proliant-dl360-gen10-8sff/options
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/help-annotations?page=configurator&slug=hpe-proliant-dl360-gen10-8sff
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/models
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+ GET /servers/hpe-proliant-dl360-gen10-8sff 200 in 229ms
+ │ GET http://localhost:9000/store/server-configurator/models 200 in 1ms (cache hit)
+Initiating Medusa client with default headers:
+ {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/models/hpe-proliant-dl360-gen10-8sff-front-drive-option
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/models/hpe-proliant-dl360-gen10-8sff-front-drive-option
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/models/hpe-proliant-dl360-gen10-8sff-front-drive-option/options
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/help-annotations?page=configurator&slug=hpe-proliant-dl360-gen10-8sff-front-drive-option
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/models
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+ GET /servers/hpe-proliant-dl360-gen10-8sff-front-drive-option 200 in 187ms
+ │ GET http://localhost:9000/store/server-configurator/models/hpe-proliant-dl360-gen10-8sff-front-drive-option 200 in 13ms (cache skip)
+ │ │ Cache skipped reason: (cache-control: no-cache (hard refresh))
+ │ GET http://localhost:9000/store/server-configurator/models/hpe-proliant-dl360-gen10-8sff-front-drive-option 200 in 21ms (cache hit)
+ │ GET http://localhost:9000/store/server-configurator/models/hpe-proliant-dl360-gen10-8sff-front-drive-option/options 200 in 19ms (cache skip)
+ │ │ Cache skipped reason: (cache-control: no-cache (hard refresh))
+ │ GET http://localhost:9000/store/server-configurator/help-annotations?page=configurator&slug=hpe-proliant-dl360-gen10-8sff-front-drive-option 200 in 14ms (cache skip)
+ │ │ Cache skipped reason: (cache-control: no-cache (hard refresh))
+ │ GET http://localhost:9000/store/server-configurator/models 200 in 1ms (cache hit)
+Initiating Medusa client with default headers:
+ {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/models/hpe-proliant-dl360-gen10-4lff
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/models/hpe-proliant-dl360-gen10-4lff
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/models/hpe-proliant-dl360-gen10-4lff/options
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/help-annotations?page=configurator&slug=hpe-proliant-dl360-gen10-4lff
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/models
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+ GET /servers/hpe-proliant-dl360-gen10-4lff 200 in 175ms
+ │ GET http://localhost:9000/store/server-configurator/models 200 in 2ms (cache hit)
+Initiating Medusa client with default headers:
+ {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/models/hpe-proliant-dl360-gen10-10sff-nvme-premium
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/models/hpe-proliant-dl360-gen10-10sff-nvme-premium
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/models/hpe-proliant-dl360-gen10-10sff-nvme-premium/options
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/help-annotations?page=configurator&slug=hpe-proliant-dl360-gen10-10sff-nvme-premium
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/models
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+ GET /servers/hpe-proliant-dl360-gen10-10sff-nvme-premium 200 in 173ms
+ │ GET http://localhost:9000/store/server-configurator/models 200 in 1ms (cache hit)
+Initiating Medusa client with default headers:
+ {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/models/hpe-proliant-dl360-gen10-8sff
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/models/hpe-proliant-dl360-gen10-8sff
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/models/hpe-proliant-dl360-gen10-8sff/options
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/help-annotations?page=configurator&slug=hpe-proliant-dl360-gen10-8sff
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/models
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+ GET /servers/hpe-proliant-dl360-gen10-8sff 200 in 116ms
+ │ GET http://localhost:9000/store/server-configurator/models/hpe-proliant-dl360-gen10-8sff 200 in 1ms (cache hit)
+ │ GET http://localhost:9000/store/server-configurator/models/hpe-proliant-dl360-gen10-8sff 200 in 1ms (cache hit)
+ │ GET http://localhost:9000/store/server-configurator/models/hpe-proliant-dl360-gen10-8sff/options 200 in 1ms (cache hit)
+ │ GET http://localhost:9000/store/server-configurator/help-annotations?page=configurator&slug=hpe-proliant-dl360-gen10-8sff 200 in 1ms (cache hit)
+ │ GET http://localhost:9000/store/server-configurator/models 200 in 1ms (cache hit)
+Initiating Medusa client with default headers:
+ {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/models/hpe-proliant-dl360-gen10-8sff
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/models/hpe-proliant-dl360-gen10-8sff
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/models/hpe-proliant-dl360-gen10-8sff/options
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/help-annotations?page=configurator&slug=hpe-proliant-dl360-gen10-8sff
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/models
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+ GET /servers/hpe-proliant-dl360-gen10-8sff 200 in 142ms
+ │ GET http://localhost:9000/store/server-configurator/models/hpe-proliant-dl360-gen10-8sff 200 in 3ms (cache hit)
+ │ GET http://localhost:9000/store/server-configurator/models/hpe-proliant-dl360-gen10-8sff 200 in 2ms (cache hit)
+ │ GET http://localhost:9000/store/server-configurator/models/hpe-proliant-dl360-gen10-8sff/options 200 in 1ms (cache hit)
+ │ GET http://localhost:9000/store/server-configurator/help-annotations?page=configurator&slug=hpe-proliant-dl360-gen10-8sff 200 in 1ms (cache hit)
+ │ GET http://localhost:9000/store/server-configurator/models 200 in 1ms (cache hit)
+Initiating Medusa client with default headers:
+ {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/models/hpe-proliant-dl360-gen10-8sff
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/models/hpe-proliant-dl360-gen10-8sff
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/models/hpe-proliant-dl360-gen10-8sff/options
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/help-annotations?page=configurator&slug=hpe-proliant-dl360-gen10-8sff
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/models
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+ GET /servers/hpe-proliant-dl360-gen10-8sff 200 in 113ms
+ │ GET http://localhost:9000/store/server-configurator/models/hpe-proliant-dl360-gen10-8sff 200 in 1ms (cache hit)
+ │ GET http://localhost:9000/store/server-configurator/models/hpe-proliant-dl360-gen10-8sff 200 in 1ms (cache hit)
+ │ GET http://localhost:9000/store/server-configurator/models/hpe-proliant-dl360-gen10-8sff/options 200 in 1ms (cache hit)
+ │ GET http://localhost:9000/store/server-configurator/help-annotations?page=configurator&slug=hpe-proliant-dl360-gen10-8sff 200 in 1ms (cache hit)
+ │ GET http://localhost:9000/store/server-configurator/models 200 in 1ms (cache hit)
+Initiating Medusa client with default headers:
+ {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/models
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/help-annotations?page=catalog
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/catalog-facets
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+ GET /servers?view=compare 200 in 334ms
+ │ GET http://localhost:9000/store/server-configurator/models 200 in 3ms (cache hit)
+ │ GET http://localhost:9000/store/server-configurator/help-annotations?page=catalog 200 in 2ms (cache hit)
+ │ GET http://localhost:9000/store/server-configurator/catalog-facets 200 in 3ms (cache hit)
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/models/hpe-proliant-dl360-gen10-8sff
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/models/hpe-proliant-dl360-gen10-8sff
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/models/hpe-proliant-dl360-gen10-8sff/options
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/help-annotations?page=configurator&slug=hpe-proliant-dl360-gen10-8sff
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/models
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+ GET /servers/hpe-proliant-dl360-gen10-8sff 200 in 130ms
+ │ GET http://localhost:9000/store/server-configurator/models/hpe-proliant-dl360-gen10-8sff 200 in 2ms (cache hit)
+ │ GET http://localhost:9000/store/server-configurator/models/hpe-proliant-dl360-gen10-8sff 200 in 1ms (cache hit)
+ │ GET http://localhost:9000/store/server-configurator/models/hpe-proliant-dl360-gen10-8sff/options 200 in 1ms (cache hit)
+ │ GET http://localhost:9000/store/server-configurator/help-annotations?page=configurator&slug=hpe-proliant-dl360-gen10-8sff 200 in 1ms (cache hit)
+ │ GET http://localhost:9000/store/server-configurator/models 200 in 1ms (cache hit)
+Initiating Medusa client with default headers:
+ {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/models
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/help-annotations?page=catalog
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/catalog-facets
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+ GET /servers?view=compare 200 in 103ms
+ │ GET http://localhost:9000/store/server-configurator/models 200 in 1ms (cache hit)
+ │ GET http://localhost:9000/store/server-configurator/help-annotations?page=catalog 200 in 1ms (cache hit)
+ │ GET http://localhost:9000/store/server-configurator/catalog-facets 200 in 1ms (cache hit)
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/models
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/help-annotations?page=catalog
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/catalog-facets
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+ GET /servers?view=favorites 200 in 92ms
+ │ GET http://localhost:9000/store/server-configurator/models 200 in 1ms (cache hit)
+ │ GET http://localhost:9000/store/server-configurator/help-annotations?page=catalog 200 in 1ms (cache hit)
+ │ GET http://localhost:9000/store/server-configurator/catalog-facets 200 in 1ms (cache hit)
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/models
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/help-annotations?page=catalog
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/catalog-facets
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+ GET /servers?view=cart 200 in 104ms
+ │ GET http://localhost:9000/store/server-configurator/models 200 in 1ms (cache hit)
+ │ GET http://localhost:9000/store/server-configurator/help-annotations?page=catalog 200 in 1ms (cache hit)
+ │ GET http://localhost:9000/store/server-configurator/catalog-facets 200 in 2ms (cache hit)
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/models
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/help-annotations?page=catalog
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/catalog-facets
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+ GET /servers?view=cart 200 in 90ms
+ │ GET http://localhost:9000/store/server-configurator/models 200 in 1ms (cache hit)
+ │ GET http://localhost:9000/store/server-configurator/help-annotations?page=catalog 200 in 1ms (cache hit)
+ │ GET http://localhost:9000/store/server-configurator/catalog-facets 200 in 1ms (cache hit)
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/models
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/help-annotations?page=catalog
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/catalog-facets
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+ GET /servers?view=cart 200 in 90ms
+ │ GET http://localhost:9000/store/server-configurator/models 200 in 1ms (cache hit)
+ │ GET http://localhost:9000/store/server-configurator/help-annotations?page=catalog 200 in 1ms (cache hit)
+ │ GET http://localhost:9000/store/server-configurator/catalog-facets 200 in 1ms (cache hit)
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/models
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/help-annotations?page=catalog
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/catalog-facets
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+ GET /servers?view=cart 200 in 148ms
+ │ GET http://localhost:9000/store/server-configurator/models 200 in 2ms (cache hit)
+ │ GET http://localhost:9000/store/server-configurator/help-annotations?page=catalog 200 in 1ms (cache hit)
+ │ GET http://localhost:9000/store/server-configurator/catalog-facets 200 in 1ms (cache hit)
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/models
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/help-annotations?page=catalog
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/catalog-facets
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+ GET /servers?quote=1 200 in 84ms
+ │ GET http://localhost:9000/store/server-configurator/models 200 in 1ms (cache hit)
+ │ GET http://localhost:9000/store/server-configurator/help-annotations?page=catalog 200 in 1ms (cache hit)
+ │ GET http://localhost:9000/store/server-configurator/catalog-facets 200 in 1ms (cache hit)
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/models
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/help-annotations?page=catalog
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/catalog-facets
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+ GET /servers?quote=1 200 in 92ms
+ │ GET http://localhost:9000/store/server-configurator/models 200 in 1ms (cache hit)
+ │ GET http://localhost:9000/store/server-configurator/help-annotations?page=catalog 200 in 1ms (cache hit)
+ │ GET http://localhost:9000/store/server-configurator/catalog-facets 200 in 1ms (cache hit)
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/models
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/help-annotations?page=catalog
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/catalog-facets
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+ GET /servers?view=compare 200 in 102ms
+ │ GET http://localhost:9000/store/server-configurator/models 200 in 1ms (cache hit)
+ │ GET http://localhost:9000/store/server-configurator/help-annotations?page=catalog 200 in 1ms (cache hit)
+ │ GET http://localhost:9000/store/server-configurator/catalog-facets 200 in 1ms (cache hit)
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/models/hpe-proliant-dl360-gen10-8sff
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/models/hpe-proliant-dl360-gen10-8sff
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/models/hpe-proliant-dl360-gen10-8sff/options
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/help-annotations?page=configurator&slug=hpe-proliant-dl360-gen10-8sff
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/models
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+ GET /servers/hpe-proliant-dl360-gen10-8sff 200 in 250ms
+ │ GET http://localhost:9000/store/server-configurator/models 200 in 1ms (cache hit)
+Initiating Medusa client with default headers:
+ {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/models/hpe-proliant-dl360-gen10-8sff
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/models/hpe-proliant-dl360-gen10-8sff
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/models/hpe-proliant-dl360-gen10-8sff/options
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/help-annotations?page=configurator&slug=hpe-proliant-dl360-gen10-8sff
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/models
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+ GET /servers/hpe-proliant-dl360-gen10-8sff 200 in 326ms
+ │ GET http://localhost:9000/store/server-configurator/models/hpe-proliant-dl360-gen10-8sff 200 in 2ms (cache hit)
+ │ GET http://localhost:9000/store/server-configurator/models/hpe-proliant-dl360-gen10-8sff 200 in 2ms (cache hit)
+ │ GET http://localhost:9000/store/server-configurator/models/hpe-proliant-dl360-gen10-8sff/options 200 in 1ms (cache hit)
+ │ GET http://localhost:9000/store/server-configurator/help-annotations?page=configurator&slug=hpe-proliant-dl360-gen10-8sff 200 in 1ms (cache hit)
+ │ GET http://localhost:9000/store/server-configurator/models 200 in 1ms (cache hit)
+Initiating Medusa client with default headers:
+ {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/models
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/help-annotations?page=catalog
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/catalog-facets
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+ GET /servers?quote=1 200 in 155ms
+ │ GET http://localhost:9000/store/server-configurator/models 200 in 3ms (cache hit)
+ │ GET http://localhost:9000/store/server-configurator/help-annotations?page=catalog 200 in 5ms (cache hit)
+ │ GET http://localhost:9000/store/server-configurator/catalog-facets 200 in 4ms (cache hit)
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/models
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/help-annotations?page=catalog
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/catalog-facets
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+ GET /servers?quote=1 200 in 108ms
+ │ GET http://localhost:9000/store/server-configurator/models 200 in 1ms (cache hit)
+ │ GET http://localhost:9000/store/server-configurator/help-annotations?page=catalog 200 in 1ms (cache hit)
+ │ GET http://localhost:9000/store/server-configurator/catalog-facets 200 in 1ms (cache hit)
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/models
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/help-annotations?page=catalog
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/catalog-facets
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+ GET /servers?quote=1 200 in 152ms
+ │ GET http://localhost:9000/store/server-configurator/models 200 in 1ms (cache hit)
+ │ GET http://localhost:9000/store/server-configurator/help-annotations?page=catalog 200 in 2ms (cache hit)
+ │ GET http://localhost:9000/store/server-configurator/catalog-facets 200 in 1ms (cache hit)
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/models/hpe-proliant-dl360-gen10-10sff-nvme-premium
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/models/hpe-proliant-dl360-gen10-10sff-nvme-premium
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/models/hpe-proliant-dl360-gen10-10sff-nvme-premium/options
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/help-annotations?page=configurator&slug=hpe-proliant-dl360-gen10-10sff-nvme-premium
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/models
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+ GET /servers/hpe-proliant-dl360-gen10-10sff-nvme-premium 200 in 529ms
+Initiating Medusa client with default headers:
+ {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/models
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/help-annotations?page=catalog
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/catalog-facets
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+ GET /servers 200 in 355ms
+ │ GET http://localhost:9000/store/server-configurator/models 200 in 5ms (cache hit)
+ │ GET http://localhost:9000/store/server-configurator/help-annotations?page=catalog 200 in 3ms (cache hit)
+ │ GET http://localhost:9000/store/server-configurator/catalog-facets 200 in 3ms (cache hit)
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/models/hpe-proliant-dl360-gen10-8sff
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/models/hpe-proliant-dl360-gen10-8sff
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/models/hpe-proliant-dl360-gen10-8sff/options
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/help-annotations?page=configurator&slug=hpe-proliant-dl360-gen10-8sff
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/models
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+ GET /servers/hpe-proliant-dl360-gen10-8sff 200 in 247ms
+ │ GET http://localhost:9000/store/server-configurator/models 200 in 2ms (cache hit)
+Initiating Medusa client with default headers:
+ {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/models/hpe-proliant-dl360-gen10-8sff-front-drive-option
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/models/hpe-proliant-dl360-gen10-8sff-front-drive-option
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/models/hpe-proliant-dl360-gen10-8sff-front-drive-option/options
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/help-annotations?page=configurator&slug=hpe-proliant-dl360-gen10-8sff-front-drive-option
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/models
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+ GET /servers/hpe-proliant-dl360-gen10-8sff-front-drive-option 200 in 207ms
+ │ GET http://localhost:9000/store/server-configurator/models 200 in 1ms (cache hit)
+Initiating Medusa client with default headers:
+ {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/models/hpe-proliant-dl360-gen10-10sff-nvme-premium
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/models/hpe-proliant-dl360-gen10-10sff-nvme-premium
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/models/hpe-proliant-dl360-gen10-10sff-nvme-premium/options
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/help-annotations?page=configurator&slug=hpe-proliant-dl360-gen10-10sff-nvme-premium
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/models
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+ GET /servers/hpe-proliant-dl360-gen10-10sff-nvme-premium 200 in 1684ms
+ │ GET http://localhost:9000/store/server-configurator/models 200 in 1ms (cache hit)
+Initiating Medusa client with default headers:
+ {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/models/hpe-proliant-dl360-gen10-4lff
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/models/hpe-proliant-dl360-gen10-4lff
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/models/hpe-proliant-dl360-gen10-4lff/options
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/help-annotations?page=configurator&slug=hpe-proliant-dl360-gen10-4lff
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/models
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+ GET /servers/hpe-proliant-dl360-gen10-4lff 200 in 232ms
+ │ GET http://localhost:9000/store/server-configurator/models 200 in 1ms (cache hit)
+Initiating Medusa client with default headers:
+ {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/models/hpe-proliant-dl360-gen10-8sff
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/models/hpe-proliant-dl360-gen10-8sff
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/models/hpe-proliant-dl360-gen10-8sff/options
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/help-annotations?page=configurator&slug=hpe-proliant-dl360-gen10-8sff
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/models
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+ GET /servers/hpe-proliant-dl360-gen10-8sff 200 in 297ms
+Initiating Medusa client with default headers:
+ {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/models/hpe-proliant-dl360-gen10-10sff-nvme-premium
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/models/hpe-proliant-dl360-gen10-10sff-nvme-premium
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/models/hpe-proliant-dl360-gen10-10sff-nvme-premium/options
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/help-annotations?page=configurator&slug=hpe-proliant-dl360-gen10-10sff-nvme-premium
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/models
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+ GET /servers/hpe-proliant-dl360-gen10-10sff-nvme-premium 200 in 163ms
+ │ GET http://localhost:9000/store/server-configurator/models/hpe-proliant-dl360-gen10-10sff-nvme-premium 200 in 2ms (cache hit)
+ │ GET http://localhost:9000/store/server-configurator/models/hpe-proliant-dl360-gen10-10sff-nvme-premium 200 in 2ms (cache hit)
+ │ GET http://localhost:9000/store/server-configurator/models/hpe-proliant-dl360-gen10-10sff-nvme-premium/options 200 in 2ms (cache hit)
+ │ GET http://localhost:9000/store/server-configurator/help-annotations?page=configurator&slug=hpe-proliant-dl360-gen10-10sff-nvme-premium 200 in 1ms (cache hit)
+ │ GET http://localhost:9000/store/server-configurator/models 200 in 2ms (cache hit)
+Initiating Medusa client with default headers:
+ {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/models
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/help-annotations?page=catalog
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/catalog-facets
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+ GET /servers 200 in 273ms
+ │ GET http://localhost:9000/store/server-configurator/models 200 in 7ms (cache hit)
+ │ GET http://localhost:9000/store/server-configurator/help-annotations?page=catalog 200 in 3ms (cache hit)
+ │ GET http://localhost:9000/store/server-configurator/catalog-facets 200 in 4ms (cache hit)
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/models/hpe-proliant-dl360-gen10-8sff
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/models/hpe-proliant-dl360-gen10-8sff
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/models/hpe-proliant-dl360-gen10-8sff/options
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/help-annotations?page=configurator&slug=hpe-proliant-dl360-gen10-8sff
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/models
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+ GET /servers/hpe-proliant-dl360-gen10-8sff 200 in 335ms
+ │ GET http://localhost:9000/store/server-configurator/models 200 in 1ms (cache hit)
+Initiating Medusa client with default headers:
+ {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/models/hpe-proliant-dl360-gen10-4lff
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/models/hpe-proliant-dl360-gen10-4lff
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/models/hpe-proliant-dl360-gen10-4lff/options
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/help-annotations?page=configurator&slug=hpe-proliant-dl360-gen10-4lff
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/models
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+ GET /servers/hpe-proliant-dl360-gen10-4lff 200 in 215ms
+ │ GET http://localhost:9000/store/server-configurator/models 200 in 1ms (cache hit)
+Initiating Medusa client with default headers:
+ {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/models
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/help-annotations?page=catalog
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/catalog-facets
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+ GET /servers 200 in 164ms
+ │ GET http://localhost:9000/store/server-configurator/models 200 in 3ms (cache hit)
+ │ GET http://localhost:9000/store/server-configurator/help-annotations?page=catalog 200 in 2ms (cache hit)
+ │ GET http://localhost:9000/store/server-configurator/catalog-facets 200 in 3ms (cache hit)
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/models
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/help-annotations?page=catalog
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/catalog-facets
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+ GET /servers?view=compare 200 in 113ms
+ │ GET http://localhost:9000/store/server-configurator/models 200 in 1ms (cache hit)
+ │ GET http://localhost:9000/store/server-configurator/help-annotations?page=catalog 200 in 1ms (cache hit)
+ │ GET http://localhost:9000/store/server-configurator/catalog-facets 200 in 1ms (cache hit)
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/models
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/help-annotations?page=catalog
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/catalog-facets
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+ GET /servers?view=compare 200 in 105ms
+ │ GET http://localhost:9000/store/server-configurator/models 200 in 1ms (cache hit)
+ │ GET http://localhost:9000/store/server-configurator/help-annotations?page=catalog 200 in 1ms (cache hit)
+ │ GET http://localhost:9000/store/server-configurator/catalog-facets 200 in 1ms (cache hit)
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/models
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/help-annotations?page=catalog
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/catalog-facets
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+ GET /servers 200 in 105ms
+ │ GET http://localhost:9000/store/server-configurator/models 200 in 1ms (cache hit)
+ │ GET http://localhost:9000/store/server-configurator/help-annotations?page=catalog 200 in 1ms (cache hit)
+ │ GET http://localhost:9000/store/server-configurator/catalog-facets 200 in 1ms (cache hit)
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/models
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/help-annotations?page=catalog
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/catalog-facets
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+ GET /servers 200 in 231ms
+ │ GET http://localhost:9000/store/server-configurator/models 200 in 2ms (cache hit)
+ │ GET http://localhost:9000/store/server-configurator/help-annotations?page=catalog 200 in 1ms (cache hit)
+ │ GET http://localhost:9000/store/server-configurator/catalog-facets 200 in 2ms (cache hit)
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/models
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/help-annotations?page=catalog
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/catalog-facets
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+ GET /servers?view=compare 200 in 111ms
+ │ GET http://localhost:9000/store/server-configurator/models 200 in 1ms (cache hit)
+ │ GET http://localhost:9000/store/server-configurator/help-annotations?page=catalog 200 in 1ms (cache hit)
+ │ GET http://localhost:9000/store/server-configurator/catalog-facets 200 in 1ms (cache hit)
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/models
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/help-annotations?page=catalog
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/catalog-facets
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+ GET /servers 200 in 114ms
+ │ GET http://localhost:9000/store/server-configurator/models 200 in 1ms (cache hit)
+ │ GET http://localhost:9000/store/server-configurator/help-annotations?page=catalog 200 in 2ms (cache hit)
+ │ GET http://localhost:9000/store/server-configurator/catalog-facets 200 in 1ms (cache hit)
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/models/hpe-proliant-dl360-gen10-10sff-nvme-premium
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/models/hpe-proliant-dl360-gen10-10sff-nvme-premium
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/models/hpe-proliant-dl360-gen10-10sff-nvme-premium/options
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/help-annotations?page=configurator&slug=hpe-proliant-dl360-gen10-10sff-nvme-premium
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/models
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+ GET /servers/hpe-proliant-dl360-gen10-10sff-nvme-premium 200 in 247ms
+ │ GET http://localhost:9000/store/server-configurator/models 200 in 1ms (cache hit)
+Initiating Medusa client with default headers:
+ {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+ POST /servers/hpe-proliant-dl360-gen10-10sff-nvme-premium 200 in 118ms
+Initiating Medusa client with default headers:
+ {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+ POST /servers/hpe-proliant-dl360-gen10-10sff-nvme-premium 200 in 92ms
+ POST /servers/hpe-proliant-dl360-gen10-10sff-nvme-premium 200 in 154ms
+Initiating Medusa client with default headers:
+ {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+ POST /servers/hpe-proliant-dl360-gen10-10sff-nvme-premium 200 in 122ms
+Initiating Medusa client with default headers:
+ {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+ POST /servers/hpe-proliant-dl360-gen10-10sff-nvme-premium 200 in 85ms
+Initiating Medusa client with default headers:
+ {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+ POST /servers/hpe-proliant-dl360-gen10-10sff-nvme-premium 200 in 105ms
+ POST /servers/hpe-proliant-dl360-gen10-10sff-nvme-premium 200 in 135ms
+ POST /servers/hpe-proliant-dl360-gen10-10sff-nvme-premium 200 in 125ms
+ POST /servers/hpe-proliant-dl360-gen10-10sff-nvme-premium 200 in 183ms
+ POST /servers/hpe-proliant-dl360-gen10-10sff-nvme-premium 200 in 130ms
+Initiating Medusa client with default headers:
+ {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+ POST /servers/hpe-proliant-dl360-gen10-10sff-nvme-premium 200 in 140ms
+ POST /servers/hpe-proliant-dl360-gen10-10sff-nvme-premium 200 in 223ms
+ POST /servers/hpe-proliant-dl360-gen10-10sff-nvme-premium 200 in 119ms
+ POST /servers/hpe-proliant-dl360-gen10-10sff-nvme-premium 200 in 110ms
+ POST /servers/hpe-proliant-dl360-gen10-10sff-nvme-premium 200 in 113ms
+Initiating Medusa client with default headers:
+ {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+ POST /servers/hpe-proliant-dl360-gen10-10sff-nvme-premium 200 in 110ms
+ POST /servers/hpe-proliant-dl360-gen10-10sff-nvme-premium 200 in 118ms
+ POST /servers/hpe-proliant-dl360-gen10-10sff-nvme-premium 200 in 122ms
+ POST /servers/hpe-proliant-dl360-gen10-10sff-nvme-premium 200 in 157ms
+ POST /servers/hpe-proliant-dl360-gen10-10sff-nvme-premium 200 in 150ms
+Initiating Medusa client with default headers:
+ {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+ POST /servers/hpe-proliant-dl360-gen10-10sff-nvme-premium 200 in 115ms
+ POST /servers/hpe-proliant-dl360-gen10-10sff-nvme-premium 200 in 93ms
+ POST /servers/hpe-proliant-dl360-gen10-10sff-nvme-premium 200 in 89ms
+Initiating Medusa client with default headers:
+ {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+ POST /servers/hpe-proliant-dl360-gen10-10sff-nvme-premium 200 in 478ms
+Initiating Medusa client with default headers:
+ {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+ POST /servers/hpe-proliant-dl360-gen10-10sff-nvme-premium 200 in 128ms
+Initiating Medusa client with default headers:
+ {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+ POST /servers/hpe-proliant-dl360-gen10-10sff-nvme-premium 200 in 102ms
+Initiating Medusa client with default headers:
+ {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+ POST /servers/hpe-proliant-dl360-gen10-10sff-nvme-premium 200 in 102ms
+ POST /servers/hpe-proliant-dl360-gen10-10sff-nvme-premium 200 in 179ms
+ POST /servers/hpe-proliant-dl360-gen10-10sff-nvme-premium 200 in 91ms
+ POST /servers/hpe-proliant-dl360-gen10-10sff-nvme-premium 200 in 113ms
+Initiating Medusa client with default headers:
+ {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+ POST /servers/hpe-proliant-dl360-gen10-10sff-nvme-premium 200 in 108ms
+ POST /servers/hpe-proliant-dl360-gen10-10sff-nvme-premium 200 in 90ms
+ POST /servers/hpe-proliant-dl360-gen10-10sff-nvme-premium 200 in 104ms
+Initiating Medusa client with default headers:
+ {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+ POST /servers/hpe-proliant-dl360-gen10-10sff-nvme-premium 200 in 89ms
+Initiating Medusa client with default headers:
+ {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/models/hpe-proliant-dl360-gen10-8sff
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/models/hpe-proliant-dl360-gen10-8sff
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/models/hpe-proliant-dl360-gen10-8sff/options
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/help-annotations?page=configurator&slug=hpe-proliant-dl360-gen10-8sff
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/models
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+ GET /servers/hpe-proliant-dl360-gen10-8sff 200 in 231ms
+Initiating Medusa client with default headers:
+ {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/models
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/help-annotations?page=catalog
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/catalog-facets
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+ GET /servers 200 in 127ms
+ │ GET http://localhost:9000/store/server-configurator/models 200 in 1ms (cache hit)
+ │ GET http://localhost:9000/store/server-configurator/help-annotations?page=catalog 200 in 3ms (cache hit)
+ │ GET http://localhost:9000/store/server-configurator/catalog-facets 200 in 3ms (cache hit)
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/models
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/help-annotations?page=catalog
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/catalog-facets
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+ GET /servers 200 in 101ms
+ │ GET http://localhost:9000/store/server-configurator/models 200 in 1ms (cache hit)
+ │ GET http://localhost:9000/store/server-configurator/help-annotations?page=catalog 200 in 1ms (cache hit)
+ │ GET http://localhost:9000/store/server-configurator/catalog-facets 200 in 1ms (cache hit)
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/models/hpe-proliant-dl360-gen10-8sff
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/models/hpe-proliant-dl360-gen10-8sff
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/models/hpe-proliant-dl360-gen10-8sff/options
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/help-annotations?page=configurator&slug=hpe-proliant-dl360-gen10-8sff
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/models
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+ GET /servers/hpe-proliant-dl360-gen10-8sff 200 in 150ms
+ │ GET http://localhost:9000/store/server-configurator/models/hpe-proliant-dl360-gen10-8sff 200 in 3ms (cache hit)
+ │ GET http://localhost:9000/store/server-configurator/models/hpe-proliant-dl360-gen10-8sff 200 in 2ms (cache hit)
+ │ GET http://localhost:9000/store/server-configurator/models/hpe-proliant-dl360-gen10-8sff/options 200 in 1ms (cache hit)
+ │ GET http://localhost:9000/store/server-configurator/help-annotations?page=configurator&slug=hpe-proliant-dl360-gen10-8sff 200 in 1ms (cache hit)
+ │ GET http://localhost:9000/store/server-configurator/models 200 in 1ms (cache hit)
+Initiating Medusa client with default headers:
+ {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/models
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/help-annotations?page=catalog
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/catalog-facets
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+ GET /servers 200 in 115ms
+ │ GET http://localhost:9000/store/server-configurator/models 200 in 1ms (cache hit)
+ │ GET http://localhost:9000/store/server-configurator/help-annotations?page=catalog 200 in 1ms (cache hit)
+ │ GET http://localhost:9000/store/server-configurator/catalog-facets 200 in 1ms (cache hit)
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/models/hpe-proliant-dl360-gen10-8sff
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/models/hpe-proliant-dl360-gen10-8sff
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/models/hpe-proliant-dl360-gen10-8sff/options
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/help-annotations?page=configurator&slug=hpe-proliant-dl360-gen10-8sff
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/models
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+ GET /servers/hpe-proliant-dl360-gen10-8sff 200 in 130ms
+ │ GET http://localhost:9000/store/server-configurator/models/hpe-proliant-dl360-gen10-8sff 200 in 3ms (cache hit)
+ │ GET http://localhost:9000/store/server-configurator/models/hpe-proliant-dl360-gen10-8sff 200 in 2ms (cache hit)
+ │ GET http://localhost:9000/store/server-configurator/models/hpe-proliant-dl360-gen10-8sff/options 200 in 1ms (cache hit)
+ │ GET http://localhost:9000/store/server-configurator/help-annotations?page=configurator&slug=hpe-proliant-dl360-gen10-8sff 200 in 1ms (cache hit)
+ │ GET http://localhost:9000/store/server-configurator/models 200 in 1ms (cache hit)
+Initiating Medusa client with default headers:
+ {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+ ✓ Compiled in 317ms
+ ✓ Compiled /servers/[slug] in 145ms
+Initiating Medusa client with default headers:
+ {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/models/hpe-proliant-dl360-gen10-8sff
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/models/hpe-proliant-dl360-gen10-8sff
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/models/hpe-proliant-dl360-gen10-8sff/options
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/help-annotations?page=configurator&slug=hpe-proliant-dl360-gen10-8sff
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/models
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+ ✓ Compiled /servers in 410ms
+ GET /servers/hpe-proliant-dl360-gen10-8sff 200 in 788ms
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/models
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/help-annotations?page=catalog
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/catalog-facets
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/models/hpe-proliant-dl360-gen10-8sff
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/models/hpe-proliant-dl360-gen10-8sff
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/models/hpe-proliant-dl360-gen10-8sff/options
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/help-annotations?page=configurator&slug=hpe-proliant-dl360-gen10-8sff
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/models
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+ GET /servers?quote=1 200 in 993ms
+ GET /servers/hpe-proliant-dl360-gen10-8sff 200 in 1000ms
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/models/hpe-proliant-dl360-gen10-8sff
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/models/hpe-proliant-dl360-gen10-8sff
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/models/hpe-proliant-dl360-gen10-8sff/options
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/help-annotations?page=configurator&slug=hpe-proliant-dl360-gen10-8sff
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/models
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+ GET /servers/hpe-proliant-dl360-gen10-8sff 200 in 735ms
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/models/hpe-proliant-dl360-gen10-8sff
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/models/hpe-proliant-dl360-gen10-8sff
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/models/hpe-proliant-dl360-gen10-8sff/options
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/help-annotations?page=configurator&slug=hpe-proliant-dl360-gen10-8sff
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/models
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Initiating Medusa client with default headers:
+ {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/models
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/help-annotations?page=catalog
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+Performing request to:
+ URL: http://localhost:9000/store/server-configurator/catalog-facets
+ Headers: {
+  "accept": "application/json",
+  "content-type": "application/json",
+  "x-publishable-api-key": "pk_b67ab8d29ffce24983d5942e49cf9409e9574e1974f90cc9e4bfafe2844c6345",
+  "authorization": "<REDACTED>"
+}
+
+Received response with status 200
+
+ GET /servers?quote=1 200 in 458ms
+ GET /servers/hpe-proliant-dl360-gen10-8sff 200 in 440ms
+ ✓ Compiled in 177ms
+ ✓ Compiled in 174ms
+ ✓ Compiled in 549ms
+[?25h
