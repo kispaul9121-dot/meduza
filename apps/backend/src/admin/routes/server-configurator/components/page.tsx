@@ -9,7 +9,7 @@ import { SpecsEditor } from "./specs-editor"
 type ComponentsResponse = { components: ComponentRow[]; count: number }
 type PacksResponse = { component_packs: ComponentPack[]; count: number }
 
-const componentTypes = ["cpu", "ram", "drive", "raid", "nic", "psu", "riser", "backplane", "rails", "cable", "cooling", "license", "service"]
+const componentTypes = ["cpu", "ram", "drive", "raid", "nic", "psu", "riser", "backplane", "drive_cage", "boot_storage", "accelerator", "rails", "cable", "cooling", "license", "service"]
 const emptyComponent: Partial<ComponentRow> = {
   type: "cpu",
   brand: "HPE",

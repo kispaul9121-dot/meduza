@@ -1,25 +1,22 @@
 import { MedusaRequest, MedusaResponse } from "@medusajs/framework/http"
+import { ContainerRegistrationKeys } from "@medusajs/framework/utils"
 import { SERVER_CONFIGURATOR_MODULE } from "../../../../modules/server-configurator"
-import { catalogFacetDefinitions, modelFacetValues } from "../../../../modules/server-configurator/catalog-facets"
+import { loadServerCatalog } from "../../../../modules/server-configurator/catalog-loader"
+import { executeCatalogQuery, parseCatalogQuery } from "../../../../modules/server-configurator/catalog-query"
 
 export async function GET(req: MedusaRequest, res: MedusaResponse) {
   const service = req.scope.resolve(SERVER_CONFIGURATOR_MODULE) as any
-  const models = await service.listServerModels({ enabled: true })
-  const catalogModels = models.filter((model: any) => model.slug !== "hpe-proliant-dl360-gen10-8sff-front-drive-option")
-  const facets = catalogFacetDefinitions
-    .map((definition) => {
-      const counts = new Map<string, number>()
-      for (const model of catalogModels) {
-        for (const value of modelFacetValues(model, definition.key)) {
-          counts.set(value, (counts.get(value) || 0) + 1)
-        }
-      }
-      return {
-        ...definition,
-        values: Array.from(counts.entries()).map(([value, count]) => ({ value, count })),
-      }
-    })
-    .filter((facet) => facet.values.length > 0)
-
-  res.json({ facets, count: catalogModels.length })
+  const graph = req.scope.resolve(ContainerRegistrationKeys.QUERY) as any
+  const catalog = await loadServerCatalog(service, graph)
+  const parsed = parseCatalogQuery({}, catalog.definitions)
+  const result = executeCatalogQuery({ ...catalog, query: parsed.query! })
+  res.setHeader("Cache-Control", "public, max-age=30, stale-while-revalidate=120")
+  res.json({
+    facets: result.facets.map((facet) => ({
+      ...catalog.definitions.find((definition) => definition.key === facet.key),
+      ...facet,
+    })),
+    count: result.total,
+    filter_schema: result.filter_schema,
+  })
 }

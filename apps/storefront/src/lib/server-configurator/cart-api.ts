@@ -15,11 +15,24 @@ export type AddConfiguredServerInput = {
   quantity?: number
   customer_email?: string
   pricing_mode?: "calculated" | "request_quote"
+  storage_option_id?: string
+  explicit_none?: string[]
+  ready_configuration_id?: string
+  ready_configuration_version?: number
+  ready_snapshot_hash?: string
+}
+
+export type ConfigurationQuoteInput = Omit<AddConfiguredServerInput, "pricing_mode"> & {
+  company_name: string
+  contact_name: string
+  email: string
+  phone?: string
+  comments?: string
 }
 
 export type ConfiguredServerCartResponse = {
   cart: HttpTypes.StoreCart | null
-  configuration: Record<string, any> | null
+  configuration: Record<string, unknown> | null
   line_item: HttpTypes.StoreCartLineItem | null
   valid: boolean
   errors: string[]
@@ -36,8 +49,11 @@ async function revalidateCart() {
 }
 
 function errorPayload(error: unknown): ConfiguredServerCartResponse {
-  const err = error as any
-  const data = err?.response?.data
+  const err = error as {
+    message?: string
+    response?: { data?: unknown }
+  }
+  const data = err.response?.data
   if (data && typeof data === "object" && "valid" in data) {
     return data as ConfiguredServerCartResponse
   }
@@ -93,12 +109,50 @@ export async function retrieveConfiguredCart() {
     .catch(() => null)
 }
 
+export async function validateConfiguredCartForCheckout(): Promise<{ valid: boolean; errors: string[] }> {
+  const cartId = await getCartId()
+  if (!cartId) return { valid: false, errors: ["Корзина не найдена."] }
+  const headers = { ...(await getAuthHeaders()) }
+  try {
+    const result = await sdk.client.fetch<{ valid: boolean; errors: string[] }>(
+      "/store/server-configurator/cart/validate",
+      { method: "POST", body: { cart_id: cartId }, headers, cache: "no-store" }
+    )
+    return { valid: result.valid === true, errors: result.errors || [] }
+  } catch (error) {
+    const data = (error as { response?: { data?: { valid?: boolean; errors?: string[] } } })?.response?.data
+    return data?.errors
+      ? { valid: data.valid === true, errors: data.errors }
+      : { valid: false, errors: [(error as Error).message] }
+  }
+}
+
+export async function requestConfigurationQuote(input: ConfigurationQuoteInput) {
+  const cartId = await getCartId()
+  const headers = { ...(await getAuthHeaders()) }
+  return sdk.client.fetch<{
+    quote_request: { id: string; status: string }
+    configuration: { id: string; hash: string }
+    availability_warnings: string[]
+  }>("/store/server-configurator/rfq", {
+    method: "POST",
+    body: { ...input, cart_id: cartId || undefined },
+    headers,
+    cache: "no-store",
+  })
+}
+
 export async function updateConfiguredCartLine(lineId: string, quantity: number) {
   const cartId = await getCartId()
   if (!cartId) return null
 
   const headers = { ...(await getAuthHeaders()) }
-  await sdk.store.cart.updateLineItem(cartId, lineId, { quantity }, {}, headers)
+  await sdk.client.fetch(`/store/server-configurator/cart/lines/${encodeURIComponent(lineId)}`, {
+    method: "POST",
+    body: { cart_id: cartId, quantity },
+    headers,
+    cache: "no-store",
+  })
   await revalidateCart()
   return retrieveConfiguredCart()
 }
@@ -108,7 +162,11 @@ export async function removeConfiguredCartLine(lineId: string) {
   if (!cartId) return null
 
   const headers = { ...(await getAuthHeaders()) }
-  await sdk.store.cart.deleteLineItem(cartId, lineId, {}, headers)
+  await sdk.client.fetch(`/store/server-configurator/cart/lines/${encodeURIComponent(lineId)}?cart_id=${encodeURIComponent(cartId)}`, {
+    method: "DELETE",
+    headers,
+    cache: "no-store",
+  })
   await revalidateCart()
   return retrieveConfiguredCart()
 }

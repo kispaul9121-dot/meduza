@@ -1,10 +1,11 @@
 import crypto from "node:crypto"
 import { MedusaRequest, MedusaResponse } from "@medusajs/framework/http"
 import { SERVER_CONFIGURATOR_MODULE } from "../../../../modules/server-configurator"
+import { ValidateServerConfigurationSchemaType } from "../validators"
 
-export async function POST(req: MedusaRequest, res: MedusaResponse) {
+export async function POST(req: MedusaRequest<ValidateServerConfigurationSchemaType>, res: MedusaResponse) {
   const service = req.scope.resolve(SERVER_CONFIGURATOR_MODULE) as any
-  const body = req.body as any
+  const body = req.validatedBody as any
   const result = await service.validateConfiguration(body)
   const [serverModel] = await service.listServerModels({ slug: body.server_model_slug })
   const snapshot = {

@@ -1,0 +1,73 @@
+{
+  "current_stage": "12",
+  "last_completed_stage": "11",
+  "status": "in_progress",
+  "stage_reports": [
+    "reports/stage-01-report.md",
+    "reports/stage-02-report.md",
+    "reports/stage-03-report.md",
+    "reports/stage-04-report.md",
+    "reports/stage-05-report.md",
+    "reports/stage-06-report.md",
+    "reports/stage-07-report.md",
+    "reports/stage-08-report.md",
+    "reports/stage-09-report.md",
+    "reports/stage-10-report.md",
+    "reports/stage-11-report.md"
+  ],
+  "commits": [
+    {
+      "stage": "01",
+      "ref": "a008470"
+    },
+    {
+      "stage": "02",
+      "ref": "feat(stage-02): establish canonical route contracts"
+    },
+    {
+      "stage": "03",
+      "ref": "feat(stage-03): establish canonical domain registries"
+    },
+    {
+      "stage": "04",
+      "ref": "feat(stage-04): build universal compatibility engine"
+    },
+    {
+      "stage": "05",
+      "ref": "feat(stage-05): build admin knowledge base and smart builders"
+    },
+    {
+      "stage": "06",
+      "ref": "feat(stage-06): build core server creation wizard"
+    },
+    {
+      "stage": "07",
+      "ref": "feat(stage-07): add genius bootstrap planning and modes"
+    },
+    {
+      "stage": "08",
+      "ref": "feat(stage-08): build reviewed technical import pipeline"
+    },
+    {
+      "stage": "09",
+      "ref": "feat(stage-09): build backend catalog filters and facets"
+    },
+    {
+      "stage": "10",
+      "ref": "feat(stage-10): build generic storefront products and collections"
+    },
+    {
+      "stage": "11",
+      "ref": "feat(stage-11): add immutable ready configurations"
+    }
+  ],
+  "next_stage_overrides": [
+    "Stage 12 must consume ReadyConfiguration identity, published version and snapshot hash as provenance; it must not mutate ReadyConfigurationVersion.",
+    "Recompute live price and availability from Medusa at cart/order time; never trust frozen snapshot unit/total price as checkout authority.",
+    "Reject stale, unpublished or incompatible ready versions before cart mutation and preserve ADR-011 validation trace/reason codes.",
+    "Keep user Configuration, ReadyConfiguration, cart/order and RFQ schemas separate; stage 13 owns persisted RFQ.",
+    "Preserve ADR-017 technical-vs-commerce identity and keep user-owned audit/roadmap files outside stage commits."
+  ],
+  "project_readiness": "not_audited",
+  "external_blockers": []
+}

@@ -18,13 +18,29 @@ const EMPTY_COLLECTIONS: Collections = {
   quoteRequests: [],
 }
 const UPDATE_EVENT = "payloud-product-collections:update"
+export const MAX_COMPARE_ITEMS = 4
 
-function normalizeCollections(value: any): Collections {
+function normalizeCollections(value: unknown): Collections {
+  const candidate = value && typeof value === "object"
+    ? value as Partial<Record<keyof Collections, unknown>>
+    : {}
   return {
-    favorites: Array.isArray(value?.favorites) ? value.favorites : [],
-    compare: Array.isArray(value?.compare) ? value.compare : [],
-    cart: Array.isArray(value?.cart) ? value.cart : [],
-    quoteRequests: Array.isArray(value?.quoteRequests) ? value.quoteRequests : [],
+    favorites: Array.isArray(candidate.favorites)
+      ? Array.from(new Set(candidate.favorites.filter((id): id is string => typeof id === "string")))
+      : [],
+    compare: Array.isArray(candidate.compare)
+      ? Array.from(new Set(candidate.compare.filter((id): id is string => typeof id === "string"))).slice(0, MAX_COMPARE_ITEMS)
+      : [],
+    cart: Array.isArray(candidate.cart)
+      ? candidate.cart.filter((item): item is CartItem => Boolean(
+        item && typeof item === "object" &&
+        typeof (item as CartItem).id === "string" &&
+        typeof (item as CartItem).quantity === "number"
+      ))
+      : [],
+    quoteRequests: Array.isArray(candidate.quoteRequests)
+      ? candidate.quoteRequests.filter((id): id is string => typeof id === "string")
+      : [],
   }
 }
 
@@ -62,9 +78,11 @@ function setCartItemQuantity(cart: CartItem[], id: string, quantity: number) {
 
 export function useServerLocalActions(productId?: string) {
   const [collections, setCollections] = useState<Collections>(EMPTY_COLLECTIONS)
+  const [hydrated, setHydrated] = useState(false)
 
   useEffect(() => {
     setCollections(readCollections())
+    setHydrated(true)
     const onUpdate = () => setCollections(readCollections())
     window.addEventListener(UPDATE_EVENT, onUpdate)
     window.addEventListener("storage", onUpdate)
@@ -87,8 +105,17 @@ export function useServerLocalActions(productId?: string) {
 
   const toggleCompare = useCallback((id = productId) => {
     if (!id) return
-    update((current) => ({ ...current, compare: toggleId(current.compare, id) }))
+    update((current) => ({
+      ...current,
+      compare: current.compare.includes(id)
+        ? current.compare.filter((item) => item !== id)
+        : [...current.compare, id].slice(-MAX_COMPARE_ITEMS),
+    }))
   }, [productId, update])
+
+  const replaceCompare = useCallback((ids: string[]) => {
+    update((current) => ({ ...current, compare: Array.from(new Set(ids)).slice(0, MAX_COMPARE_ITEMS) }))
+  }, [update])
 
   const addToCart = useCallback((id = productId) => {
     if (!id) return
@@ -132,6 +159,7 @@ export function useServerLocalActions(productId?: string) {
 
   return {
     collections,
+    hydrated,
     counters,
     isFavorite: Boolean(productId && collections.favorites.includes(productId)),
     isCompared: Boolean(productId && collections.compare.includes(productId)),
@@ -143,6 +171,7 @@ export function useServerLocalActions(productId?: string) {
     clearCart,
     removeFavorite,
     removeCompare,
+    replaceCompare,
     requestQuote,
   }
 }

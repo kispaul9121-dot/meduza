@@ -1,5 +1,5 @@
-import { MiddlewareRoute } from "@medusajs/framework"
-import { validateAndTransformBody } from "@medusajs/framework/http"
+import { MiddlewareRoute } from "@medusajs/framework";
+import { validateAndTransformBody } from "@medusajs/framework/http";
 import {
   CreateComponentSchema,
   AddComponentToPackSchema,
@@ -17,6 +17,29 @@ import {
   ReorderPackItemsSchema,
   ReviewRuleSchema,
   SimulateConfigurationSchema,
+  CompatibilityReadinessSchema,
+  KnowledgeEntityMutationSchema,
+  SmartBuilderApplySchema,
+  SmartBuilderDraftSchema,
+  SmartBuilderPreviewSchema,
+  ConvertDirectToPackSchema,
+  CoreWizardDraftSchema,
+  CoreWizardPreviewSchema,
+  CoreWizardMaterializeSchema,
+  CoreWizardPublishSchema,
+  ImpactAnalysisSchema,
+  GeniusPlanSchema,
+  GeniusSessionSchema,
+  GeniusManifestSaveSchema,
+  GeniusBulkAdapterSchema,
+  GeniusAbandonSchema,
+  PropertyCompletenessSchema,
+  ImportBatchCreateSchema,
+  ImportBatchReviewSchema,
+  ImportBatchDryRunSchema,
+  ImportBatchApplySchema,
+  ImportBatchRollbackSchema,
+  ImportGeniusManifestSchema,
   UpdateComponentApplicabilitySchema,
   UpdateComponentPackSchema,
   UpdateComponentSchema,
@@ -24,30 +47,279 @@ import {
   UpdateRulePresetSchema,
   UpdateRuleSchema,
   UpdateServerModelSchema,
-} from "./validators"
+  ReadyConfigurationMutationSchema,
+  ReorderReadyConfigurationsSchema,
+  UpdateQuoteRequestSchema,
+} from "./validators";
 
 export const serverConfiguratorAdminMiddlewares: MiddlewareRoute[] = [
-  { matcher: "/admin/server-configurator/models", method: "POST", middlewares: [validateAndTransformBody(CreateServerModelSchema)] },
-  { matcher: "/admin/server-configurator/models/:id", method: "POST", middlewares: [validateAndTransformBody(UpdateServerModelSchema)] },
-  { matcher: "/admin/server-configurator/components", method: "POST", middlewares: [validateAndTransformBody(CreateComponentSchema)] },
-  { matcher: "/admin/server-configurator/components/:id", method: "POST", middlewares: [validateAndTransformBody(UpdateComponentSchema)] },
-  { matcher: "/admin/server-configurator/components/:id/applicability", method: "POST", middlewares: [validateAndTransformBody(UpdateComponentApplicabilitySchema)] },
-  { matcher: "/admin/server-configurator/component-packs", method: "POST", middlewares: [validateAndTransformBody(CreateComponentPackSchema)] },
-  { matcher: "/admin/server-configurator/component-packs/:id", method: "POST", middlewares: [validateAndTransformBody(UpdateComponentPackSchema)] },
-  { matcher: "/admin/server-configurator/component-packs/:id/items", method: "POST", middlewares: [validateAndTransformBody(AddComponentToPackSchema)] },
-  { matcher: "/admin/server-configurator/component-packs/:id/items/reorder", method: "POST", middlewares: [validateAndTransformBody(ReorderPackItemsSchema)] },
-  { matcher: "/admin/server-configurator/component-packs/:id/bulk-add-components", method: "POST", middlewares: [validateAndTransformBody(BulkAddComponentsToPackSchema)] },
-  { matcher: "/admin/server-configurator/component-packs/:id/preview-applicability", method: "POST", middlewares: [validateAndTransformBody(PreviewPackApplicabilitySchema)] },
-  { matcher: "/admin/server-configurator/component-packs/:id/apply-applicability", method: "POST", middlewares: [validateAndTransformBody(ApplyPackApplicabilitySchema)] },
-  { matcher: "/admin/server-configurator/component-packs/:id/detach-applicability", method: "POST", middlewares: [validateAndTransformBody(DetachPackApplicabilitySchema)] },
-  { matcher: "/admin/server-configurator/rules", method: "POST", middlewares: [validateAndTransformBody(CreateRuleSchema)] },
-  { matcher: "/admin/server-configurator/rules/:id", method: "POST", middlewares: [validateAndTransformBody(UpdateRuleSchema)] },
-  { matcher: "/admin/server-configurator/rules/:id/review", method: "POST", middlewares: [validateAndTransformBody(ReviewRuleSchema)] },
-  { matcher: "/admin/server-configurator/rules/:id/enable-with-confirmation", method: "POST", middlewares: [validateAndTransformBody(EnableRuleWithConfirmationSchema)] },
-  { matcher: "/admin/server-configurator/rule-presets", method: "POST", middlewares: [validateAndTransformBody(CreateRulePresetSchema)] },
-  { matcher: "/admin/server-configurator/rule-presets/:id", method: "POST", middlewares: [validateAndTransformBody(UpdateRulePresetSchema)] },
-  { matcher: "/admin/server-configurator/rule-presets/:id/create-rule", method: "POST", middlewares: [validateAndTransformBody(CreateRuleFromPresetSchema)] },
-  { matcher: "/admin/server-configurator/help-annotations", method: "POST", middlewares: [validateAndTransformBody(CreateHelpAnnotationSchema)] },
-  { matcher: "/admin/server-configurator/help-annotations/:id", method: "POST", middlewares: [validateAndTransformBody(UpdateHelpAnnotationSchema)] },
-  { matcher: "/admin/server-configurator/simulate", method: "POST", middlewares: [validateAndTransformBody(SimulateConfigurationSchema)] },
-]
+  {
+    matcher: "/admin/server-configurator/quote-requests/:id",
+    method: "POST",
+    middlewares: [validateAndTransformBody(UpdateQuoteRequestSchema)],
+  },
+  {
+    matcher: "/admin/server-configurator/ready-configurations",
+    method: "POST",
+    middlewares: [validateAndTransformBody(ReadyConfigurationMutationSchema)],
+  },
+  {
+    matcher: "/admin/server-configurator/ready-configurations/reorder",
+    method: "POST",
+    middlewares: [validateAndTransformBody(ReorderReadyConfigurationsSchema)],
+  },
+  {
+    matcher: "/admin/server-configurator/ready-configurations/:id",
+    method: "POST",
+    middlewares: [validateAndTransformBody(ReadyConfigurationMutationSchema)],
+  },
+  {
+    matcher: "/admin/server-configurator/ready-configurations/:id/:action",
+    method: "POST",
+    middlewares: [validateAndTransformBody(ReadyConfigurationMutationSchema)],
+  },
+  {
+    matcher: "/admin/server-configurator/models",
+    method: "POST",
+    middlewares: [validateAndTransformBody(CreateServerModelSchema)],
+  },
+  {
+    matcher: "/admin/server-configurator/models/:id",
+    method: "POST",
+    middlewares: [validateAndTransformBody(UpdateServerModelSchema)],
+  },
+  {
+    matcher: "/admin/server-configurator/components",
+    method: "POST",
+    middlewares: [validateAndTransformBody(CreateComponentSchema)],
+  },
+  {
+    matcher: "/admin/server-configurator/components/:id",
+    method: "POST",
+    middlewares: [validateAndTransformBody(UpdateComponentSchema)],
+  },
+  {
+    matcher: "/admin/server-configurator/components/:id/applicability",
+    method: "POST",
+    middlewares: [validateAndTransformBody(UpdateComponentApplicabilitySchema)],
+  },
+  {
+    matcher: "/admin/server-configurator/component-packs",
+    method: "POST",
+    middlewares: [validateAndTransformBody(CreateComponentPackSchema)],
+  },
+  {
+    matcher: "/admin/server-configurator/component-packs/:id",
+    method: "POST",
+    middlewares: [validateAndTransformBody(UpdateComponentPackSchema)],
+  },
+  {
+    matcher: "/admin/server-configurator/component-packs/:id/items",
+    method: "POST",
+    middlewares: [validateAndTransformBody(AddComponentToPackSchema)],
+  },
+  {
+    matcher: "/admin/server-configurator/component-packs/:id/items/reorder",
+    method: "POST",
+    middlewares: [validateAndTransformBody(ReorderPackItemsSchema)],
+  },
+  {
+    matcher:
+      "/admin/server-configurator/component-packs/:id/bulk-add-components",
+    method: "POST",
+    middlewares: [validateAndTransformBody(BulkAddComponentsToPackSchema)],
+  },
+  {
+    matcher:
+      "/admin/server-configurator/component-packs/:id/preview-applicability",
+    method: "POST",
+    middlewares: [validateAndTransformBody(PreviewPackApplicabilitySchema)],
+  },
+  {
+    matcher:
+      "/admin/server-configurator/component-packs/:id/apply-applicability",
+    method: "POST",
+    middlewares: [validateAndTransformBody(ApplyPackApplicabilitySchema)],
+  },
+  {
+    matcher:
+      "/admin/server-configurator/component-packs/:id/detach-applicability",
+    method: "POST",
+    middlewares: [validateAndTransformBody(DetachPackApplicabilitySchema)],
+  },
+  {
+    matcher: "/admin/server-configurator/rules",
+    method: "POST",
+    middlewares: [validateAndTransformBody(CreateRuleSchema)],
+  },
+  {
+    matcher: "/admin/server-configurator/rules/:id",
+    method: "POST",
+    middlewares: [validateAndTransformBody(UpdateRuleSchema)],
+  },
+  {
+    matcher: "/admin/server-configurator/rules/:id/review",
+    method: "POST",
+    middlewares: [validateAndTransformBody(ReviewRuleSchema)],
+  },
+  {
+    matcher: "/admin/server-configurator/rules/:id/enable-with-confirmation",
+    method: "POST",
+    middlewares: [validateAndTransformBody(EnableRuleWithConfirmationSchema)],
+  },
+  {
+    matcher: "/admin/server-configurator/rule-presets",
+    method: "POST",
+    middlewares: [validateAndTransformBody(CreateRulePresetSchema)],
+  },
+  {
+    matcher: "/admin/server-configurator/rule-presets/:id",
+    method: "POST",
+    middlewares: [validateAndTransformBody(UpdateRulePresetSchema)],
+  },
+  {
+    matcher: "/admin/server-configurator/rule-presets/:id/create-rule",
+    method: "POST",
+    middlewares: [validateAndTransformBody(CreateRuleFromPresetSchema)],
+  },
+  {
+    matcher: "/admin/server-configurator/help-annotations",
+    method: "POST",
+    middlewares: [validateAndTransformBody(CreateHelpAnnotationSchema)],
+  },
+  {
+    matcher: "/admin/server-configurator/help-annotations/:id",
+    method: "POST",
+    middlewares: [validateAndTransformBody(UpdateHelpAnnotationSchema)],
+  },
+  {
+    matcher: "/admin/server-configurator/simulate",
+    method: "POST",
+    middlewares: [validateAndTransformBody(SimulateConfigurationSchema)],
+  },
+  {
+    matcher: "/admin/server-configurator/compatibility-readiness",
+    method: "POST",
+    middlewares: [validateAndTransformBody(CompatibilityReadinessSchema)],
+  },
+  {
+    matcher: "/admin/server-configurator/knowledge-base/:entity_type",
+    method: "POST",
+    middlewares: [validateAndTransformBody(KnowledgeEntityMutationSchema)],
+  },
+  {
+    matcher: "/admin/server-configurator/knowledge-base/:entity_type/:id",
+    method: "POST",
+    middlewares: [validateAndTransformBody(KnowledgeEntityMutationSchema)],
+  },
+  {
+    matcher: "/admin/server-configurator/smart-builder/preview",
+    method: "POST",
+    middlewares: [validateAndTransformBody(SmartBuilderPreviewSchema)],
+  },
+  {
+    matcher: "/admin/server-configurator/smart-builder/apply",
+    method: "POST",
+    middlewares: [validateAndTransformBody(SmartBuilderApplySchema)],
+  },
+  {
+    matcher: "/admin/server-configurator/smart-builder/drafts",
+    method: "POST",
+    middlewares: [validateAndTransformBody(SmartBuilderDraftSchema)],
+  },
+  {
+    matcher: "/admin/server-configurator/smart-builder/convert-direct-to-pack",
+    method: "POST",
+    middlewares: [validateAndTransformBody(ConvertDirectToPackSchema)],
+  },
+  {
+    matcher: "/admin/server-configurator/core-wizard/drafts",
+    method: "POST",
+    middlewares: [validateAndTransformBody(CoreWizardDraftSchema)],
+  },
+  {
+    matcher: "/admin/server-configurator/core-wizard/preview",
+    method: "POST",
+    middlewares: [validateAndTransformBody(CoreWizardPreviewSchema)],
+  },
+  {
+    matcher: "/admin/server-configurator/core-wizard/materialize",
+    method: "POST",
+    middlewares: [validateAndTransformBody(CoreWizardMaterializeSchema)],
+  },
+  {
+    matcher: "/admin/server-configurator/core-wizard/publish",
+    method: "POST",
+    middlewares: [validateAndTransformBody(CoreWizardPublishSchema)],
+  },
+  {
+    matcher: "/admin/server-configurator/impact-analysis",
+    method: "POST",
+    middlewares: [validateAndTransformBody(ImpactAnalysisSchema)],
+  },
+  {
+    matcher: "/admin/server-configurator/genius/discovery",
+    method: "POST",
+    middlewares: [validateAndTransformBody(GeniusPlanSchema)],
+  },
+  {
+    matcher: "/admin/server-configurator/genius/plan",
+    method: "POST",
+    middlewares: [validateAndTransformBody(GeniusPlanSchema)],
+  },
+  {
+    matcher: "/admin/server-configurator/genius/sessions",
+    method: "POST",
+    middlewares: [validateAndTransformBody(GeniusSessionSchema)],
+  },
+  {
+    matcher: "/admin/server-configurator/genius/manifest",
+    method: "POST",
+    middlewares: [validateAndTransformBody(GeniusManifestSaveSchema)],
+  },
+  {
+    matcher: "/admin/server-configurator/genius/bulk-adapter",
+    method: "POST",
+    middlewares: [validateAndTransformBody(GeniusBulkAdapterSchema)],
+  },
+  {
+    matcher: "/admin/server-configurator/genius/abandon",
+    method: "POST",
+    middlewares: [validateAndTransformBody(GeniusAbandonSchema)],
+  },
+  {
+    matcher: "/admin/server-configurator/genius/property-completeness",
+    method: "POST",
+    middlewares: [validateAndTransformBody(PropertyCompletenessSchema)],
+  },
+  {
+    matcher: "/admin/server-configurator/import-pipeline/batches",
+    method: "POST",
+    middlewares: [validateAndTransformBody(ImportBatchCreateSchema)],
+  },
+  {
+    matcher: "/admin/server-configurator/import-pipeline/batches/:id/review",
+    method: "POST",
+    middlewares: [validateAndTransformBody(ImportBatchReviewSchema)],
+  },
+  {
+    matcher: "/admin/server-configurator/import-pipeline/batches/:id/dry-run",
+    method: "POST",
+    middlewares: [validateAndTransformBody(ImportBatchDryRunSchema)],
+  },
+  {
+    matcher: "/admin/server-configurator/import-pipeline/batches/:id/apply",
+    method: "POST",
+    middlewares: [validateAndTransformBody(ImportBatchApplySchema)],
+  },
+  {
+    matcher: "/admin/server-configurator/import-pipeline/batches/:id/rollback",
+    method: "POST",
+    middlewares: [validateAndTransformBody(ImportBatchRollbackSchema)],
+  },
+  {
+    matcher: "/admin/server-configurator/import-pipeline/genius-manifest",
+    method: "POST",
+    middlewares: [validateAndTransformBody(ImportGeniusManifestSchema)],
+  },
+];

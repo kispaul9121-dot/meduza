@@ -40,11 +40,32 @@ export type ComponentRow = {
   public_name: string
   short_name: string
   specs_json?: Record<string, any> | null
+  normalized_specs_json?: Record<string, any> | null
+  requirements_json?: Record<string, any> | null
+  provides_json?: Record<string, any> | null
+  consumes_json?: Record<string, any> | null
+  source_json?: Record<string, any> | null
   price: number
   cost: number
   stock_qty: number
   medusa_product_variant_id?: string | null
   enabled: boolean
+}
+
+export type KnowledgeEntityType = "property_definition" | "technology_concept" | "technology_relation" | "technology_platform" | "vendor_generation_template" | "component_type_definition" | "relation_type_definition" | "server_model_component_assignment" | "configurator_option_group"
+
+export type KnowledgeEntity = Record<string, any> & { id: string; created_at?: string; updated_at?: string }
+
+export type ReadinessResponse = {
+  readiness: {
+    ready: boolean
+    status: string
+    blockers: Array<{ code: string; [key: string]: unknown }>
+    warnings: Array<{ code: string; [key: string]: unknown }>
+    recommendations: Array<{ action: string; [key: string]: unknown }>
+    resolved_properties?: unknown[]
+    candidate_count?: number
+  }
 }
 
 export type ComponentPack = {

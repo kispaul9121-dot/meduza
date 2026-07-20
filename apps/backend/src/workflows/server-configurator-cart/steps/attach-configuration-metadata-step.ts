@@ -43,6 +43,7 @@ export const attachConfigurationMetadataStep = createStep(
       id: configurationId,
       medusa_cart_id: input.added.cart.id,
       medusa_line_item_id: lineItemId,
+      status: "in_cart",
       snapshot_json: {
         ...(input.saved.snapshot || {}),
         medusa_cart_id: input.added.cart.id,

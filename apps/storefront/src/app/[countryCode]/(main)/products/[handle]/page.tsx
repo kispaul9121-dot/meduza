@@ -1,9 +1,10 @@
 import { Metadata } from "next"
-import { notFound } from "next/navigation"
+import { notFound, redirect } from "next/navigation"
 import { listProducts } from "@lib/data/products"
 import { getRegion, listRegions } from "@lib/data/regions"
 import ProductTemplate from "@modules/products/templates"
 import { HttpTypes } from "@medusajs/types"
+import { listServerModels } from "@lib/server-configurator/data"
 
 type Props = {
   params: Promise<{ countryCode: string; handle: string }>
@@ -78,14 +79,21 @@ export async function generateMetadata(props: Props): Promise<Metadata> {
     notFound()
   }
 
-  const product = await listProducts({
-    countryCode: params.countryCode,
-    queryParams: { handle },
-  }).then(({ response }) => response.products[0])
+  const [product, serverModels] = await Promise.all([
+    listProducts({
+      countryCode: params.countryCode,
+      queryParams: { handle },
+    }).then(({ response }) => response.products[0]),
+    listServerModels(),
+  ])
 
   if (!product) {
     notFound()
   }
+
+  const serverModel = serverModels.find(
+    (model) => model.medusa_product_id === product.id || model.slug === product.handle
+  )
 
   return {
     title: `${product.title} | Medusa Store`,
@@ -95,13 +103,18 @@ export async function generateMetadata(props: Props): Promise<Metadata> {
       description: `${product.title}`,
       images: product.thumbnail ? [product.thumbnail] : [],
     },
+    alternates: serverModel
+      ? { canonical: `/servers/${serverModel.slug}` }
+      : { canonical: `/${params.countryCode}/products/${product.handle}` },
   }
 }
 
 export default async function ProductPage(props: Props) {
   const params = await props.params
-  const region = await getRegion(params.countryCode)
-  const searchParams = await props.searchParams
+  const [region, searchParams] = await Promise.all([
+    getRegion(params.countryCode),
+    props.searchParams,
+  ])
 
   const selectedVariantId = searchParams.v_id
 
@@ -109,16 +122,26 @@ export default async function ProductPage(props: Props) {
     notFound()
   }
 
-  const pricedProduct = await listProducts({
-    countryCode: params.countryCode,
-    queryParams: { handle: params.handle },
-  }).then(({ response }) => response.products[0])
-
-  const images = getImagesForVariant(pricedProduct, selectedVariantId)
+  const [pricedProduct, serverModels] = await Promise.all([
+    listProducts({
+      countryCode: params.countryCode,
+      queryParams: { handle: params.handle },
+    }).then(({ response }) => response.products[0]),
+    listServerModels(),
+  ])
 
   if (!pricedProduct) {
     notFound()
   }
+
+  const serverModel = serverModels.find(
+    (model) => model.medusa_product_id === pricedProduct.id || model.slug === pricedProduct.handle
+  )
+  if (serverModel) {
+    redirect(`/servers/${serverModel.slug}`)
+  }
+
+  const images = getImagesForVariant(pricedProduct, selectedVariantId)
 
   return (
     <ProductTemplate

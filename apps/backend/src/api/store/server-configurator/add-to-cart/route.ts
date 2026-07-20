@@ -9,7 +9,10 @@ export async function POST(
 ) {
   try {
     const { result } = await addConfiguredServerToCartWorkflow(req.scope).run({
-      input: req.validatedBody,
+      input: {
+        ...req.validatedBody,
+        customer_id: (req as any).auth_context?.actor_id || undefined,
+      },
     })
 
     res.status(201).json(result)

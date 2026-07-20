@@ -1,5 +1,9 @@
 import { HttpTypes } from "@medusajs/types"
 import { NextRequest, NextResponse } from "next/server"
+import {
+  canonicalLegacyServerUrl,
+  isB2BPath,
+} from "@lib/routing/contracts"
 
 const BACKEND_URL = process.env.NEXT_PUBLIC_MEDUSA_BACKEND_URL
 const PUBLISHABLE_API_KEY = process.env.NEXT_PUBLIC_MEDUSA_PUBLISHABLE_KEY
@@ -101,9 +105,13 @@ async function getCountryCode(
  * Middleware to handle region selection and onboarding status.
  */
 export async function middleware(request: NextRequest) {
+  const canonicalLegacyUrl = canonicalLegacyServerUrl(request.nextUrl)
+  if (canonicalLegacyUrl) {
+    return NextResponse.redirect(canonicalLegacyUrl, 308)
+  }
+
   if (
-    request.nextUrl.pathname === "/servers" ||
-    request.nextUrl.pathname.startsWith("/servers/") ||
+    isB2BPath(request.nextUrl.pathname) ||
     request.nextUrl.pathname === "/robots.txt" ||
     request.nextUrl.pathname === "/sitemap.xml"
   ) {

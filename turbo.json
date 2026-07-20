@@ -15,7 +15,10 @@
     "lint": {
       "outputs": []
     },
-    "test": {
+    "typecheck": {
+      "outputs": []
+    },
+    "test:unit": {
       "outputs": []
     },
     "seed": {

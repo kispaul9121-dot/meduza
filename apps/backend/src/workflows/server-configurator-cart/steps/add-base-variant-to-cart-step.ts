@@ -5,6 +5,7 @@ import {
 } from "@medusajs/medusa/core-flows"
 import { CreateCartCreateLineItemDTO } from "@medusajs/framework/types"
 import { MedusaError } from "@medusajs/framework/utils"
+import { Modules } from "@medusajs/framework/utils"
 import { createStep, StepResponse } from "@medusajs/framework/workflows-sdk"
 import {
   AddConfiguredServerToCartInput,
@@ -77,15 +78,26 @@ export const addBaseVariantToCartStep = createStep(
   }, { container }) => {
     const serverModel = input.validation.server_model
     let cartId = input.request.cart_id
+    let createdCart = false
+
+    if (input.pricing.request_quote) {
+      throw new MedusaError(
+        MedusaError.Types.INVALID_DATA,
+        "RFQ_CONFIGURATION_MUST_USE_RFQ_ENDPOINT"
+      )
+    }
 
     if (!cartId) {
       const { result: cart } = await createCartWorkflow(container).run({
         input: {
           email: input.request.customer_email,
+          region_id: input.pricing.region_id || undefined,
+          customer_id: input.request.customer_id,
           metadata: { source: "server_configurator" },
         },
       })
       cartId = cart.id
+      createdCart = true
     }
 
     const item: CreateCartCreateLineItemDTO = {
@@ -93,8 +105,12 @@ export const addBaseVariantToCartStep = createStep(
       quantity: input.request.quantity || 1,
       metadata: {
         configuration_id: input.saved.configuration.id,
+        configuration_hash: input.saved.configuration.hash,
         server_model_slug: serverModel.slug,
         server_public_name: serverModel.public_name,
+        storage: sanitizeCartMetadata((input.saved.snapshot as any).storage),
+        optional_groups: sanitizeCartMetadata((input.saved.snapshot as any).optional_groups),
+        auto_added_components: sanitizeCartMetadata((input.saved.snapshot as any).auto_added_components),
         selected_components_snapshot: sanitizeCartMetadata(
           input.saved.selected_components_snapshot
         ),
@@ -102,9 +118,25 @@ export const addBaseVariantToCartStep = createStep(
         warnings: input.validation.warnings,
         errors: input.validation.errors,
         total_price: input.pricing.total_price,
+        currency_code: input.pricing.currency_code,
         pricing_mode: input.pricing.pricing_mode,
-        request_quote: input.pricing.request_quote,
+        request_quote: false,
+        price_hash: input.pricing.price_hash,
+        priced_at: input.pricing.priced_at,
+        price_expires_at: input.pricing.price_expires_at,
+        validation_engine_version: "compatibility-engine.v1",
+        ready_configuration_id: input.request.ready_configuration_id || null,
+        ready_configuration_version: input.request.ready_configuration_version || null,
+        ready_snapshot_hash: input.request.ready_snapshot_hash || null,
       },
+    }
+
+    const metadataBytes = Buffer.byteLength(JSON.stringify(item.metadata), "utf8")
+    if (metadataBytes > 48_000) {
+      throw new MedusaError(
+        MedusaError.Types.INVALID_DATA,
+        `Configured line metadata exceeds the 48 KB safety limit (${metadataBytes} bytes).`
+      )
     }
 
     if (input.pricing.pricing_mode === "calculated") {
@@ -127,6 +159,7 @@ export const addBaseVariantToCartStep = createStep(
     return new StepResponse(result, {
       cart_id: cartId,
       line_item_id: result.line_item.id,
+      created_cart: createdCart,
     })
   },
   async (created, { container }) => {
@@ -138,5 +171,9 @@ export const addBaseVariantToCartStep = createStep(
         update: { quantity: 0 },
       },
     })
+    if (created.created_cart) {
+      const cartService = container.resolve(Modules.CART) as any
+      await cartService.deleteCarts(created.cart_id)
+    }
   }
 )

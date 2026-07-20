@@ -1,21 +1,19 @@
 import { Metadata } from "next"
+import Link from "next/link"
 import { notFound } from "next/navigation"
 import {
   listHelpAnnotations,
-  listServerModels,
-  listConfiguratorOptions,
+  listReadyConfigurations,
+  listConfiguratorContext,
   productJsonLd,
+  queryServerCatalog,
   retrieveServerModel,
+  retrieveReadyConfiguratorState,
 } from "@lib/server-configurator/data"
 import { ConfiguratorClient } from "@modules/server-configurator/configurator-client"
 import { ServerHeader } from "@modules/server-configurator/server-header"
 
 export const dynamic = "force-dynamic"
-
-export async function generateStaticParams() {
-  const models = await listServerModels()
-  return models.map((model) => ({ slug: model.slug }))
-}
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params
@@ -34,26 +32,31 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   }
 }
 
-export default async function ServerConfiguratorPage({ params }: { params: Promise<{ slug: string }> }) {
+export default async function ServerConfiguratorPage({ params, searchParams }: { params: Promise<{ slug: string }>; searchParams: Promise<{ ready?: string }> }) {
   const { slug } = await params
+  const { ready } = await searchParams
   const model = await retrieveServerModel(slug)
   if (!model) notFound()
-  const options = await listConfiguratorOptions(slug)
-  const annotations = await listHelpAnnotations("configurator", slug)
-  const navModels = await listServerModels()
+  const [context, annotations, navCatalog, readyConfigurations, initialReadyState] = await Promise.all([
+    listConfiguratorContext(slug),
+    listHelpAnnotations("configurator", slug),
+    queryServerCatalog({ limit: "6", sort: "name_asc" }),
+    listReadyConfigurations({ server_model_slug: slug }),
+    ready ? retrieveReadyConfiguratorState(ready) : Promise.resolve(null),
+  ])
   const jsonLd = productJsonLd(model)
 
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-      <ServerHeader models={navModels} annotations={annotations} />
+      <ServerHeader models={navCatalog.items} annotations={annotations} />
       <main className="server-page-shell">
         <nav className="server-breadcrumbs" aria-label="Breadcrumbs">
-          <a href="/servers">Servers</a>
+          <Link href="/servers">Servers</Link>
           <span>/</span>
           <span>{model.public_name}</span>
         </nav>
-        <ConfiguratorClient model={model} options={options} annotations={annotations} navModels={navModels} />
+        <ConfiguratorClient model={model} context={context} annotations={annotations} navModels={navCatalog.items} readyConfigurations={readyConfigurations} initialReadyState={initialReadyState} />
       </main>
     </>
   )

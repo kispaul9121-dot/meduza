@@ -2,6 +2,7 @@
 
 import Link from "next/link"
 import { ServerModel } from "@lib/server-configurator/data"
+import { formatPrice } from "@lib/server-configurator/format"
 import { BarChart3, Heart, Settings2, ShoppingCart } from "lucide-react"
 import { useServerLocalActions } from "./local-actions"
 import { ServerIllustration } from "./server-illustration"
@@ -15,6 +16,12 @@ export function ServerProductCard({ model }: { model: ServerModel }) {
     `${model.cpu_socket}, up to ${model.max_cpu} CPU`,
     `${model.ram_slots_total} DIMM, max ${model.max_ram_capacity}`,
   ]
+  const availability = ({
+    in_stock: "В наличии",
+    available: "Доступно без учёта остатков",
+    backorder: "Под заказ",
+    out_of_stock: "Нет в наличии",
+  } as Record<string, string>)[model.catalog_availability || ""] || "Наличие не указано"
 
   return (
     <article className="server-product-card">
@@ -41,8 +48,8 @@ export function ServerProductCard({ model }: { model: ServerModel }) {
           <BarChart3 size={20} />
         </button>
       </div>
-      <div className="server-product-status">В наличии / под проект</div>
-      <strong className="server-product-price">по запросу</strong>
+      <div className="server-product-status">{availability}</div>
+      <strong className="server-product-price">{model.catalog_price !== null && model.catalog_price !== undefined ? formatPrice(model.catalog_price) : "Цена не указана"}</strong>
       <div className="server-product-copy">
         <h2>
           <Link href={`/servers/${model.slug}`}>{model.public_name}</Link>
@@ -58,7 +65,7 @@ export function ServerProductCard({ model }: { model: ServerModel }) {
           <Settings2 size={17} />
           Сконфигурировать
         </Link>
-        <button className="server-cart-button" type="button" aria-label="Добавить в корзину" onClick={() => actions.addToCart()}>
+        <button className="server-cart-button" type="button" aria-label={model.medusa_variant_id ? "Добавить в корзину" : "Товарный вариант не связан"} disabled={!model.medusa_variant_id} onClick={() => actions.addToCart()}>
           <ShoppingCart size={20} />
         </button>
       </div>

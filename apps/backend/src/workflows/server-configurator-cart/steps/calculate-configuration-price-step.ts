@@ -1,4 +1,6 @@
+import { MedusaError } from "@medusajs/framework/utils"
 import { createStep, StepResponse } from "@medusajs/framework/workflows-sdk"
+import { resolveCommercePrice } from "../commerce-pricing"
 import {
   AddConfiguredServerToCartInput,
   ConfiguredServerPriceResult,
@@ -10,15 +12,17 @@ export const calculateConfigurationPriceStep = createStep(
   async (input: {
     request: AddConfiguredServerToCartInput
     validation: ConfiguredServerValidationResult
-  }) => {
-    const totalPrice = Number(input.validation.total_price || 0)
-    const requestQuote =
-      input.request.pricing_mode === "request_quote" || totalPrice <= 0
-
-    const result: ConfiguredServerPriceResult = {
-      total_price: requestQuote ? 0 : totalPrice,
-      pricing_mode: requestQuote ? "request_quote" : "calculated",
-      request_quote: requestQuote,
+  }, { container }) => {
+    const result: ConfiguredServerPriceResult = await resolveCommercePrice({
+      container,
+      request: input.request,
+      validation: input.validation,
+    })
+    if (result.pricing_mode === "calculated" && result.availability_errors.length) {
+      throw new MedusaError(
+        MedusaError.Types.INVALID_DATA,
+        `CONFIGURED_SERVER_COMMERCE_INVALID: ${result.availability_errors.join(" ")}`
+      )
     }
 
     return new StepResponse(result)

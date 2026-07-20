@@ -39,7 +39,7 @@ function HeaderCatalogDropdown({
 }) {
   const [activeSection, setActiveSection] = useState("servers")
   const chassisItems = models.map((model) => ({
-    label: model.public_name.replace("HPE ProLiant ", ""),
+    label: model.public_name,
     href: `/servers/${model.slug}`,
   }))
   const sections = [
@@ -49,13 +49,16 @@ function HeaderCatalogDropdown({
       label: "Комплектующие",
       icon: Settings2,
       items: [
-        { label: "Процессоры", href: "/servers?component=cpu", icon: Cpu },
-        { label: "Память", href: "/servers?component=ram", icon: MemoryStick },
-        { label: "Накопители", href: "/servers?component=drive" },
-        { label: "RAID контроллеры", href: "/servers?component=raid" },
-        { label: "Сетевые карты", href: "/servers?component=nic", icon: Network },
-        { label: "Блоки питания", href: "/servers?component=psu", icon: Zap },
-        { label: "Рельсы / кабели / райзеры", href: "/servers?component=accessories" },
+        { label: "Процессоры", href: "/components/cpu", icon: Cpu },
+        { label: "Память", href: "/components/memory", icon: MemoryStick },
+        { label: "Накопители", href: "/components/drives" },
+        { label: "RAID / HBA", href: "/components/raid-hba" },
+        { label: "Сетевые карты", href: "/components/network", icon: Network },
+        { label: "GPU / ускорители", href: "/components/accelerators" },
+        { label: "Блоки питания", href: "/components/psu", icon: Zap },
+        { label: "Райзеры", href: "/components/risers" },
+        { label: "Boot storage", href: "/components/boot-storage" },
+        { label: "Аксессуары", href: "/components/accessories" },
       ],
     },
     {
@@ -63,11 +66,11 @@ function HeaderCatalogDropdown({
       label: "СХД",
       icon: Database,
       items: [
-        { label: "SAS/SATA корзины", href: "/servers?interface=SAS", icon: HardDrive },
-        { label: "NVMe конфигурации", href: "/servers?interface=NVMe" },
-        { label: "LFF под емкость", href: "/servers?drive_form_factor=3.5" },
-        { label: "SFF под производительность", href: "/servers?drive_form_factor=2.5" },
-        { label: "Universal Media Bay", href: "/servers?component=media-bay" },
+        { label: "SAS/SATA инфраструктура", href: "/components/storage?attr.storage.protocol=SAS", icon: HardDrive },
+        { label: "NVMe инфраструктура", href: "/components/storage?attr.storage.protocol=NVMe" },
+        { label: "LFF под ёмкость", href: "/components/storage?attr.storage.form_factor=3.5" },
+        { label: "SFF под производительность", href: "/components/storage?attr.storage.form_factor=2.5" },
+        { label: "Universal Media Bay", href: "/components/media-bay" },
       ],
     },
     {
@@ -76,9 +79,9 @@ function HeaderCatalogDropdown({
       icon: Boxes,
       items: [
         { label: "1U серверы", href: "/servers?form_factor=1U" },
-        { label: "Под виртуализацию", href: "/servers?view=virtualization" },
-        { label: "Под базы данных", href: "/servers?view=database" },
-        { label: "Под файловое хранилище", href: "/servers?view=storage" },
+        { label: "Под виртуализацию", href: "/solutions/virtualization" },
+        { label: "Под базы данных", href: "/solutions/database" },
+        { label: "Под файловое хранилище", href: "/solutions/storage" },
       ],
     },
     {
@@ -86,11 +89,11 @@ function HeaderCatalogDropdown({
       label: "Сервис",
       icon: Wrench,
       items: [
-        { label: "Получить КП", href: "/servers?quote=1", icon: FileText },
-        { label: "Поставка под проект", href: "/servers?view=project" },
-        { label: "Подбор аналогов", href: "/servers?view=analogs" },
-        { label: "Сборка и тестирование", href: "/servers?view=assembly", icon: PackageCheck },
-        { label: "Сервис и SLA", href: "/servers?view=service" },
+        { label: "Получить КП", href: "/rfq", icon: FileText },
+        { label: "Поставка под проект", href: "/solutions/project" },
+        { label: "Подбор аналогов", href: "/solutions/analogs" },
+        { label: "Сборка и тестирование", href: "/solutions/assembly", icon: PackageCheck },
+        { label: "Сервис и SLA", href: "/solutions/service" },
       ],
     },
   ]
@@ -159,17 +162,17 @@ export function ServerHeader({
   const nav = useMemo(() => [
     ["Главная", "/servers"],
     ["Каталог", "/servers"],
-    ["Конфигуратор", "/servers/hpe-proliant-dl360-gen10-8sff"],
-    ["Готовые решения", "/servers?view=ready"],
-    ["Комплектующие", "/servers?view=components"],
-    ["СХД", "/servers?view=storage"],
-    ["Сервис и SLA", "/servers?view=service"],
-  ], [])
+    ["Конфигуратор", models[0] ? `/servers/${models[0].slug}` : "/servers"],
+    ["Готовые решения", "/solutions"],
+    ["Комплектующие", "/components"],
+    ["СХД", "/components/storage"],
+    ["Сервис и SLA", "/solutions/service"],
+  ], [models])
 
   function submitSearch(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault()
     const query = searchQuery.trim()
-    if (query) router.push(`/servers?q=${encodeURIComponent(query)}`)
+    if (query) router.push(`/servers?search=${encodeURIComponent(query)}`)
   }
 
   useEffect(() => {
@@ -189,6 +192,16 @@ export function ServerHeader({
     }
   }, [])
 
+  useEffect(() => {
+    function closeMenus(event: KeyboardEvent) {
+      if (event.key !== "Escape") return
+      setMenuOpen(false)
+      setCatalogOpen(false)
+    }
+    window.addEventListener("keydown", closeMenus)
+    return () => window.removeEventListener("keydown", closeMenus)
+  }, [])
+
   return (
     <header className="server-site-header">
       <div className="server-topbar">
@@ -197,7 +210,7 @@ export function ServerHeader({
         <span>support@payloud.ru</span>
       </div>
       <div className="server-header-main">
-        <button className="server-icon-button server-menu-toggle" onClick={() => setMenuOpen((value) => !value)} aria-label="Открыть меню" type="button">
+        <button className="server-icon-button server-menu-toggle" onClick={() => setMenuOpen((value) => !value)} aria-label="Открыть меню" aria-expanded={menuOpen} type="button">
           {menuOpen ? <X size={22} /> : <Menu size={22} />}
         </button>
         <Link className="server-brand" href="/servers">
@@ -227,20 +240,20 @@ export function ServerHeader({
           />
         </form>
         <div className="server-header-actions" aria-label="Быстрые действия">
-          <button className="server-header-action" type="button" aria-label="Сравнение" onClick={() => router.push("/servers?view=compare")}>
+          <button className="server-header-action" type="button" aria-label="Сравнение" onClick={() => router.push("/compare")}>
             <BarChart3 size={18} />
             <span>{actions.counters.compare}</span>
           </button>
-          <button className="server-header-action" type="button" aria-label="Избранное" onClick={() => router.push("/servers?view=favorites")}>
+          <button className="server-header-action" type="button" aria-label="Избранное" onClick={() => router.push("/favorites")}>
             <Heart size={18} />
             <span>{actions.counters.favorites}</span>
           </button>
-          <button className="server-header-action" type="button" aria-label="Корзина" aria-live="polite" onClick={() => router.push("/servers?view=cart")}>
+          <button className="server-header-action" type="button" aria-label="Корзина" aria-live="polite" onClick={() => router.push("/cart")}>
             <ShoppingCart size={18} />
             <span>{cartCount}</span>
           </button>
         </div>
-        <button className="server-primary small server-quote-button" type="button" onClick={() => router.push("/servers?quote=1")}>
+        <button className="server-primary small server-quote-button" type="button" onClick={() => router.push("/rfq")}>
           <FileText size={18} />
           Получить КП
         </button>
@@ -248,7 +261,7 @@ export function ServerHeader({
       <nav className={`server-category-nav ${menuOpen ? "open" : ""}`} aria-label="Основная навигация">
         <div className="server-nav-inner">
           {nav.map(([label, href]) => (
-            <Link className={pathname === href ? "active" : ""} href={href} key={label}>
+            <Link className={pathname === href ? "active" : ""} href={href} key={label} onClick={() => setMenuOpen(false)}>
               {label}
             </Link>
           ))}

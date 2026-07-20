@@ -1,6 +1,6 @@
 {
   "name": "meduza-server-store",
-  "private": false,
+  "private": true,
   "packageManager": "npm@11.6.2",
   "engines": {
     "node": ">=20"
@@ -9,8 +9,12 @@
     "dev": "turbo dev",
     "build": "turbo build",
     "start": "turbo start",
+    "typecheck": "turbo typecheck",
     "lint": "turbo lint",
-    "test": "turbo test",
+    "test": "npm run test:unit && npm run test:integration",
+    "test:unit": "turbo test:unit",
+    "test:integration": "npm run test:integration:modules --workspace=@dtc/backend && npm run test:integration:http --workspace=@dtc/backend",
+    "test:smoke": "npm run test:smoke --workspace=@dtc/storefront",
     "backend:seed": "turbo seed --filter=@dtc/backend",
     "backend:dev": "turbo dev --filter=@dtc/backend",
     "storefront:dev": "turbo dev --filter=@dtc/storefront"
@@ -31,8 +35,5 @@
   "workspaces": [
     "apps/**",
     "!apps/backend/.medusa/**"
-  ],
-  "overrides": {
-    "ajv": "^8.0.0"
-  }
+  ]
 }

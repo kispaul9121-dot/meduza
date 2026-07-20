@@ -1,15 +1,26 @@
-import { MedusaError } from "@medusajs/framework/utils"
+import { ContainerRegistrationKeys, MedusaError } from "@medusajs/framework/utils"
 import { MedusaRequest, MedusaResponse } from "@medusajs/framework/http"
 import { SERVER_CONFIGURATOR_MODULE } from "../../../../../modules/server-configurator"
-import { decorateModelWithFacets } from "../../../../../modules/server-configurator/catalog-facets"
+import { loadServerCatalog } from "../../../../../modules/server-configurator/catalog-loader"
 
 export async function GET(req: MedusaRequest, res: MedusaResponse) {
   const service = req.scope.resolve(SERVER_CONFIGURATOR_MODULE) as any
-  const [model] = await service.listServerModels({ slug: req.params.slug, enabled: true })
+  const graph = req.scope.resolve(ContainerRegistrationKeys.QUERY) as any
+  const catalog = await loadServerCatalog(service, graph)
+  const record = catalog.records.find((item) => item.model.slug === req.params.slug)
 
-  if (!model) {
+  if (!record) {
     throw new MedusaError(MedusaError.Types.NOT_FOUND, "Server model not found")
   }
 
-  res.json({ model: decorateModelWithFacets(model) })
+  res.setHeader("Cache-Control", "public, max-age=30, stale-while-revalidate=120")
+  res.setHeader("Vary", "Accept-Encoding, x-publishable-api-key")
+  res.json({
+    model: record.model,
+    property_provenance: record.provenance,
+    query_metadata: {
+      duration_ms: Number(catalog.duration_ms.toFixed(3)),
+      query_count: catalog.query_count,
+    },
+  })
 }

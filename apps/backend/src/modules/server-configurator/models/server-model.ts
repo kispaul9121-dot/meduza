@@ -4,6 +4,10 @@ const ServerModel = model.define("server_model", {
   id: model.id().primaryKey(),
   medusa_product_id: model.text().nullable(),
   medusa_variant_id: model.text().nullable(),
+  technology_platform_id: model.text().nullable(),
+  vendor_generation_template_id: model.text().nullable(),
+  server_family_id: model.text().nullable(),
+  capability_profile_id: model.text().nullable(),
   brand: model.text(),
   family: model.text(),
   generation: model.text(),
@@ -30,6 +34,7 @@ const ServerModel = model.define("server_model", {
   seo_title: model.text(),
   seo_description: model.text(),
   source_doc_reference: model.text(),
+  schema_version: model.number().default(1),
   enabled: model.boolean().default(true),
 })
 

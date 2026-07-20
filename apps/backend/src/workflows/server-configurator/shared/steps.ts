@@ -3,6 +3,11 @@ import { MedusaError } from "@medusajs/framework/utils"
 import { SERVER_CONFIGURATOR_MODULE } from "../../../modules/server-configurator"
 import { previewApplicability } from "../../../modules/server-configurator/applicability"
 import {
+  canonicalComponentPayload,
+  componentContractErrors,
+  componentTypeDefinitionErrors,
+} from "../../../modules/server-configurator/domain-contracts"
+import {
   ComponentApplicabilityInput,
   CreateRuleFromPresetInput,
   EnableRuleWithConfirmationInput,
@@ -82,7 +87,17 @@ export const createComponentStep = createStep(
   "create-server-configurator-component",
   async (input: EntityPayload, { container }) => {
     const service = container.resolve(SERVER_CONFIGURATOR_MODULE) as any
-    const component = await service.createComponents(input)
+    const payload = canonicalComponentPayload(input)
+    const errors = componentContractErrors(payload)
+    const definitions = await service.listComponentTypeDefinitions({
+      key: payload.type,
+      enabled: true,
+    })
+    errors.push(...componentTypeDefinitionErrors(definitions[0] || null))
+    if (errors.length) {
+      throw new MedusaError(MedusaError.Types.INVALID_DATA, errors.join(" "))
+    }
+    const component = await service.createComponents(payload)
     return new StepResponse({ component }, component.id)
   },
   async (id, { container }) => {
@@ -96,7 +111,28 @@ export const updateComponentStep = createStep(
   async (input: EntityUpdateInput, { container }) => {
     const service = container.resolve(SERVER_CONFIGURATOR_MODULE) as any
     const previous = await service.retrieveComponent(input.id)
-    const component = await service.updateComponents({ id: input.id, ...input.data })
+    const payload = canonicalComponentPayload({
+      ...input.data,
+      type: input.data.type ?? previous.type,
+      specs_json: input.data.specs_json ?? previous.specs_json,
+      normalized_specs_json:
+        input.data.normalized_specs_json ?? previous.normalized_specs_json,
+      raw_specs_json: input.data.raw_specs_json ?? previous.raw_specs_json,
+      source_json: input.data.source_json ?? previous.source_json,
+      schema_version: input.data.schema_version ?? previous.schema_version,
+      normalization_status:
+        input.data.normalization_status ?? previous.normalization_status,
+    })
+    const errors = componentContractErrors(payload)
+    const definitions = await service.listComponentTypeDefinitions({
+      key: payload.type,
+      enabled: true,
+    })
+    errors.push(...componentTypeDefinitionErrors(definitions[0] || null))
+    if (errors.length) {
+      throw new MedusaError(MedusaError.Types.INVALID_DATA, errors.join(" "))
+    }
+    const component = await service.updateComponents({ id: input.id, ...payload })
     return new StepResponse({ component }, previous)
   },
   async (previous, { container }) => {
@@ -141,6 +177,11 @@ export const updateComponentApplicabilityStep = createStep(
     const updated = await service.updateComponents({
       id: input.id,
       specs_json: { ...(component.specs_json || {}), applicability: input.applicability },
+      normalized_specs_json: {
+        ...(component.normalized_specs_json || component.specs_json || {}),
+        applicability: input.applicability,
+      },
+      applicability_json: input.applicability,
     })
     const models = await service.listServerModels({ enabled: true })
     return new StepResponse({ component: updated, preview: previewApplicability(updated, models) }, component)

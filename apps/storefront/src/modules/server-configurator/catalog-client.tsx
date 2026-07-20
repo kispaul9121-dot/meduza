@@ -1,78 +1,18 @@
 "use client"
 
 import Link from "next/link"
-import { useSearchParams } from "next/navigation"
-import { useMemo, useState } from "react"
-import { CatalogFacet, HelpAnnotation, ServerModel } from "@lib/server-configurator/data"
-import { BarChart3, Heart, RotateCcw, ShoppingCart, SlidersHorizontal, X } from "lucide-react"
+import { usePathname, useRouter, useSearchParams } from "next/navigation"
+import { useEffect, useMemo, useState } from "react"
+import { QueryClient, QueryClientProvider, keepPreviousData, useQuery } from "@tanstack/react-query"
+import {
+  CatalogFilterDefinition,
+  HelpAnnotation,
+  queryServerCatalog,
+  ServerCatalogResponse,
+} from "@lib/server-configurator/data"
+import { RotateCcw, SlidersHorizontal, X } from "lucide-react"
 import { HelpPopover } from "./help-popover"
-import { ConfiguredServerCartView } from "./cart-view"
-import { useServerLocalActions } from "./local-actions"
 import { ServerProductCard } from "./product-card"
-
-type SelectedFilters = Record<string, string[]>
-type FilterGroup = { label: string; key: string; category: string }
-
-const filterGroups: FilterGroup[] = [
-  { label: "Цена", key: "price_range", category: "Коммерческие" },
-  { label: "Наличие", key: "availability", category: "Коммерческие" },
-  { label: "Состояние", key: "condition", category: "Коммерческие" },
-  { label: "Бренд", key: "brand", category: "Бренд / модель" },
-  { label: "Бренд / модель", key: "family", category: "Бренд / модель" },
-  { label: "Поколение", key: "generation", category: "Бренд / модель" },
-  { label: "Дисковые корзины", key: "chassis_type", category: "Storage" },
-  { label: "Форм-фактор", key: "form_factor", category: "Форм-фактор" },
-  { label: "Сокет", key: "cpu_socket", category: "CPU" },
-  { label: "Количество CPU", key: "max_cpu", category: "CPU" },
-  { label: "Семейство CPU", key: "cpu_family", category: "CPU" },
-  { label: "Максимальный объем RAM", key: "max_ram_capacity", category: "RAM" },
-  { label: "Тип RAM", key: "supported_ram_types", category: "RAM" },
-  { label: "Количество слотов", key: "ram_slots_total", category: "RAM" },
-  { label: "Интерфейс дисков", key: "supported_drive_interfaces", category: "Storage" },
-  { label: "Поддержка GPU", key: "gpu_support", category: "GPU" },
-  { label: "Количество GPU", key: "gpu_qty", category: "GPU" },
-  { label: "Глубина", key: "depth", category: "Physical" },
-  { label: "Гарантия", key: "warranty", category: "Коммерческие" },
-  { label: "Доставка", key: "delivery", category: "Коммерческие" },
-]
-
-function modelValues(model: ServerModel, key: string) {
-  const facetValues = model.facets_json?.[key]
-  if (facetValues?.length) return facetValues
-  const value = (model as any)[key]
-  const values = Array.isArray(value) ? value : [value]
-  return values.filter(Boolean).map(String)
-}
-
-function valuesFor(models: ServerModel[], facets: CatalogFacet[], key: string) {
-  const facet = facets.find((item) => item.key === key)
-  if (facet?.values?.length) return facet.values.map((item) => item.value)
-  return Array.from(new Set(models.flatMap((model) => modelValues(model, key)))).filter(Boolean)
-}
-
-function matches(model: ServerModel, selected: SelectedFilters) {
-  return Object.entries(selected).every(([key, values]) => {
-    if (!values.length) return true
-    const modelValueSet = modelValues(model, key)
-    return values.some((value) => modelValueSet.includes(value))
-  })
-}
-
-function countFor(models: ServerModel[], selected: SelectedFilters, key: string, value: string) {
-  return models.filter((model) => matches(model, { ...selected, [key]: [value] })).length
-}
-
-function toggleValue(selected: SelectedFilters, key: string, value: string) {
-  const values = selected[key] || []
-  return {
-    ...selected,
-    [key]: values.includes(value) ? values.filter((item) => item !== value) : [...values, value],
-  }
-}
-
-function compactSelection(selected: SelectedFilters) {
-  return Object.fromEntries(Object.entries(selected).filter(([, values]) => values.length)) as SelectedFilters
-}
 
 function CollectionEmpty({ title, text }: { title: string; text: string }) {
   return (
@@ -84,116 +24,170 @@ function CollectionEmpty({ title, text }: { title: string; text: string }) {
   )
 }
 
-function FavoritesPage({ models }: { models: ServerModel[] }) {
-  const actions = useServerLocalActions()
-  const favoriteModels = actions.collections.favorites
-    .map((id) => models.find((model) => model.slug === id))
-    .filter(Boolean) as ServerModel[]
-
-  return (
-    <section className="server-collection-page">
-      <div className="server-catalog-toolbar">
-        <div>
-          <h1>Избранное</h1>
-          <p>{favoriteModels.length} сохранено для быстрого возврата</p>
-        </div>
-      </div>
-      {!favoriteModels.length ? (
-        <CollectionEmpty title="Избранное пусто" text="Добавьте серверы через кнопку с сердцем на карточке или в конфигураторе." />
-      ) : (
-        <div className="server-product-grid">
-          {favoriteModels.map((model) => <ServerProductCard model={model} key={model.slug} />)}
-        </div>
-      )}
-    </section>
-  )
-}
-
-function ComparePage({ models }: { models: ServerModel[] }) {
-  const actions = useServerLocalActions()
-  const compareModels = actions.collections.compare
-    .map((id) => models.find((model) => model.slug === id))
-    .filter(Boolean) as ServerModel[]
-  const rows = [
-    ["Корзина", (model: ServerModel) => model.chassis_type],
-    ["Отсеки", (model: ServerModel) => String(model.drive_bays_front)],
-    ["Интерфейсы", (model: ServerModel) => model.supported_drive_interfaces.join(" / ")],
-    ["CPU", (model: ServerModel) => `${model.cpu_socket}, до ${model.max_cpu}`],
-    ["Память", (model: ServerModel) => `${model.ram_slots_total} DIMM, до ${model.max_ram_capacity}`],
-    ["PSU", (model: ServerModel) => model.psu_type],
-  ] as const
-
-  return (
-    <section className="server-collection-page">
-      <div className="server-catalog-toolbar">
-        <div>
-          <h1>Сравнение</h1>
-          <p>{compareModels.length} серверов в сравнении</p>
-        </div>
-      </div>
-      {compareModels.length < 1 ? (
-        <CollectionEmpty title="Сравнение пустое" text="Добавьте серверы через кнопку сравнения на карточке товара." />
-      ) : (
-        <div className="server-compare-table-wrap">
-          <table className="server-compare-table">
-            <thead>
-              <tr>
-                <th>Параметр</th>
-                {compareModels.map((model) => (
-                  <th key={model.slug}>
-                    <Link href={`/servers/${model.slug}`}>{model.public_name}</Link>
-                    <button type="button" onClick={() => actions.removeCompare(model.slug)}>Убрать</button>
-                  </th>
-                ))}
-              </tr>
-            </thead>
-            <tbody>
-              {rows.map(([label, read]) => (
-                <tr key={label}>
-                  <td>{label}</td>
-                  {compareModels.map((model) => <td key={`${label}-${model.slug}`}>{read(model)}</td>)}
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-      )}
-    </section>
-  )
-}
-
 export function ServerCatalogClient({
   annotations = [],
-  facets = [],
-  models,
+  initialCatalog,
+  initialQuery,
 }: {
   annotations?: HelpAnnotation[]
-  facets?: CatalogFacet[]
-  models: ServerModel[]
+  initialCatalog: ServerCatalogResponse
+  initialQuery: string
 }) {
+  const [queryClient] = useState(() => new QueryClient({
+    defaultOptions: { queries: { staleTime: 30_000, retry: 1 } },
+  }))
+  return (
+    <QueryClientProvider client={queryClient}>
+      <CatalogContent
+        annotations={annotations}
+        initialCatalog={initialCatalog}
+        initialQuery={initialQuery}
+      />
+    </QueryClientProvider>
+  )
+}
+
+function CatalogContent({
+  annotations,
+  initialCatalog,
+  initialQuery,
+}: {
+  annotations: HelpAnnotation[]
+  initialCatalog: ServerCatalogResponse
+  initialQuery: string
+}) {
+  const router = useRouter()
+  const pathname = usePathname()
   const searchParams = useSearchParams()
-  const view = searchParams.get("view")
-  const [selected, setSelected] = useState<SelectedFilters>({})
-  const [draftSelected, setDraftSelected] = useState<SelectedFilters>({})
+  const serialized = searchParams.toString()
+  const [search, setSearch] = useState(searchParams.get("q") || searchParams.get("search") || "")
   const [allFiltersOpen, setAllFiltersOpen] = useState(false)
-  const [expandedFilter, setExpandedFilter] = useState<string | null>("price_range")
-  const filtered = useMemo(() => models.filter((model) => matches(model, selected)), [models, selected])
-  const draftFilteredCount = useMemo(() => models.filter((model) => matches(model, draftSelected)).length, [models, draftSelected])
-  const activeCount = Object.values(selected).reduce((sum, values) => sum + values.length, 0)
-  const draftActiveCount = Object.values(draftSelected).reduce((sum, values) => sum + values.length, 0)
+  const [expandedFilter, setExpandedFilter] = useState<string | null>(null)
+  const query = useQuery({
+    queryKey: ["server-catalog", serialized],
+    queryFn: ({ signal }) => queryServerCatalog(new URLSearchParams(serialized), signal),
+    initialData: serialized === initialQuery ? initialCatalog : undefined,
+    placeholderData: keepPreviousData,
+  })
+  const catalog = query.data
+  const definitions = catalog?.filter_schema.definitions || initialCatalog.filter_schema.definitions
+  const primaryDefinitions = definitions.filter((definition) => definition.primary).slice(0, 12)
+  const definitionByKey = useMemo(
+    () => new Map(definitions.map((definition) => [definition.key, definition])),
+    [definitions],
+  )
+  const activeKeys = Array.from(new Set(Array.from(searchParams.keys()).filter(
+    (key) => !["q", "search", "page", "limit", "sort"].includes(key),
+  )))
+  const activeCount = activeKeys.reduce((sum, key) => sum + Math.max(searchParams.getAll(key).length, 1), 0)
   const filterHelp = annotations.find((item) => item.key === "catalog.filters")
 
-  if (view === "favorites") return <FavoritesPage models={models} />
-  if (view === "compare") return <ComparePage models={models} />
-  if (view === "cart") return <ConfiguredServerCartView />
-
-  const openAllFilters = () => {
-    setDraftSelected(selected)
-    setAllFiltersOpen(true)
+  function navigate(params: URLSearchParams, replace = false) {
+    const target = params.toString() ? `${pathname}?${params.toString()}` : pathname
+    if (replace) router.replace(target, { scroll: false })
+    else router.push(target, { scroll: false })
   }
-  const applyAllFilters = () => {
-    setSelected(compactSelection(draftSelected))
-    setAllFiltersOpen(false)
+
+  function updateValues(key: string, value: string) {
+    const params = new URLSearchParams(serialized)
+    const current = params.getAll(key)
+    params.delete(key)
+    for (const item of current.includes(value)
+      ? current.filter((item) => item !== value)
+      : [...current, value]) params.append(key, item)
+    params.delete("page")
+    navigate(params)
+  }
+
+  function updateScalar(key: string, value: string) {
+    const params = new URLSearchParams(serialized)
+    if (value) params.set(key, value)
+    else params.delete(key)
+    params.delete("page")
+    navigate(params)
+  }
+
+  function clearFilters() {
+    const params = new URLSearchParams()
+    const q = searchParams.get("q") || searchParams.get("search")
+    if (q) params.set("q", q)
+    navigate(params)
+  }
+
+  useEffect(() => {
+    const current = searchParams.get("q") || searchParams.get("search") || ""
+    if (current !== search) setSearch(current)
+    // URL changes from browser navigation are the authoritative source.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [serialized])
+
+  useEffect(() => {
+    const timer = window.setTimeout(() => {
+      const current = searchParams.get("q") || searchParams.get("search") || ""
+      if (search === current) return
+      const params = new URLSearchParams(serialized)
+      params.delete("search")
+      if (search.trim()) params.set("q", search.trim())
+      else params.delete("q")
+      params.delete("page")
+      navigate(params, true)
+    }, 350)
+    return () => window.clearTimeout(timer)
+    // `serialized` intentionally makes browser back/forward cancel stale work.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [search])
+
+  function filterControl(definition: CatalogFilterDefinition, prefix: string) {
+    const facet = catalog?.facets.find((item) => item.key === definition.key)
+    if (definition.type === "range") return (
+      <div className="catalog-range-fields">
+        <label>
+          <span>От</span>
+          <input
+            key={`${definition.key}-min-${serialized}`}
+            type="number"
+            min={facet?.range?.min}
+            max={facet?.range?.max}
+            defaultValue={searchParams.get(`${definition.key}.min`) || ""}
+            placeholder={facet?.range ? String(facet.range.min) : undefined}
+            onBlur={(event) => updateScalar(`${definition.key}.min`, event.currentTarget.value)}
+          />
+        </label>
+        <label>
+          <span>До</span>
+          <input
+            key={`${definition.key}-max-${serialized}`}
+            type="number"
+            min={facet?.range?.min}
+            max={facet?.range?.max}
+            defaultValue={searchParams.get(`${definition.key}.max`) || ""}
+            placeholder={facet?.range ? String(facet.range.max) : undefined}
+            onBlur={(event) => updateScalar(`${definition.key}.max`, event.currentTarget.value)}
+          />
+        </label>
+      </div>
+    )
+    if (definition.type === "text") return (
+      <input
+        key={`${definition.key}-text-${serialized}`}
+        className="catalog-text-filter"
+        type="search"
+        defaultValue={searchParams.get(definition.key) || ""}
+        placeholder={`Введите ${definition.label.toLocaleLowerCase()}`}
+        onBlur={(event) => updateScalar(definition.key, event.currentTarget.value.trim())}
+      />
+    )
+    return (facet?.values || []).map((option) => (
+      <label key={`${prefix}-${definition.key}-${option.value}`}>
+        <input
+          type="checkbox"
+          checked={searchParams.getAll(definition.key).includes(option.value)}
+          onChange={() => updateValues(definition.key, option.value)}
+        />
+        <span>{option.label || option.value}</span>
+        <small>{option.count}</small>
+      </label>
+    ))
   }
 
   return (
@@ -207,30 +201,20 @@ export function ServerCatalogClient({
           </span>
         </div>
         <div className="server-filter-scroll">
-          {filterGroups.slice(3, 13).map(({ label, key }) => (
-            <section className="server-filter-section" key={key}>
-              <h3>{label}</h3>
-              {valuesFor(models, facets, key).map((value) => (
-                <label key={`${key}-${value}`}>
-                  <input
-                    type="checkbox"
-                    checked={(selected[key] || []).includes(String(value))}
-                    onChange={() => setSelected((current) => compactSelection(toggleValue(current, key, String(value))))}
-                  />
-                  <span>{String(value)}</span>
-                  <small>{countFor(models, selected, key, String(value))}</small>
-                </label>
-              ))}
+          {primaryDefinitions.map((definition) => (
+            <section className="server-filter-section" key={definition.key}>
+              <h3>{definition.label}</h3>
+              {filterControl(definition, "main")}
             </section>
           ))}
         </div>
         <div className="server-filter-actions">
-          <button className="server-primary all-filters-button" type="button" onClick={openAllFilters}>
+          <button className="server-primary all-filters-button" type="button" onClick={() => setAllFiltersOpen(true)}>
             <SlidersHorizontal size={17} />
             <span>Все фильтры</span>
             <strong>{activeCount}</strong>
           </button>
-          <button className="server-secondary filter-reset-button" type="button" onClick={() => setSelected({})} disabled={!activeCount} aria-label="Сбросить фильтры">
+          <button className="server-secondary filter-reset-button" type="button" onClick={clearFilters} disabled={!activeCount} aria-label="Сбросить фильтры">
             <RotateCcw size={17} />
           </button>
         </div>
@@ -239,32 +223,66 @@ export function ServerCatalogClient({
       <section>
         <div className="server-catalog-toolbar">
           <div>
-            <h1>Серверы HPE ProLiant DL360 Gen10</h1>
-            <p>Найдено: {filtered.length} из {models.length} серверов</p>
+            <h1>Каталог серверов</h1>
+            <p aria-live="polite">Найдено: {catalog?.total ?? 0} серверов</p>
+          </div>
+          <div className="catalog-query-controls">
+            <input
+              type="search"
+              value={search}
+              onChange={(event) => setSearch(event.target.value)}
+              placeholder="Поиск по модели или семейству"
+              aria-label="Поиск серверов"
+            />
+            <select
+              value={searchParams.get("sort") || "relevance"}
+              onChange={(event) => updateScalar("sort", event.target.value)}
+              aria-label="Сортировка"
+            >
+              <option value="relevance">По релевантности</option>
+              <option value="name_asc">Название: А–Я</option>
+              <option value="name_desc">Название: Я–А</option>
+              <option value="price_asc">Сначала дешевле</option>
+              <option value="price_desc">Сначала дороже</option>
+              <option value="newest">Сначала новые</option>
+            </select>
           </div>
         </div>
         {activeCount > 0 && (
           <div className="active-filter-chips">
-            {Object.entries(selected).flatMap(([key, values]) =>
-              values.map((value) => (
-                <button type="button" key={`${key}-${value}`} onClick={() => setSelected((current) => compactSelection(toggleValue(current, key, value)))}>
-                  {value}
+            {activeKeys.flatMap((key) => searchParams.getAll(key).map((value) => (
+                <button type="button" key={`${key}-${value}`} onClick={() => updateValues(key, value)}>
+                  {definitionByKey.get(key.replace(/\.(min|max)$/, ""))?.label || key}: {value}
                   <X size={14} />
                 </button>
-              ))
-            )}
-            <button className="clear-filter-chip" type="button" onClick={() => setSelected({})}>
+              )))}
+            <button className="clear-filter-chip" type="button" onClick={clearFilters}>
               Сбросить все
             </button>
           </div>
         )}
-        <div className="server-product-grid">
-          {filtered.map((model) => (
+        {query.isFetching && <p className="catalog-request-state" role="status">Обновляем каталог…</p>}
+        {query.isError && (
+          <div className="server-empty-state" role="alert">
+            <strong>Каталог временно недоступен</strong>
+            <p>{query.error instanceof Error ? query.error.message : "Не удалось получить данные каталога."}</p>
+            <button className="server-primary" type="button" onClick={() => query.refetch()}>Повторить</button>
+          </div>
+        )}
+        {!query.isError && <div className="server-product-grid">
+          {(catalog?.items || []).map((model) => (
             <ServerProductCard model={model} key={model.slug} />
           ))}
-        </div>
-        {!filtered.length && (
+        </div>}
+        {!query.isError && !query.isFetching && !catalog?.items.length && (
           <CollectionEmpty title="Ничего не найдено" text="Сбросьте часть параметров или откройте все фильтры для более широкого подбора." />
+        )}
+        {!!catalog?.pagination.pages && catalog.pagination.pages > 1 && (
+          <nav className="catalog-pagination" aria-label="Страницы каталога">
+            <button type="button" disabled={!catalog.pagination.has_previous} onClick={() => updateScalar("page", String(catalog.pagination.page - 1))}>Назад</button>
+            <span>{catalog.pagination.page} из {catalog.pagination.pages}</span>
+            <button type="button" disabled={!catalog.pagination.has_next} onClick={() => updateScalar("page", String(catalog.pagination.page + 1))}>Дальше</button>
+          </nav>
         )}
       </section>
 
@@ -275,47 +293,36 @@ export function ServerCatalogClient({
               <div>
                 <span>Подбор серверов</span>
                 <h2>Все фильтры</h2>
-                <p>Найдено по параметрам: {draftFilteredCount}</p>
+                <p>Найдено по параметрам: {catalog?.total ?? 0}</p>
               </div>
               <div className="server-all-filters-header-actions">
-                <button className="server-secondary" type="button" onClick={() => setAllFiltersOpen(false)}>Отменить</button>
-                <button className="server-primary" type="button" onClick={applyAllFilters}>Применить</button>
+                <button className="server-primary" type="button" onClick={() => setAllFiltersOpen(false)}>Готово</button>
                 <button className="server-secondary all-filters-close" type="button" onClick={() => setAllFiltersOpen(false)} aria-label="Закрыть фильтры">
                   <X size={18} />
                 </button>
               </div>
             </header>
             <div className="server-all-filters-reset-row">
-              <button className="server-secondary" type="button" onClick={() => setDraftSelected({})} disabled={!draftActiveCount}>
+              <button className="server-secondary" type="button" onClick={clearFilters} disabled={!activeCount}>
                 <RotateCcw size={17} />
                 Сбросить все
               </button>
             </div>
             <div className="server-all-filters-body">
               <div className="server-all-filters-grid">
-                {filterGroups.map(({ label, key, category }) => {
-                  const expanded = expandedFilter === key
+                {definitions.map((definition) => {
+                  const expanded = expandedFilter === definition.key
                   return (
-                    <section className={`server-filter-accordion ${expanded ? "expanded" : ""}`} key={`modal-${key}`}>
-                      <button type="button" onClick={() => setExpandedFilter(expanded ? null : key)} aria-expanded={expanded}>
+                    <section className={`server-filter-accordion ${expanded ? "expanded" : ""}`} key={`modal-${definition.key}`}>
+                      <button type="button" onClick={() => setExpandedFilter(expanded ? null : definition.key)} aria-expanded={expanded}>
                         <span>
-                          <strong>{label}</strong>
-                          <small>{category}</small>
+                          <strong>{definition.label}</strong>
+                          <small>{definition.category}</small>
                         </span>
                         <span aria-hidden="true">⌄</span>
                       </button>
                       <div className="server-filter-accordion-panel">
-                        {valuesFor(models, facets, key).map((value) => (
-                          <label key={`modal-${key}-${value}`}>
-                            <input
-                              type="checkbox"
-                              checked={(draftSelected[key] || []).includes(String(value))}
-                              onChange={() => setDraftSelected((current) => compactSelection(toggleValue(current, key, String(value))))}
-                            />
-                            <span>{String(value)}</span>
-                            <small>{countFor(models, draftSelected, key, String(value))}</small>
-                          </label>
-                        ))}
+                        {filterControl(definition, "modal")}
                       </div>
                     </section>
                   )

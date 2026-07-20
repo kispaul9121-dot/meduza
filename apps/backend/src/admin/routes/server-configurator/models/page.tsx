@@ -417,6 +417,7 @@ const ModelsPage = () => {
                 <Table.Cell>{model.chassis_type} / {model.form_factor}</Table.Cell>
                 <Table.Cell><Badge color={model.enabled ? "green" : "grey"}>{model.enabled ? "enabled" : "disabled"}</Badge></Table.Cell>
                 <Table.Cell className="flex gap-2">
+                  <Link to={`/server-configurator/models/${model.id}/direct-components`}><Button size="small" variant="secondary">Direct components</Button></Link>
                   <Button size="small" variant="secondary" onClick={() => setDraft(model)}>Edit</Button>
                   <Button size="small" variant="secondary" onClick={() => mutateModel.mutate({ id: model.id, action: "duplicate" })}>Duplicate</Button>
                   <Button size="small" variant="secondary" onClick={() => mutateModel.mutate({ id: model.id, body: { enabled: !model.enabled } })}>{model.enabled ? "Disable" : "Enable"}</Button>

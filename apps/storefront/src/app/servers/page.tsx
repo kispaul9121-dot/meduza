@@ -1,32 +1,45 @@
 import { Metadata } from "next"
-import { listCatalogFacets, listHelpAnnotations, listServerModels } from "@lib/server-configurator/data"
+import { listHelpAnnotations, queryServerCatalog } from "@lib/server-configurator/data"
 import { ServerCatalogClient } from "@modules/server-configurator/catalog-client"
 import { ServerHeader } from "@modules/server-configurator/server-header"
 
 export const dynamic = "force-dynamic"
 
 export const metadata: Metadata = {
-  title: "HPE DL360 Gen10 servers | Payloud",
-  description: "Catalog of HPE ProLiant DL360 Gen10 chassis/storage variants with server configurator.",
+  title: "Каталог серверов | Payloud",
+  description: "Серверные платформы разных производителей с фильтрами по нормализованным характеристикам и конфигуратором совместимости.",
   alternates: { canonical: "/servers" },
   openGraph: {
-    title: "HPE DL360 Gen10 servers",
-    description: "Configure HPE DL360 Gen10 8SFF, 8SFF front option, 10SFF NVMe Premium and 4LFF.",
+    title: "Каталог серверных платформ",
+    description: "Подберите сервер по производителю, платформе, CPU, памяти и storage-параметрам.",
     type: "website",
   },
 }
 
-export default async function ServersPage() {
-  const models = await listServerModels()
-  const catalogModels = models.filter((model) => model.slug !== "hpe-proliant-dl360-gen10-8sff-front-drive-option")
-  const annotations = await listHelpAnnotations("catalog")
-  const facets = await listCatalogFacets()
+export default async function ServersPage({
+  searchParams,
+}: {
+  searchParams: Promise<Record<string, string | string[] | undefined>>
+}) {
+  const parameters = await searchParams
+  const query = new URLSearchParams()
+  for (const [key, value] of Object.entries(parameters)) {
+    for (const entry of Array.isArray(value) ? value : value ? [value] : []) query.append(key, entry)
+  }
+  const [catalog, annotations] = await Promise.all([
+    queryServerCatalog(query),
+    listHelpAnnotations("catalog"),
+  ])
 
   return (
     <>
-      <ServerHeader models={catalogModels} annotations={annotations} />
+      <ServerHeader models={catalog.items} annotations={annotations} />
       <main className="server-page-shell">
-        <ServerCatalogClient models={catalogModels} annotations={annotations} facets={facets} />
+        <ServerCatalogClient
+          annotations={annotations}
+          initialCatalog={catalog}
+          initialQuery={query.toString()}
+        />
       </main>
     </>
   )

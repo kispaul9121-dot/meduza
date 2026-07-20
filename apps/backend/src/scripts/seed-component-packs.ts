@@ -15,7 +15,11 @@ function matches(component: any, spec: any) {
   if (spec.type && component.type !== spec.type) return false
   if (spec.brand && !text(component.brand).includes(text(spec.brand))) return false
   if (spec.any && !spec.any.some((item: string) => body.includes(text(item)))) return false
-  if (spec.generation && specs.xeon_scalable_generation !== spec.generation) return false
+  if (
+    spec.generation &&
+    specs.xeon_scalable_generation !== spec.generation &&
+    specs.generation !== spec.generation
+  ) return false
   return true
 }
 
@@ -31,6 +35,9 @@ async function upsertPack(service: any, name: string, componentType: string, com
     chassis_scope: scopes.chassis_scope || [],
     tags_json: scopes.tags_json || ["sample"],
     applicability_template_json: scopes.applicability_template_json || {},
+    pack_kind: scopes.pack_kind || "candidate_pool",
+    defaults_json: scopes.defaults_json || {},
+    schema_version: 1,
     enabled: true,
     source_doc_reference: "seed-component-packs.ts",
   }
@@ -61,7 +68,6 @@ export default async function seedComponentPacks({ container }: { container: Med
   const specs = [
     ["Intel Xeon Scalable 1st Gen", "cpu", { type: "cpu", brand: "Intel", generation: "1st" }],
     ["Intel Xeon Scalable 2nd Gen", "cpu", { type: "cpu", brand: "Intel", generation: "2nd" }],
-    ["Intel Xeon Scalable 1st/2nd Gen for HPE Gen10", "cpu", { type: "cpu", brand: "Intel", any: ["xeon scalable"] }, { brand_scope: ["HPE"], family_scope: ["ProLiant DL360"], generation_scope: ["Gen10"] }],
     ["DDR4 RDIMM ECC", "ram", { type: "ram", any: ["ddr4", "rdimm", "ecc"] }],
     ["HPE Smart Array Gen10", "raid", { type: "raid", brand: "HPE", any: ["smart array"] }],
     ["Intel/Broadcom PCIe NIC", "nic", { type: "nic", any: ["intel", "broadcom", "pcie"] }],

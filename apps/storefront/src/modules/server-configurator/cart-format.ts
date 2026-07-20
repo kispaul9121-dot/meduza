@@ -2,6 +2,7 @@ import { HttpTypes } from "@medusajs/types"
 
 export type ConfiguredLineMetadata = {
   configuration_id?: string
+  configuration_hash?: string
   server_model_slug?: string
   server_public_name?: string
   selected_components_snapshot?: Array<{
@@ -12,14 +13,37 @@ export type ConfiguredLineMetadata = {
     short_name: string
     unit_price?: number
     total_price?: number
-    specs_json?: Record<string, any> | null
+    specs_json?: Record<string, unknown> | null
   }>
-  effective_specs?: Record<string, any>
+  effective_specs?: Record<string, unknown>
   warnings?: string[]
   errors?: string[]
   total_price?: number
   pricing_mode?: "calculated" | "request_quote"
   request_quote?: boolean
+  currency_code?: string
+  price_hash?: string
+  priced_at?: string
+  price_expires_at?: string
+  validation_engine_version?: string
+  storage?: {
+    id?: string
+    public_name?: string
+    zones?: unknown
+    placements?: Array<Record<string, unknown>>
+  } | null
+  optional_groups?: Array<{
+    key: string
+    title: string
+    component_type: string
+    state: "explicit_none" | "selected" | "not_applicable"
+  }>
+  auto_added_components?: ConfiguredLineMetadata["selected_components_snapshot"]
+}
+
+export function customerChoice(metadata: ConfiguredLineMetadata, type: string, label: string) {
+  const value = componentLine(metadata, type)
+  return `${label}: ${value === "не выбрано" ? "отсутствует" : value}`
 }
 
 export function configuredMetadata(line: HttpTypes.StoreCartLineItem) {
