@@ -40,6 +40,8 @@ export type ConfiguredServerCartResponse = {
   effective_specs: Record<string, unknown>
 }
 
+type CheckoutValidationResponse = { valid: boolean; errors: string[] }
+
 const cartFields =
   "id,currency_code,total,subtotal,*items,*items.metadata,*items.product,*items.variant,+items.total,+items.unit_price"
 
@@ -48,24 +50,64 @@ async function revalidateCart() {
   if (cartCacheTag) revalidateTag(cartCacheTag)
 }
 
+function messageFromError(error: unknown, fallback: string) {
+  return error instanceof Error && error.message.trim() ? error.message : fallback
+}
+
+function stringArray(value: unknown): string[] {
+  if (!Array.isArray(value)) return []
+  return value.filter(
+    (item): item is string => typeof item === "string" && item.trim().length > 0
+  )
+}
+
+function normalizeConfiguredCartResponse(
+  value: unknown,
+  fallbackMessage: string
+): ConfiguredServerCartResponse {
+  const payload = value && typeof value === "object"
+    ? value as Partial<ConfiguredServerCartResponse>
+    : {}
+  const valid = payload.valid === true
+  const errors = stringArray(payload.errors)
+  const effectiveSpecs = payload.effective_specs && typeof payload.effective_specs === "object" && !Array.isArray(payload.effective_specs)
+    ? payload.effective_specs
+    : {}
+
+  return {
+    cart: payload.cart ?? null,
+    configuration: payload.configuration ?? null,
+    line_item: payload.line_item ?? null,
+    valid,
+    errors: valid || errors.length ? errors : [fallbackMessage],
+    warnings: stringArray(payload.warnings),
+    effective_specs: effectiveSpecs,
+  }
+}
+
+function normalizeCheckoutValidation(
+  value: unknown,
+  fallbackMessage: string
+): CheckoutValidationResponse {
+  const payload = value && typeof value === "object"
+    ? value as Partial<CheckoutValidationResponse>
+    : {}
+  const valid = payload.valid === true
+  const errors = stringArray(payload.errors)
+
+  return {
+    valid,
+    errors: valid || errors.length ? errors : [fallbackMessage],
+  }
+}
+
 function errorPayload(error: unknown): ConfiguredServerCartResponse {
   const err = error as {
     message?: string
     response?: { data?: unknown }
   }
-  const data = err.response?.data
-  if (data && typeof data === "object" && "valid" in data) {
-    return data as ConfiguredServerCartResponse
-  }
-  return {
-    cart: null,
-    configuration: null,
-    line_item: null,
-    valid: false,
-    errors: [err?.message || "Не удалось добавить конфигурацию в корзину."],
-    warnings: [],
-    effective_specs: {},
-  }
+  const fallback = messageFromError(error, "Не удалось добавить конфигурацию в корзину.")
+  return normalizeConfiguredCartResponse(err.response?.data, fallback)
 }
 
 export async function addConfiguredServerToCart(
@@ -88,11 +130,15 @@ export async function addConfiguredServerToCart(
       }
     )
 
-    if (result.cart?.id) {
-      await setCartId(result.cart.id)
+    const normalized = normalizeConfiguredCartResponse(
+      result,
+      "Backend вернул неполный результат добавления конфигурации."
+    )
+    if (normalized.cart?.id) {
+      await setCartId(normalized.cart.id)
     }
     await revalidateCart()
-    return result
+    return normalized
   } catch (error) {
     return errorPayload(error)
   }
@@ -109,21 +155,25 @@ export async function retrieveConfiguredCart() {
     .catch(() => null)
 }
 
-export async function validateConfiguredCartForCheckout(): Promise<{ valid: boolean; errors: string[] }> {
+export async function validateConfiguredCartForCheckout(): Promise<CheckoutValidationResponse> {
   const cartId = await getCartId()
   if (!cartId) return { valid: false, errors: ["Корзина не найдена."] }
   const headers = { ...(await getAuthHeaders()) }
   try {
-    const result = await sdk.client.fetch<{ valid: boolean; errors: string[] }>(
+    const result = await sdk.client.fetch<CheckoutValidationResponse>(
       "/store/server-configurator/cart/validate",
       { method: "POST", body: { cart_id: cartId }, headers, cache: "no-store" }
     )
-    return { valid: result.valid === true, errors: result.errors || [] }
+    return normalizeCheckoutValidation(
+      result,
+      "Backend не вернул причину блокировки оформления заказа."
+    )
   } catch (error) {
-    const data = (error as { response?: { data?: { valid?: boolean; errors?: string[] } } })?.response?.data
-    return data?.errors
-      ? { valid: data.valid === true, errors: data.errors }
-      : { valid: false, errors: [(error as Error).message] }
+    const data = (error as { response?: { data?: unknown } })?.response?.data
+    return normalizeCheckoutValidation(
+      data,
+      messageFromError(error, "Не удалось проверить конфигурацию перед оформлением заказа.")
+    )
   }
 }
 
