@@ -39,16 +39,13 @@ export const attachConfigurationMetadataStep = createStep(
     const configurationId = input.saved.configuration.id
     const lineItemId = input.added.line_item.id
 
+    // Cart and line-item identifiers are mutable commerce links, not part of the
+    // immutable technical snapshot whose hash was calculated when it was saved.
     const configuration = await service.updateConfigurations({
       id: configurationId,
       medusa_cart_id: input.added.cart.id,
       medusa_line_item_id: lineItemId,
       status: "in_cart",
-      snapshot_json: {
-        ...(input.saved.snapshot || {}),
-        medusa_cart_id: input.added.cart.id,
-        medusa_line_item_id: lineItemId,
-      },
     })
     const cart = await retrieveCart(container, input.added.cart.id)
     const lineItem = cart?.items?.find((item: any) => item.id === lineItemId) || input.added.line_item
