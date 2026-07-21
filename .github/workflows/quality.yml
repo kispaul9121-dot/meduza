@@ -43,41 +43,20 @@ jobs:
           node-version: 20
           cache: npm
       - name: Install dependencies
-        shell: bash
-        run: |
-          set -o pipefail
-          npm ci --no-audit --no-fund --progress=false --verbose --foreground-scripts 2>&1 | tee npm-ci.log
+        run: npm ci --no-audit --no-fund --progress=false
         timeout-minutes: 25
-      - name: Upload npm install log
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: npm-ci-log
-          path: npm-ci.log
-          if-no-files-found: warn
       - name: Apply database migrations
         working-directory: apps/backend
-        shell: bash
-        run: |
-          set -o pipefail
-          npx --no-install medusa db:migrate 2>&1 | tee ../../migration.log
-      - name: Upload migration log
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: migration-log
-          path: migration.log
-          if-no-files-found: warn
+        run: npx --no-install medusa db:migrate
       - run: npm run typecheck
       - run: npm run lint
       - run: npm run test
       - name: Production build
-        shell: bash
         env:
           MEDUSA_BACKEND_URL: http://127.0.0.1:9100
           NEXT_PUBLIC_MEDUSA_BACKEND_URL: http://127.0.0.1:9100
+        shell: bash
         run: |
-          set -o pipefail
           node apps/storefront/tests/smoke/mock-medusa.cjs > mock-medusa-build.log 2>&1 &
           MOCK_PID=$!
           trap 'kill "$MOCK_PID" 2>/dev/null || true' EXIT
@@ -92,29 +71,10 @@ jobs:
             fi
             sleep 1
           done
-          npm run build 2>&1 | tee build.log
-      - name: Upload build diagnostics
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: build-log
-          path: |
-            build.log
-            mock-medusa-build.log
-          if-no-files-found: warn
+          npm run build || {
+            status=$?
+            cat mock-medusa-build.log
+            exit "$status"
+          }
       - name: Browser smoke tests
-        shell: bash
-        run: |
-          set -o pipefail
-          npm run test:smoke 2>&1 | tee smoke.log
-      - name: Upload smoke diagnostics
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: smoke-diagnostics
-          path: |
-            smoke.log
-            apps/storefront/playwright-report
-            apps/storefront/test-results
-            reports/stage-12-artifacts
-          if-no-files-found: warn
+        run: npm run test:smoke
