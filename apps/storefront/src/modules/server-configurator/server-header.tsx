@@ -217,7 +217,7 @@ export function ServerHeader({
           <span className="server-brand-mark">P</span>
           <span>Payloud</span>
         </Link>
-        <div className={`catalog-dropdown-wrap ${catalogOpen ? "open" : ""}`}>
+        <div className={`catalog-dropdown-wrap max-[720px]:!hidden ${catalogOpen ? "open" : ""}`}>
           <button
             className={`catalog-button ${catalogOpen ? "open" : ""}`}
             type="button"
