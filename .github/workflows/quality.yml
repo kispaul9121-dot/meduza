@@ -76,5 +76,15 @@ jobs:
             cat mock-medusa-build.log
             exit "$status"
           }
+      - name: Storefront performance budgets
+        working-directory: apps/storefront
+        run: npm run perf:budget
+      - name: Upload performance budget report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: storefront-performance-budget
+          path: apps/storefront/.next/performance-budget-report.json
+          if-no-files-found: ignore
       - name: Browser smoke tests
         run: npm run test:smoke
