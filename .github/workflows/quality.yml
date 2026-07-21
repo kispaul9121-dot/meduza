@@ -42,6 +42,14 @@ jobs:
         with:
           node-version: 20
           cache: npm
+      - name: Regenerate corrected npm lockfile
+        run: npm install --package-lock-only --ignore-scripts --no-audit --no-fund --progress=false
+      - name: Upload corrected npm lockfile
+        uses: actions/upload-artifact@v4
+        with:
+          name: corrected-package-lock
+          path: package-lock.json
+          if-no-files-found: error
       - name: Install dependencies
         shell: bash
         run: |
