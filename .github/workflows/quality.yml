@@ -35,7 +35,6 @@ jobs:
       JWT_SECRET: ci-only-jwt-secret
       COOKIE_SECRET: ci-only-cookie-secret
       NEXT_PUBLIC_MEDUSA_PUBLISHABLE_KEY: pk_test_ci
-      MEDUSA_BACKEND_URL: http://127.0.0.1:9000
       NEXT_PUBLIC_BASE_URL: http://127.0.0.1:8000
     steps:
       - uses: actions/checkout@v4
@@ -61,14 +60,48 @@ jobs:
       - run: npm run test
       - name: Production build
         shell: bash
+        env:
+          MEDUSA_BACKEND_URL: http://127.0.0.1:9100
+          NEXT_PUBLIC_MEDUSA_BACKEND_URL: http://127.0.0.1:9100
         run: |
           set -o pipefail
+          node apps/storefront/tests/smoke/mock-medusa.cjs > mock-medusa-build.log 2>&1 &
+          MOCK_PID=$!
+          trap 'kill "$MOCK_PID" 2>/dev/null || true' EXIT
+          for attempt in {1..30}; do
+            if curl --fail --silent http://127.0.0.1:9100/health > /dev/null; then
+              break
+            fi
+            if [ "$attempt" -eq 30 ]; then
+              echo "Mock Medusa did not become ready"
+              cat mock-medusa-build.log
+              exit 1
+            fi
+            sleep 1
+          done
           npm run build 2>&1 | tee build.log
-      - name: Upload build log
+      - name: Upload build diagnostics
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: build-log
-          path: build.log
+          path: |
+            build.log
+            mock-medusa-build.log
           if-no-files-found: warn
-      - run: npm run test:smoke
+      - name: Browser smoke tests
+        shell: bash
+        run: |
+          set -o pipefail
+          npm run test:smoke 2>&1 | tee smoke.log
+      - name: Upload smoke diagnostics
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: smoke-diagnostics
+          path: |
+            smoke.log
+            apps/storefront/playwright-report
+            apps/storefront/test-results
+            reports/stage-12-artifacts
+          if-no-files-found: warn
