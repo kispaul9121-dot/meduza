@@ -55,6 +55,19 @@ jobs:
           name: npm-ci-log
           path: npm-ci.log
           if-no-files-found: warn
+      - name: Apply database migrations
+        working-directory: apps/backend
+        shell: bash
+        run: |
+          set -o pipefail
+          npx --no-install medusa db:migrate 2>&1 | tee ../../migration.log
+      - name: Upload migration log
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: migration-log
+          path: migration.log
+          if-no-files-found: warn
       - run: npm run typecheck
       - run: npm run lint
       - run: npm run test
