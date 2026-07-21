@@ -5,9 +5,14 @@ on:
   push:
     branches: [main]
 
+concurrency:
+  group: quality-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   verify:
     runs-on: ubuntu-latest
+    timeout-minutes: 60
     services:
       postgres:
         image: postgres:16
@@ -30,7 +35,6 @@ jobs:
       JWT_SECRET: ci-only-jwt-secret
       COOKIE_SECRET: ci-only-cookie-secret
       NEXT_PUBLIC_MEDUSA_PUBLISHABLE_KEY: pk_test_ci
-      MEDUSA_BACKEND_URL: http://127.0.0.1:9000
       NEXT_PUBLIC_BASE_URL: http://127.0.0.1:8000
     steps:
       - uses: actions/checkout@v4
@@ -38,9 +42,39 @@ jobs:
         with:
           node-version: 20
           cache: npm
-      - run: npm ci
+      - name: Install dependencies
+        run: npm ci --no-audit --no-fund --progress=false
+        timeout-minutes: 25
+      - name: Apply database migrations
+        working-directory: apps/backend
+        run: npx --no-install medusa db:migrate
       - run: npm run typecheck
       - run: npm run lint
       - run: npm run test
-      - run: npm run build
-      - run: npm run test:smoke
+      - name: Production build
+        env:
+          MEDUSA_BACKEND_URL: http://127.0.0.1:9100
+          NEXT_PUBLIC_MEDUSA_BACKEND_URL: http://127.0.0.1:9100
+        shell: bash
+        run: |
+          node apps/storefront/tests/smoke/mock-medusa.cjs > mock-medusa-build.log 2>&1 &
+          MOCK_PID=$!
+          trap 'kill "$MOCK_PID" 2>/dev/null || true' EXIT
+          for attempt in {1..30}; do
+            if curl --fail --silent http://127.0.0.1:9100/health > /dev/null; then
+              break
+            fi
+            if [ "$attempt" -eq 30 ]; then
+              echo "Mock Medusa did not become ready"
+              cat mock-medusa-build.log
+              exit 1
+            fi
+            sleep 1
+          done
+          npm run build || {
+            status=$?
+            cat mock-medusa-build.log
+            exit "$status"
+          }
+      - name: Browser smoke tests
+        run: npm run test:smoke
