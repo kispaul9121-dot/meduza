@@ -12,7 +12,7 @@ concurrency:
 jobs:
   verify:
     runs-on: ubuntu-latest
-    timeout-minutes: 35
+    timeout-minutes: 60
     services:
       postgres:
         image: postgres:16
@@ -44,8 +44,18 @@ jobs:
           node-version: 20
           cache: npm
       - name: Install dependencies
-        run: npm ci --verbose --foreground-scripts
-        timeout-minutes: 10
+        shell: bash
+        run: |
+          set -o pipefail
+          npm ci --no-audit --no-fund --progress=false --verbose --foreground-scripts 2>&1 | tee npm-ci.log
+        timeout-minutes: 25
+      - name: Upload npm install log
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: npm-ci-log
+          path: npm-ci.log
+          if-no-files-found: warn
       - run: npm run typecheck
       - run: npm run lint
       - run: npm run test
