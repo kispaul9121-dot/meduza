@@ -3,12 +3,7 @@ name: Quality
 on:
   pull_request:
   push:
-    branches:
-      - main
-      - codex/stage-13-ux-publishing-assistant
-
-permissions:
-  contents: write
+    branches: [main]
 
 concurrency:
   group: quality-${{ github.ref }}
@@ -47,27 +42,6 @@ jobs:
         with:
           node-version: 20
           cache: npm
-      - name: Regenerate corrected npm lockfile
-        run: npm install --package-lock-only --ignore-scripts --no-audit --no-fund --progress=false
-      - name: Commit corrected npm lockfile
-        if: github.event_name == 'push'
-        shell: bash
-        run: |
-          if git diff --quiet -- package-lock.json; then
-            echo "package-lock.json is current"
-            exit 0
-          fi
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add package-lock.json
-          git commit -m "Fix npm lockfile for storefront dependencies"
-          git push origin "HEAD:${GITHUB_REF_NAME}"
-      - name: Upload corrected npm lockfile
-        uses: actions/upload-artifact@v4
-        with:
-          name: corrected-package-lock
-          path: package-lock.json
-          if-no-files-found: error
       - name: Install dependencies
         shell: bash
         run: |
@@ -146,3 +120,12 @@ jobs:
           if-no-files-found: ignore
       - name: Browser smoke tests
         run: npm run test:smoke
+      - name: Upload browser evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: storefront-browser-evidence
+          path: |
+            apps/storefront/test-results
+            apps/storefront/playwright-report
+          if-no-files-found: ignore
