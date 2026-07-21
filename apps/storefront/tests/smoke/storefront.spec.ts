@@ -67,11 +67,13 @@ test("cart region redirect preserves the cart cookie", async ({ context, page })
   expect(cartCookie?.value).toBe("cart_stage_02")
 })
 
-test("mobile menu is keyboard dismissible and unknown route reaches 404", async ({ page }) => {
+test("mobile menu is singular, keyboard dismissible and unknown route reaches 404", async ({ page }) => {
   await page.setViewportSize({ width: 390, height: 844 })
   await page.goto("/servers")
 
+  await expect(page.getByRole("button", { name: "Меню", exact: true })).toHaveCount(0)
   const menuButton = page.getByRole("button", { name: "Открыть меню" })
+  await expect(menuButton).toHaveCount(1)
   await menuButton.click()
   await expect(menuButton).toHaveAttribute("aria-expanded", "true")
   await page.keyboard.press("Escape")

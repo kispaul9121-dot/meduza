@@ -278,7 +278,14 @@ class ServerConfiguratorModuleService extends MedusaService({
     partial?: boolean
     manifest?: any
   }) {
+    const service = this as any
     const data = await this.loadCompatibilityData(input)
+    if (input.mode === "production_validation") {
+      ;(data as any).all_direct_assignments = await service.listServerModelComponentAssignments(
+        { enabled: true },
+        { take: 100000 },
+      )
+    }
     return validateReadiness(data, { mode: input.mode, manifest: input.manifest })
   }
 }

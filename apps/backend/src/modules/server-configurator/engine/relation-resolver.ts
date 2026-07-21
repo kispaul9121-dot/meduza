@@ -11,10 +11,23 @@ export function resolveRelations(data: CompatibilityData, selectedComponents: an
   const relations = (data.relations || []).filter((relation: any) => relation.enabled !== false && selectedIds.has(relation.source_id))
   const issues: ValidationIssue[] = []
   const trace: TraceEntry[] = []
-  const summary = { mapped: 0, passed: 0, failed: 0, unmapped: 0 }
+  const summary = { mapped: 0, passed: 0, failed: 0, unmapped: 0, informational: 0 }
 
   for (const relation of relations.sort((a: any, b: any) => String(a.id).localeCompare(String(b.id)))) {
     const definition = definitions.get(relation.relation_type_id) as any
+    if (definition?.status === "informational") {
+      summary.informational += 1
+      trace.push({
+        phase: "relation",
+        validator: "relation_resolver",
+        result: "skipped",
+        reason_code: "RELATION_INFORMATIONAL",
+        message: `Informational relation ${relation.id} is retained as evidence but does not affect compatibility.`,
+        component_id: relation.source_type === "component" ? relation.source_id : undefined,
+        source_reference: relation.source_reference,
+      })
+      continue
+    }
     if (!definition || definition.status !== "engine_mapped") {
       summary.unmapped += 1
       issues.push({
@@ -77,4 +90,3 @@ export function resolveRelations(data: CompatibilityData, selectedComponents: an
   }
   return { issues, trace, summary }
 }
-

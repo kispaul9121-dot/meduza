@@ -15,6 +15,7 @@
     "lint": "eslint src",
     "test:unit": "jest --runInBand",
     "test:smoke": "playwright test",
+    "perf:budget": "node scripts/check-performance-budgets.mjs",
     "analyze": "ANALYZE=true next build"
   },
   "dependencies": {
@@ -33,7 +34,7 @@
     "pg": "^8.11.3",
     "qs": "^6.12.1",
     "react": "19.0.5",
-    "react-country-flag": "^3.1.0",
+    "react-country-flag": "3.1.0",
     "react-dom": "19.0.5",
     "server-only": "^0.0.1",
     "tailwindcss-radix": "^2.8.0"
