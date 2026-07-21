@@ -11,6 +11,20 @@ const json = (response, status, body) => {
   response.end(JSON.stringify(body))
 }
 
+const readJson = (request) => new Promise((resolve, reject) => {
+  let body = ""
+  request.setEncoding("utf8")
+  request.on("data", (chunk) => { body += chunk })
+  request.on("end", () => {
+    try {
+      resolve(body ? JSON.parse(body) : {})
+    } catch (error) {
+      reject(error)
+    }
+  })
+  request.on("error", reject)
+})
+
 const models = [
   {
     id: "srv_hpe", medusa_product_id: "prod_hpe", medusa_variant_id: "var_hpe", brand: "HPE", family: "ProLiant", generation: "Gen10", model: "DL360", public_name: "HPE ProLiant DL360 Gen10", slug: "hpe-dl360", form_factor: "1U", chassis_type: "8SFF", drive_bays_front: 8, drive_bays_rear: 0, drive_form_factor: "2.5", supported_drive_interfaces: ["SAS", "SATA"], backplane_type: "SAS/SATA", cpu_socket: "LGA3647", max_cpu: 2, ram_slots_total: 24, ram_slots_per_cpu: 12, max_ram_capacity: "3 TB", supported_ram_types: ["DDR4"], supported_ram_speeds: ["2933"], psu_type: "Hot Plug", cooling_profile: "standard", seo_title: "HPE DL360", seo_description: "HPE server platform", source_doc_reference: "HPE QuickSpecs", enabled: true, catalog_price: 2400, catalog_availability: "in_stock", catalog_condition: null, presentation_properties: [{ key: "cpu.cores", label: "Максимум ядер CPU", value_type: "number", value: 28, unit: null, comparable: true, state: "value", compatibility_status: "engine_mapped", inherited: true }],
@@ -31,6 +45,7 @@ const options = {
   drive_suggestions: [], source: "compatibility_engine",
 }
 
+const readySnapshotHash = "b".repeat(64)
 const ready = {
   id: "ready_virtualization",
   slug: "virtualization-starter",
@@ -51,7 +66,7 @@ const ready = {
   primary_action: "request_quote",
   version: {
     version: 2,
-    snapshot_hash: "abcdef1234567890",
+    snapshot_hash: readySnapshotHash,
     engine_version: "adr-011-engine-v1",
     published_at: "2026-07-20T20:00:00.000Z",
     snapshot: {
@@ -66,7 +81,7 @@ const ready = {
   },
 }
 
-http.createServer((request, response) => {
+http.createServer(async (request, response) => {
   const url = new URL(request.url, "http://127.0.0.1:9100")
 
   if (request.method === "OPTIONS") return json(response, 200, { ok: true })
@@ -140,6 +155,25 @@ http.createServer((request, response) => {
   }
   if (url.pathname === `/store/server-configurator/components/${component.id}`) return json(response, 200, { component })
   if (url.pathname === "/store/server-configurator/validate" && request.method === "POST") return json(response, 200, { valid: true, errors: [], warnings: [], effective_specs: {} })
+  if (url.pathname === "/store/server-configurator/rfq" && request.method === "POST") {
+    try {
+      const body = await readJson(request)
+      const includesReadyIdentity = Boolean(body.ready_configuration_id || body.ready_configuration_version || body.ready_snapshot_hash)
+      const readyIdentityMatches = body.ready_configuration_id === ready.id &&
+        body.ready_configuration_version === ready.version.version &&
+        body.ready_snapshot_hash === ready.version.snapshot_hash
+      if (includesReadyIdentity && !readyIdentityMatches) {
+        return json(response, 409, { message: "Ready configuration identity mismatch." })
+      }
+      return json(response, 201, {
+        quote_request: { id: "rfq_stage12_mock", status: "requested" },
+        configuration: { id: "cfg_stage12_mock", hash: "c".repeat(64) },
+        availability_warnings: [],
+      })
+    } catch {
+      return json(response, 400, { message: "Invalid JSON body." })
+    }
+  }
   if (url.pathname.startsWith("/store/carts/")) {
     return json(response, 200, {
       cart: {
