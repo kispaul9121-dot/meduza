@@ -2,7 +2,7 @@
 
 ## Status
 
-Stage 13 is implemented in branch `codex/stage-13-ux-publishing-assistant` and draft PR #3. The `main` branch has not been modified or merged.
+Stage 13 is implemented in branch `codex/stage-13-ux-publishing-assistant` and PR #3, which is ready for review. The `main` branch has not been modified or merged.
 
 ## Previous-stage gate
 
@@ -125,9 +125,11 @@ The JSON report is retained as the `storefront-performance-budget` workflow arti
 
 ## Verification evidence
 
-Final GitHub Actions run: `29812137660` on branch head `926f36e04ced5833211c5d5343636e0d436fa0d7`.
+Verified implementation run: `29812137660` on implementation head `926f36e04ced5833211c5d5343636e0d436fa0d7`.
 
-All quality steps passed:
+Final report-head verification run: `29812661523` on report head `9d16eef54c9d83105a953ad15cd4bcd48ee6c52c`.
+
+Both runs passed the complete quality workflow. The final report-head run confirmed:
 
 - clean dependency installation;
 - PostgreSQL initialization and all Medusa database migrations;
