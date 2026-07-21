@@ -57,7 +57,7 @@
 10. API security:
     Zod, ownership, server-side compatibility/price, cost protection, metadata limits.
 11. Проверь workflow compensation.
-12. Исправь структуру и критические usability blockers корзины, но полный визуальный редизайн оставь этапу 13.
+12. Исправь только критические usability blockers корзины, необходимые для корректного commerce flow. Общий functional UX/performance cleanup принадлежит этапу 15, а полный визуальный redesign — только ручному этапу 18. Этап 13 владеет content/knowledge/documents и не должен получать cart redesign scope.
 13. Tests:
     purchase, RFQ, base price, invalid config, price changed, unavailable stock, persistence, order lifecycle, rollback.
 
