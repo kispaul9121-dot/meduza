@@ -3,7 +3,9 @@ name: Quality
 on:
   pull_request:
   push:
-    branches: [main]
+    branches:
+      - main
+      - codex/stage-13-ux-publishing-assistant
 
 permissions:
   contents: write
@@ -48,6 +50,7 @@ jobs:
       - name: Regenerate corrected npm lockfile
         run: npm install --package-lock-only --ignore-scripts --no-audit --no-fund --progress=false
       - name: Commit corrected npm lockfile
+        if: github.event_name == 'push'
         shell: bash
         run: |
           if git diff --quiet -- package-lock.json; then
@@ -58,7 +61,7 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add package-lock.json
           git commit -m "Fix npm lockfile for storefront dependencies"
-          git push origin "HEAD:${GITHUB_HEAD_REF:-${GITHUB_REF_NAME}}"
+          git push origin "HEAD:${GITHUB_REF_NAME}"
       - name: Upload corrected npm lockfile
         uses: actions/upload-artifact@v4
         with:
