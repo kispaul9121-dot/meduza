@@ -43,8 +43,24 @@ jobs:
           node-version: 20
           cache: npm
       - name: Install dependencies
-        run: npm ci --no-audit --no-fund --progress=false
+        shell: bash
+        run: |
+          set +e
+          npm ci --no-audit --no-fund --progress=false 2>&1 | tee npm-ci.log
+          status=${PIPESTATUS[0]}
+          if [ "$status" -ne 0 ]; then
+            echo "npm ci failed with status $status"
+            tail -n 120 npm-ci.log
+          fi
+          exit "$status"
         timeout-minutes: 25
+      - name: Upload npm install diagnostics
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: npm-ci-diagnostics
+          path: npm-ci.log
+          if-no-files-found: ignore
       - name: Apply database migrations
         working-directory: apps/backend
         run: npx --no-install medusa db:migrate
