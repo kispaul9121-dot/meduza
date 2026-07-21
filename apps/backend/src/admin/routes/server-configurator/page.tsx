@@ -5,6 +5,11 @@ import { Link } from "react-router-dom";
 
 const sections = [
   [
+    "publishing-assistant",
+    "Publishing Assistant",
+    "Deterministic publication gate, structured findings and guided repair sessions",
+  ],
+  [
     "ready-configurations",
     "Ready Configurations",
     "Immutable published presets, validation versions, stale detection and storefront preview",
