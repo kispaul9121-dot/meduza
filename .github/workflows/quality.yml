@@ -5,6 +5,9 @@ on:
   push:
     branches: [main]
 
+permissions:
+  contents: write
+
 concurrency:
   group: quality-${{ github.ref }}
   cancel-in-progress: true
@@ -44,6 +47,18 @@ jobs:
           cache: npm
       - name: Regenerate corrected npm lockfile
         run: npm install --package-lock-only --ignore-scripts --no-audit --no-fund --progress=false
+      - name: Commit corrected npm lockfile
+        shell: bash
+        run: |
+          if git diff --quiet -- package-lock.json; then
+            echo "package-lock.json is current"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add package-lock.json
+          git commit -m "Fix npm lockfile for storefront dependencies"
+          git push origin "HEAD:${GITHUB_HEAD_REF:-${GITHUB_REF_NAME}}"
       - name: Upload corrected npm lockfile
         uses: actions/upload-artifact@v4
         with:
@@ -74,7 +89,23 @@ jobs:
         run: npx --no-install medusa db:migrate
       - run: npm run typecheck
       - run: npm run lint
-      - run: npm run test
+      - name: Test
+        shell: bash
+        run: |
+          set +e
+          npm run test 2>&1 | tee test.log
+          status=${PIPESTATUS[0]}
+          if [ "$status" -ne 0 ]; then
+            tail -n 180 test.log
+          fi
+          exit "$status"
+      - name: Upload test diagnostics
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: test-diagnostics
+          path: test.log
+          if-no-files-found: ignore
       - name: Production build
         env:
           MEDUSA_BACKEND_URL: http://127.0.0.1:9100
